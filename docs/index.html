@@ -9,19 +9,46 @@
   <meta name="keywords" content="mysql,sql,innodb">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ccaef5cdeaeaf1f2f36b2a9b0be5207f";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    
 </head>
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: 'MySQL 8.0 中文参考手册',
-      repo: '',
+      repo: 'dev2007/mysql8-manual',
       coverpage: true,
       loadSidebar: true,
-      auto2top: true
+      auto2top: true,
+      homepage: "mysql.md",
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/md5@2.3.0/dist/md5.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '52409e38c79dc585daf6',
+      clientSecret: 'b0488376f290b732da76de711ceda194166d6058',
+      repo: 'gitalk-comment',
+      owner: 'dev2007',
+      admin: ['dev2007'],
+      id: MD5(location.pathname),
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+    })
+  </script>
 </body>
 </html>

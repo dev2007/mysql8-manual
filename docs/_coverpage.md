@@ -6,4 +6,5 @@
 
 > 对官方参考手册的翻译
 
-[点击阅读](readme.md)
+[GitHub](https://github.com/dev2007/mysql8-manual)
+[点击阅读](mysql.md)
