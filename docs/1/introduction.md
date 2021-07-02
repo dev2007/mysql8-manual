@@ -4,7 +4,7 @@
 
 - [1.1 关于本手册](/1/1.1/manual-info)
 - [1.2 MySQL 数据库管理系统概述](/1/1.2/what-is)
-- [1.3 MySQL 8.0 新增功能](/1/1.3/mysql-nutshell)
+- [1.3 MySQL 8.0 新增特性](/1/1.3/mysql-nutshell)
 - [1.4 MySQL 8.0 中添加、弃用或删除的服务器和状态变量及选项](/1/1.4/added-deprecated-removed)
 - [1.5 MySQL 信息源](/1/1.5/information-sources)
 - [1.6 如何报告错误或问题](/1/1.6/bug-reports)
