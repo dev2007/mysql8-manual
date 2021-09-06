@@ -28,7 +28,7 @@
 
 ## 数据类型
 
-- 许多数据类型：有符号/无符号整数 1、2、3、4 和 8 字节长、[FLOAT](/11/11.1/11.1.4/floating-point-types)、[DOUBLE]((/1/1.11/1.11.4/floating-point-types))、[CHAR](/11/11.3/11.3.2/char)、[VARCHAR]((/11/11.3/11.3.2/char))、[BINARY](/11/11.3/11.3.3/binary-varbinary)、[VARBINARY]((/11/11.3/11.3.3/binary-varbinary))、[TEXT](/11/11.3/11.3.4/blob)、[BLOB]((/11/11.3/11.3.4/blob))、[DATE](/11/11.2/11.2.2/datetime)、[TIME](/11/11.2/11.2.3/time)、[DATETIME](/11/11.2/11.2.2/datetime)、[TIMESTAMP](/11/11.2/11.2.2/datetime)、[YEAR](/11/11.2/11.2.4/year)、[SET](/11/11.3/11.3.6/set)、[ENUM](/11/11.3/11.3.5/enum) 和 OpenGIS 空间类型。参阅[章节 11，数据类型](/11/data-types)。
+- 许多数据类型：有符号/无符号整数 1、2、3、4 和 8 字节长、[FLOAT](/11/11.1/11.1.4/floating-point-types)、[DOUBLE]((/1/1.11/1.11.4/floating-point-types))、[CHAR](/11/11.3/11.3.2/char)、[VARCHAR]((/11/11.3/11.3.2/char))、[BINARY](/11/11.3/11.3.3/binary-varbinary)、[VARBINARY](/11/11.3/11.3.3/binary-varbinary)、[TEXT](/11/11.3/11.3.4/blob)、[BLOB](/11/11.3/11.3.4/blob)、[DATE](/11/11.2/11.2.2/datetime)、[TIME](/11/11.2/11.2.3/time)、[DATETIME](/11/11.2/11.2.2/datetime)、[TIMESTAMP](/11/11.2/11.2.2/datetime)、[YEAR](/11/11.2/11.2.4/year)、[SET](/11/11.3/11.3.6/set)、[ENUM](/11/11.3/11.3.5/enum) 和 OpenGIS 空间类型。参阅[章节 11，数据类型](/11/data-types)。
 
 - 固定长度和可变长度字符串类型。
 
