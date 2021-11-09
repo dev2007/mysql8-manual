@@ -119,5 +119,5 @@ CREATE TABLE t1(a INT, KEY (a)) /*!50110 KEY_BLOCK_SIZE=1024 */;
   - 使用 [`TRIM()`](/12/12.8/string-functions) 修剪子字符串。标准 SQL 仅支持删除单个字符。
 
   - `GROUP BY` 的函数 [`STD()`](/12/12.20/aggregate-functions-and-modifiers)、[`BIT_OR()`](/12/12.20/aggregate-functions-and-modifiers)、[`BIT_AND()`](/12/12.20/aggregate-functions-and-modifiers)、[`BIT_XOR()`](/12/12.20/aggregate-functions-and-modifiers) 和 [`GROUP_CONCAT()`](/12/12.20/aggregate-functions-and-modifiers)。参阅[章节 12.20，“Aggregate 函数”](/12/12.20/aggregate-functions-and-modifiers)。
- 
+
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/extensions-to-ansi.html)
