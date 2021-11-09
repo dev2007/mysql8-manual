@@ -1,9 +1,9 @@
 # 1.7.2 MySQL 与标准 SQL 的区别
 
-- [1.7.2.1 SELECT INTO TABLE 区别](/1/1.7/1.7.2/1.7.21/ansi-diff-select-into-table)
-- [1.7.2.2 UPDATE 区别](/1/1.7/1.7.2/1.7.22/ansi-diff-update)
-- [1.7.2.3 FOREIGN KEY 约束的区别](/1/1.7/1.7.2/1.7.23/ansi-diff-foreign-keys)
-- [1.7.2.4 '--' 作为备注的开头](/1/1.7/1.7.2/1.7.24/ansi-diff-comments)
+- [1.7.2.1 SELECT INTO TABLE 区别](/1/1.7/1.7.2/1.7.2.1/ansi-diff-select-into-table)
+- [1.7.2.2 UPDATE 区别](/1/1.7/1.7.2/1.7.2.2/ansi-diff-update)
+- [1.7.2.3 FOREIGN KEY 约束的区别](/1/1.7/1.7.2/1.7.2.3/ansi-diff-foreign-keys)
+- [1.7.2.4 '--' 作为备注的开头](/1/1.7/1.7.2/1.7.2.4/ansi-diff-comments)
 
 我们试图使 MySQL Server 遵循 ANSI SQL 标准和 ODBC SQL 标准，但 MySQL Server 在某些情况下执行的操作不同：
 
