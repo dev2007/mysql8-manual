@@ -40,4 +40,4 @@ You may create a printed copy of this documentation solely for your own personal
 
 购买了支持的Oracle客户可以通过My Oracle support访问电子支持。有关信息，请访问 https://www.oracle.com/corporate/accessibility/learning-support.html#support-tab 。
 
-> [原文链接](https://dev。mysql。com/doc/refman/8。0/en/preface。html)
+> [原文链接](https://dev.mysql.com/doc/refman/8.0/en/preface.html)

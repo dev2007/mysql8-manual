@@ -17,4 +17,8 @@
       * [FOREIGN KEY 约束的区别](/1/1.7/1.7.2/1.7.2.3/ansi-diff-foreign-keys)
       * ['--' 作为备注的开头](/1/1.7/1.7.2/1.7.2.4/ansi-diff-comments)
     * [MySQL 如何处理约束](/1/1.7/1.7.3/constraints)
+      * [PRIMARY KEY 和 UNIQUE 索引约束](/1/1.7/1.7.3/1.7.3.1/constraint-primary-key)
+      * [FOREIGN KEY 约束](/1/1.7/1.7.3/1.7.3.2/constraint-foreign-key)
+      * [对无效数据的强制约束](/1/1.7/1.7.3/1.7.3.3/constraint-invalid-data)
+      * [ENUM 和 SET 约束](/1/1.7/1.7.3/1.7.3.4/constraint-enum)
   * [致谢](/1/1.8/credits)
