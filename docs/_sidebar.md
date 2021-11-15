@@ -22,3 +22,8 @@
       * [对无效数据的强制约束](/1/1.7/1.7.3/1.7.3.3/constraint-invalid-data)
       * [ENUM 和 SET 约束](/1/1.7/1.7.3/1.7.3.4/constraint-enum)
   * [致谢](/1/1.8/credits)
+    * [MySQL 贡献者](/1/1.8/1.8.1/contributors)
+    * [资料员和翻译](/1/1.8/1.8.2/documenters-translators)
+    * [支持 MySQL 的包](/1/1.8/1.8.3/packages)
+    * [用于创建 MySQL 的工具](/1/1.8/1.8.4/tools-used-to-create-mysql)
+    * [MySQL 支持者](/1/1.8/1.8.5/supporters)
