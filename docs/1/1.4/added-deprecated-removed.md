@@ -1,8 +1,8 @@
 # 1.4 MySQL 8.0 中添加、弃用或删除的服务器和状态变量及选项
 
-- [MySQL 8.0 中引入的选项和变量](/1/1.4/added-deprecated-removed?id=MySQL-8.0-中引入的选项和变量)
-- [MySQL 8.0 中弃用的选项和变量](/1/1.4/added-deprecated-removed?id=MySQL-8.0-中弃用的选项和变量)
-- [MySQL 8.0 中删除的选项和变量](/1/1.4/added-deprecated-removed?id=MySQL-8.0-中删除的选项和变量)
+- [MySQL 8.0 中引入的选项和变量](/1/1.4/added-deprecated-removed?id=MySQL-80-中引入的选项和变量)
+- [MySQL 8.0 中弃用的选项和变量](/1/1.4/added-deprecated-removed?id=MySQL-80-中弃用的选项和变量)
+- [MySQL 8.0 中删除的选项和变量](/1/1.4/added-deprecated-removed?id=MySQL-80-中删除的选项和变量)
 
 本节列出了 MySQL 8.0 中首次添加、已弃用或已删除的服务器变量、状态变量和选项。
 
@@ -26,9 +26,9 @@
 
 - [Audit_log_write_waits](/5/5.1/5.1.10/server-status-variables)：书面延迟审核事件的数量。MySQL 8.0.11 中添加。
 
-- [Authentication_ldap_sasl_supported_methods]/5/5.1/5.1.10/server-status-variables)：支持 SASL LDAP 认证的认证方法。MySQL 8.0.21 中添加。
+- [Authentication_ldap_sasl_supported_methods](/5/5.1/5.1.10/server-status-variables)：支持 SASL LDAP 认证的认证方法。MySQL 8.0.21 中添加。
 
-- [Caching_sha2_password_rsa_public_key]/5/5.1/5.1.10/server-status-variables)：caching_sha2_password 认证插件 RSA 公共关键值。MySQL 8.0.4 中添加。
+- [Caching_sha2_password_rsa_public_key](/5/5.1/5.1.10/server-status-variables)：caching_sha2_password 认证插件 RSA 公共关键值。MySQL 8.0.4 中添加。
 
 - [Com_alter_resource_group](/5/5.1/5.1.10/server-status-variables)： `ALTER RESOURCE GROUP` 语句计数。MySQL 8.0.3 中添加。
 
@@ -798,11 +798,11 @@
 
 - [sync_source_info](/17/17.1/17.1.6/17.1.6.3/replication-options-replica)：每次 #th 事件后同步源信息。MySQL 8.0.26 中添加。
 
-- [syseventlog.facility](/5/5.1/5.1.8/server-system-variables)：系统日志消息的功能。MySQL 8.0.13 中添加。
+- [syseventlog.facility](/5/5.1/5.1.8/server-system-variables)：syslog 消息的功能。MySQL 8.0.13 中添加。
 
-- [syseventlog.include_pid](/5/5.1/5.1.8/server-system-variables)：是否将服务器 PID 包含在系统日志消息中。MySQL 8.0.13 中添加。
+- [syseventlog.include_pid](/5/5.1/5.1.8/server-system-variables)：是否将服务器 PID 包含在 syslog 消息中。MySQL 8.0.13 中添加。
 
-- [syseventlog.tag](/5/5.1/5.1.8/server-system-variables)：在系统日志消息中标记服务器标识符。MySQL 8.0.13 中添加。
+- [syseventlog.tag](/5/5.1/5.1.8/server-system-variables)：在 syslog 消息中标记服务器标识符。MySQL 8.0.13 中添加。
 
 - [table_encryption_privilege_check](/5/5.1/5.1.8/server-system-variables)：启用 TABLE_ENCRYPTION_ADMIN 权限检查。MySQL 8.0.16 中添加。
 
@@ -890,7 +890,7 @@
 
 - [log_slow_slave_statements](/17/17.1/17.1.6/17.1.6.3/replication-options-replica)：使副本执行的慢语句写入慢查询日志。MySQL 8.0.26 中已弃用。
 
-- [log_syslog](/5/5.1/5.1.8/server-system-variables)：是否将错误日志写入系统日志。MySQL 8.0.2 中已弃用。
+- [log_syslog](/5/5.1/5.1.8/server-system-variables)：是否将错误日志写入 syslog。MySQL 8.0.2 中已弃用。
 
 - [master-info-file](/17/17.1/17.1.6/17.1.6.3/replication-options-replica)：记住源以及 I/O 复制线程在源二进制日志中的位置的文件的位置和名称。MySQL 8.0.18 中已弃用。
 
@@ -1042,9 +1042,9 @@ MySQL 8.0 中删除了以下系统变量、状态变量和选项。
 
 - log_error_filter_rules：错误日志的过滤规则。MySQL 8.0.4 中删除。
 
-- [log_syslog](/5/5.1/5.1.8/server-system-variables)：是否将错误日志写入系统日志。MySQL 8.0.13 中删除。
+- [log_syslog](/5/5.1/5.1.8/server-system-variables)：是否将错误日志写入 syslog。MySQL 8.0.13 中删除。
 
-- [log_syslog_facility](/5/5.1/5.1.8/server-system-variables)：用于系统日志消息的设施。MySQL 8.0.13 中删除。
+- [log_syslog_facility](/5/5.1/5.1.8/server-system-variables)：用于 syslog 消息的设施。MySQL 8.0.13 中删除。
 
 - [log_syslog_include_pid](/5/5.1/5.1.8/server-system-variables)：是否在 syslog 消息中包含服务器 pid。MySQL 8.0.13 中删除。
 
