@@ -40,6 +40,7 @@
   * [使用通用二进制文件在 Unix/Linux 上安装 MySQL](/2/2.2/binary-installation)
   * [在 Microsoft Windows 上安装 MySQL](/2/2.3/windows-installation)
     * [Microsoft Windows上的 MySQL 安装布局](/2/2.3/2.3.1/windows-installation-layout)
+    * [选择安装包](/2/2.3/2.3.2/windows-choosing-package)
   * [在 macOS 上安装 MySQL](/2/2.4/macos-installation)
   * [在 Linux 上安装 MySQL](/2/2.5/linux-installation)
   * [使用不可破坏的 Linux 网络（ULN）安装 MySQL](/2/2.6/uln-installation)

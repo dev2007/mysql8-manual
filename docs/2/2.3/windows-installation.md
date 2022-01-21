@@ -6,7 +6,7 @@
 
 [2.3.3 适用于 Windows 的 MySQL Installer](/2/2.3/2.3.3/mysql-installer)
 
-[2.3.4 使用 noinstall ZIP 存档在 Microsoft Windows 上安装 MySQL](/2/2.3/2.3.4/windows-install-archive)
+[2.3.4 使用免安装 ZIP 存档在 Microsoft Windows 上安装 MySQL](/2/2.3/2.3.4/windows-install-archive)
 
 [2.3.5 Microsoft Windows MySQL Server 安装故障排除](/2/2.3/2.3.5/windows-troubleshooting)
 
