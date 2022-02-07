@@ -1,10 +1,10 @@
 # 2.3 在 Microsoft Windows 上安装 MySQL
 
-[2.3.1 Microsoft Windows上的 MySQL 安装布局](/2/2.3/2.3.1/windows-installation-layout)
+[2.3.1 Microsoft Windows 上的 MySQL 安装布局](/2/2.3/2.3.1/windows-installation-layout)
 
 [2.3.2 选择安装包](/2/2.3/2.3.2/windows-choosing-package)
 
-[2.3.3 适用于 Windows 的 MySQL Installer](/2/2.3/2.3.3/mysql-installer)
+[2.3.3 适用于 Windows 的 MySQL 安装程序](/2/2.3/2.3.3/mysql-installer)
 
 [2.3.4 使用免安装 ZIP 存档在 Microsoft Windows 上安装 MySQL](/2/2.3/2.3.4/windows-install-archive)
 
@@ -20,13 +20,13 @@ MySQL 仅适用于 Microsoft Windows 64 位操作系统。有关支持的 Window
 
 在 Microsoft Windows 上安装 MySQL 有不同的方法。
 
-## MySQL Installer 方法
+## MySQL 安装程序方法
 
-最简单且推荐的方法是下载 MySQL Installer（适用于 Windows），让它安装并配置特定版本的 MySQL Server，如下所示：
+最简单且推荐的方法是下载 MySQL 安装程序（适用于 Windows），让它安装并配置特定版本的 MySQL Server，如下所示：
 
-1. 从 https://dev.mysql.com/downloads/installer/ 下载 MySQL Installer 并执行它。
+1. 从 https://dev.mysql.com/downloads/installer/ 下载 MySQL 安装程序并执行它。
 
-  ?> **注意** 与标准 MySQL Installer 不同，更小的 `web-community` 版本不捆绑任何 MySQL 应用程序，只下载你选择安装的 MySQL 产品。
+  ?> **注意** 与标准 MySQL 安装程序不同，更小的 `web-community` 版本不捆绑任何 MySQL 应用程序，只下载你选择安装的 MySQL 产品。
 
 2. 确定初始安装 MySQL 产品时使用的安装类型。例如：
 
@@ -36,7 +36,7 @@ MySQL 仅适用于 Microsoft Windows 64 位操作系统。有关支持的 Window
 
   - **自定义**（Custom）：允许你选择 MySQL Server 和其他 MySQL 产品的任何版本。
 
-3. 安装服务器实例（以及产品），然后按照屏幕上的说明开始服务器配置。有关每个单独步骤的更多信息，参阅[章节 2.3.3.3.1，“使用 MySQL Installer 配置 MySQL Server”](/2/2.3/2.3.3/2.3.3.3/mysql-installer-workflow?id=2.3.3.3.1-使用-MySQL-Installer-配置-MySQL-Server)。
+3. 安装服务器实例（以及产品），然后按照屏幕上的说明开始服务器配置。有关每个单独步骤的更多信息，参阅[章节 2.3.3.3.1，“使用 MySQL 安装程序配置 MySQL Server”](/2/2.3/2.3.3/2.3.3.3/mysql-installer-workflow?id=2.3.3.3.1-使用-MySQL-Installer-配置-MySQL-Server)。
 
   ?> **注意** 如果在系统上安装 MySQL Workbench，请考虑使用它来检查新的 MySQL Server 连接。默认情况下，程序在安装 MySQL 后自动启动。
 
@@ -54,19 +54,19 @@ MySQL 仅适用于 Microsoft Windows 64 位操作系统。有关支持的 Window
 
 - 要使用 ODBC 连接到 MySQL Server，必须具有 Connector/ODBC 驱动程序。有关更多信息，包括安装和配置说明，请参阅[MySQL Connector/ODBC 开发人员指南](https://dev.mysql.com/doc/connector-odbc/en/)。
 
-  ?> **注意** MySQL Installer 为你安装和配置 Connector/ODBC。
+  ?> **注意** MySQL 安装程序为你安装和配置 Connector/ODBC。
 
 - .NET 应用程序要使用 MySQL Server，您必须具有 Connector/NET 驱动程序。有关更多信息，包括安装和配置说明，请参阅 [MySQL Connector/NET 开发人员指南](https://dev.mysql.com/doc/connector-net/en/)。
 
-  ?> **注意** MySQL Installer 为你安装和配置 Connector/NET。
+  ?> **注意** MySQL 安装程序为你安装和配置 Connector/NET。
 
 适用于 Windows 的 MySQL 发行版可以从 https://dev.mysql.com/downloads/ 下载。参阅[章节 2.1.3，“如何获取 MySQL”](/2/2.1/2.1.3/gettting-mysql)。
 
-MySQL for Windows 有几种分发格式，详细信息如下。一般来说，您应该使用 MySQL Installer。它比旧的 MSI 包含更多的功能和 MySQL 产品，比压缩文件更易于使用，并且您不需要额外的工具来启动和运行 MySQL。MySQL 安装程序自动安装 MySQL Server 和其他 MySQL 产品，创建选项文件，启动服务器，并允许您创建默认用户帐户。有关选择软件包的更多信息，参阅[章节 2.3.2，“选择安装包”](/2/2.3/2.3.2/windows-choosing-package)。
+MySQL for Windows 有几种分发格式，详细信息如下。一般来说，您应该使用 MySQL 安装程序。它比旧的 MSI 包含更多的功能和 MySQL 产品，比压缩文件更易于使用，并且您不需要额外的工具来启动和运行 MySQL。MySQL 安装程序自动安装 MySQL Server 和其他 MySQL 产品，创建选项文件，启动服务器，并允许您创建默认用户帐户。有关选择软件包的更多信息，参阅[章节 2.3.2，“选择安装包”](/2/2.3/2.3.2/windows-choosing-package)。
 
-- MySQL Installer 发行版包括 MySQL Server 和其他 MySQL 产品，包括 MySQL Workbench 和 MySQL for Visual Studio。MySQL Installer 也可用于将来升级这些产品（参阅 https://dev.mysql.com/doc/mysql-compat-matrix/en/)。
+- MySQL 安装程序发行版包括 MySQL Server 和其他 MySQL 产品，包括 MySQL Workbench 和 Visual Studio 版 MySQL。MySQL 安装程序也可用于将来升级这些产品（参阅 https://dev.mysql.com/doc/mysql-compat-matrix/en/)。
 
-  有关使用 MySQL Installer 安装 MySQL 的说明，参阅[章节 2.3.3，“用于 Windows 的 MySQL Installer”](/2/2.3/2.3.3/mysql-installer)。
+  有关使用 MySQL 安装程序安装 MySQL 的说明，参阅[章节 2.3.3，“用于 Windows 的 MySQL 安装程序”](/2/2.3/2.3.3/mysql-installer)。
 
 - 标准二进制发行版（打包为压缩文件）包含您解包到所选位置的所有必要文件。此软件包包含完整 Windows MSI 安装程序包中的所有文件，但不包括安装程序。
 

@@ -2,27 +2,27 @@
 
 对于MySQL 8.0，在Windows上安装MySQL时有多种安装包格式可供选择。本节中描述的软件包格式为：
 
-- [MySQL Installer](/2/2.3/2.3.2/windows-choosing-package?id=MySQL-Installer)
+- [MySQL 安装程序](/2/2.3/2.3.2/windows-choosing-package?id=MySQL-安装程序)
 - [MySQL 免安装的 ZIP 压缩包](/2/2.3/2.3.2/windows-choosing-package?id=MySQL-免安装的-ZIP-压缩包)
-- [MySQL Docker 镜像]()
+- [MySQL Docker 镜像](/2/2.3/2.3.2/windows-choosing-package?id=MySQL-Docker-镜像)
 
 程序数据库（PDB）文件（文件扩展名为 `PDB`）提供了在出现问题时调试 MySQL 安装的信息。这些文件包含在 MySQL 的 ZIP 压缩包发行版中（但不在 MSI 发行版）。
 
-## MySQL Installer
+## MySQL 安装程序
 
-这个包的文件名类似于 `mysql-installer-community-8.0.28.0.msi` 或 `mysql-installer-commercial-8.0.28.0.msi`，并利用 MSI 自动安装 MySQL Server 和其他产品。MySQL Installer 下载更新并将其应用于自身以及每个已安装的产品。它还配置已安装的 MySQL Server（包括沙盒 InnoDB 集群测试设置）和 MySQL Router。大多数用户建议使用 MySQL Installer。
+这个包的文件名类似于 `mysql-installer-community-8.0.28.0.msi` 或 `mysql-installer-commercial-8.0.28.0.msi`，并利用 MSI 自动安装 MySQL Server 和其他产品。MySQL 安装程序下载更新并将其应用于自身以及每个已安装的产品。它还配置已安装的 MySQL Server（包括沙盒 InnoDB 集群测试设置）和 MySQL Router。大多数用户建议使用 MySQL 安装程序。
 
-MySQL Installer 可以安装和管理（添加、修改、升级和删除）许多其他 MySQL 产品，包括：
+MySQL 安装程序可以安装和管理（添加、修改、升级和删除）许多其他 MySQL 产品，包括：
 
-- 应用程序——MySQL Workbench、MySQL for Visual Studio、MySQL Shell 和 MySQL Router（参阅 https://dev.mysql.com/doc/mysql-compat-matrix/en/)
+- 应用程序——MySQL Workbench、Visual Studio 版 MySQL、MySQL Shell 和 MySQL Router（参阅 https://dev.mysql.com/doc/mysql-compat-matrix/en/)
 - 连接器——MySQL Connector/C++、MySQL Connector/NET、Connector/ODBC、MySQL Connector/Python、MySQL Connector/J、MySQL Connector/Node.js
 - 文档——MySQL 手册（PDF 格式）、示例和例子
 
-MySQL Installer 在所有支持 MySQL 的 Windows 版本上运行（参阅 https://www.mysql.com/support/supportedplatforms/database.html)。
+MySQL 安装程序在所有支持 MySQL 的 Windows 版本上运行（参阅 https://www.mysql.com/support/supportedplatforms/database.html)。
 
-?> **注意** 因为 MySQL Installer 不是 Microsoft Windows 的本机组件，并且依赖于 .NET，它不适用于像 Windows Server 的服务器核心版本这样的最小安装选项。
+?> **注意** 因为 MySQL 安装程序不是 Microsoft Windows 的本机组件，并且依赖于 .NET，它不适用于像 Windows Server 的服务器核心版本这样的最小安装选项。
 
-有关如何使用 MySQL Installer 安装 MySQL 的说明，参阅[章节 2.3.3，“Windows MySQL Installer”](/2/2.3/2.3.3/mysql-installer)。
+有关如何使用 MySQL 安装程序安装 MySQL 的说明，参阅[章节 2.3.3，“Windows MySQL 安装程序”](/2/2.3/2.3.3/mysql-installer)。
 
 ## MySQL 免安装的 ZIP 压缩包
 
