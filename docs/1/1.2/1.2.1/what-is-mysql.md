@@ -18,7 +18,7 @@ SQL 是由 `ANSI/ISO SQL` 标准定义的。自 1986 年以来，SQL 标准一�
 
 - MySQL 软件是开源的。
 
-开源意味着任何人都可以使用和修改软件。任何人都可以从互联网上下载 MySQL 软件并免费使用。如果你愿意，您可以研究源代码并对其进行更改以满足你的需要。MySQL 软件使用 GPL（GNU General Public License / GNU通用公共许可证），http://www.fsf.org/licenses/ ，以定义在不同情况下对软件可做和不可做的操作。如果你对 GPL 感到不舒服或者需要将 MySQL 代码嵌入到商业应用程序中，你可以从我们这里购买商业许可版本。有关更多信息，请参阅 MySQL 许可概述(http://www.mysql.com/company/legal/licensing/ )。
+开源意味着任何人都可以使用和修改软件。任何人都可以从互联网上下载 MySQL 软件并免费使用。如果你愿意，你可以研究源代码并对其进行更改以满足你的需要。MySQL 软件使用 GPL（GNU General Public License / GNU通用公共许可证），http://www.fsf.org/licenses/ ，以定义在不同情况下对软件可做和不可做的操作。如果你对 GPL 感到不舒服或者需要将 MySQL 代码嵌入到商业应用程序中，你可以从我们这里购买商业许可版本。有关更多信息，请参阅 MySQL 许可概述(http://www.mysql.com/company/legal/licensing/ )。
 
 - MySQ 数据库服务器非常快速、可靠、可扩展且易于使用。
 

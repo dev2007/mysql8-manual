@@ -1,6 +1,6 @@
 # 1.7.1 MySQL 对标准 SQL 的扩展
 
-MySQL Server 支持一些在其他 SQL DBMS 中不太可能找到的扩展。请注意，如果您你用它们，你的代码很可能无法移植到其他 SQL Server。在某些情况下，你可以使用以下形式的注释编写包含 MySQL 扩展但仍可移植的代码：
+MySQL Server 支持一些在其他 SQL DBMS 中不太可能找到的扩展。请注意，如果你你用它们，你的代码很可能无法移植到其他 SQL Server。在某些情况下，你可以使用以下形式的注释编写包含 MySQL 扩展但仍可移植的代码：
 
 ```bash
 /*! MySQL-specific code */

@@ -2,7 +2,7 @@
 
 [2.3.3.1 MySQL 安装程序初始设置](/2/2.3/2.3.3/2.3.3.1/mysql-installer-setup)
 
-[2.3.3.2 使用 MySQL 安装程序设置备用服务器路径](/2/2.3/2.3.3/2.3.3.2/mysql-installer-change-path-proc)
+[2.3.3.2 使用 MySQL 安装程序设置其他服务器路径](/2/2.3/2.3.3/2.3.3.2/mysql-installer-change-path-proc)
 
 [2.3.3.3 MySQL 安装程序的安装工作流](/2/2.3/2.3.3/2.3.3.3/mysql-installer-workflow)
 

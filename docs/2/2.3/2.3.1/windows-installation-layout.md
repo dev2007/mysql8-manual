@@ -1,6 +1,6 @@
 # 2.3.1 Microsoft Windows上的 MySQL 安装布局
 
-对于 Windows 上的 MySQL 8.0，默认安装目录是 `C:\Program Files\MySQL\MySQL Server 8.0`，用于使用 MySQL 安装程序执行的安装。如果使用 ZIP 存档方法安装 MySQL，您可能更喜欢在 `C:\MySQL` 中安装。但是，子目录的布局保持不变。
+对于 Windows 上的 MySQL 8.0，默认安装目录是 `C:\Program Files\MySQL\MySQL Server 8.0`，用于使用 MySQL 安装程序执行的安装。如果使用 ZIP 存档方法安装 MySQL，你可能更喜欢在 `C:\MySQL` 中安装。但是，子目录的布局保持不变。
 
 如下表所示的结构，所有文件都位于该父目录中。
 

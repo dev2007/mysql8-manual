@@ -108,13 +108,13 @@ $> tar xvf /path/to/mysql-VERSION-OS.tar.xz
 
  **tar** 命令创建名为 `mysql-VERSION-OS` 的目录。
 
- 要从压缩的 **tar** 文件二进制发行版安装MySQL，您的系统必须具有 GNU `XZ Utils` 来解压缩发行版，以及适合的 **tar** 来解压缩发行版。
+ 要从压缩的 **tar** 文件二进制发行版安装MySQL，你的系统必须具有 GNU `XZ Utils` 来解压缩发行版，以及适合的 **tar** 来解压缩发行版。
 
  ?> **注意** 在 MySQL Server 8.0.12 中，压缩算法从 Gzip 更改为 XZ；通用二进制文件的文件扩展名从 .tar.gz 变更为 .tar.xz。
 
- GNU tar 是已知可用。一些操作系统提供的标准 **tar** 无法解压缩 MySQL 发行版中的长文件名。您应该下载并安装 GNU **tar**，或者如果可用，使用预安装的 GNU tar 版本。通常，这可以作为 **gnutar**、**gtar** 或者从 GNU 中或从 自由软件目录（如/usr/sfw/bin或/usr/local/bin）中获得的 **tar**。GNU **tar** 可从以下网址获得：http://www.gnu.org/software/tar/ 。
+ GNU tar 是已知可用。一些操作系统提供的标准 **tar** 无法解压缩 MySQL 发行版中的长文件名。你应该下载并安装 GNU **tar**，或者如果可用，使用预安装的 GNU tar 版本。通常，这可以作为 **gnutar**、**gtar** 或者从 GNU 中或从 自由软件目录（如/usr/sfw/bin或/usr/local/bin）中获得的 **tar**。GNU **tar** 可从以下网址获得：http://www.gnu.org/software/tar/ 。
 
- 如果您的 **tar** 不支持 `xz` 格式，则使用 **xz** 命令解包发行版，使用 **tar** 解包发行版。用以下替代命令替换前面的 **tar** 命令以解压缩和提取分发：
+ 如果你的 **tar** 不支持 `xz` 格式，则使用 **xz** 命令解包发行版，使用 **tar** 解包发行版。用以下替代命令替换前面的 **tar** 命令以解压缩和提取分发：
 
  ```bash
  $> xz -dc /path/to/mysql-VERSION-OS.tar.xz | tar x
@@ -126,7 +126,7 @@ $> tar xvf /path/to/mysql-VERSION-OS.tar.xz
 $> ln -s full-path-to-mysql-VERSION-OS mysql
 ```
 
-`ln` 命令生成指向安装目录的符号链接。这使您能够更容易地将其称为 `/usr/local/mysql`。为了避免在使用 MySQL 时必须始终键入客户端程序的路径名，可以将 `/usr/local/MySQL/bin` 目录添加到 `PATH` 变量中：
+`ln` 命令生成指向安装目录的符号链接。这使你能够更容易地将其称为 `/usr/local/mysql`。为了避免在使用 MySQL 时必须始终键入客户端程序的路径名，可以将 `/usr/local/MySQL/bin` 目录添加到 `PATH` 变量中：
 
 ```bash
 $> export PATH=$PATH:/usr/local/mysql/bin

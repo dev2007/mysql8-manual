@@ -56,19 +56,19 @@ MySQL 仅适用于 Microsoft Windows 64 位操作系统。有关支持的 Window
 
   ?> **注意** MySQL 安装程序为你安装和配置 Connector/ODBC。
 
-- .NET 应用程序要使用 MySQL Server，您必须具有 Connector/NET 驱动程序。有关更多信息，包括安装和配置说明，请参阅 [MySQL Connector/NET 开发人员指南](https://dev.mysql.com/doc/connector-net/en/)。
+- .NET 应用程序要使用 MySQL Server，你必须具有 Connector/NET 驱动程序。有关更多信息，包括安装和配置说明，请参阅 [MySQL Connector/NET 开发人员指南](https://dev.mysql.com/doc/connector-net/en/)。
 
   ?> **注意** MySQL 安装程序为你安装和配置 Connector/NET。
 
 适用于 Windows 的 MySQL 发行版可以从 https://dev.mysql.com/downloads/ 下载。参阅[章节 2.1.3，“如何获取 MySQL”](/2/2.1/2.1.3/gettting-mysql)。
 
-MySQL for Windows 有几种分发格式，详细信息如下。一般来说，您应该使用 MySQL 安装程序。它比旧的 MSI 包含更多的功能和 MySQL 产品，比压缩文件更易于使用，并且您不需要额外的工具来启动和运行 MySQL。MySQL 安装程序自动安装 MySQL Server 和其他 MySQL 产品，创建选项文件，启动服务器，并允许您创建默认用户帐户。有关选择软件包的更多信息，参阅[章节 2.3.2，“选择安装包”](/2/2.3/2.3.2/windows-choosing-package)。
+MySQL for Windows 有几种分发格式，详细信息如下。一般来说，你应该使用 MySQL 安装程序。它比旧的 MSI 包含更多的功能和 MySQL 产品，比压缩文件更易于使用，并且你不需要额外的工具来启动和运行 MySQL。MySQL 安装程序自动安装 MySQL Server 和其他 MySQL 产品，创建选项文件，启动服务器，并允许你创建默认用户帐户。有关选择软件包的更多信息，参阅[章节 2.3.2，“选择安装包”](/2/2.3/2.3.2/windows-choosing-package)。
 
 - MySQL 安装程序发行版包括 MySQL Server 和其他 MySQL 产品，包括 MySQL Workbench 和 Visual Studio 版 MySQL。MySQL 安装程序也可用于将来升级这些产品（参阅 https://dev.mysql.com/doc/mysql-compat-matrix/en/)。
 
   有关使用 MySQL 安装程序安装 MySQL 的说明，参阅[章节 2.3.3，“用于 Windows 的 MySQL 安装程序”](/2/2.3/2.3.3/mysql-installer)。
 
-- 标准二进制发行版（打包为压缩文件）包含您解包到所选位置的所有必要文件。此软件包包含完整 Windows MSI 安装程序包中的所有文件，但不包括安装程序。
+- 标准二进制发行版（打包为压缩文件）包含你解包到所选位置的所有必要文件。此软件包包含完整 Windows MSI 安装程序包中的所有文件，但不包括安装程序。
 
   有关使用压缩文件安装 MySQL 的说明，参阅[章节 2.3.4，“使用 noinstall ZIP 存档在 Microsoft Windows上 安装 MySQL”](/2/2.3/2.3.4/windows-install-archive)
 
@@ -86,7 +86,7 @@ MySQL for Windows 有几种分发格式，详细信息如下。一般来说，�
 
   包含 MySQL 数据和临时表的目录上的病毒扫描软件（如 Norton/Symantec Anti-Virus）可能会导致 MySQL 性能和病毒扫描软件错误识别包含垃圾邮件的文件内容方面的问题。这是由于病毒扫描软件使用的指纹机制，以及 MySQL 快速更新不同文件的方式，这可能被认为是一种潜在的安全风险。
 
-  安装 MySQL Server 后，建议您在用于存储 MySQL 表数据的主目录（[`datadir`](/5/5.1/5.1.8/server-system-variables)）上禁用病毒扫描。病毒扫描软件中通常内置一个系统，以便忽略特定目录。
+  安装 MySQL Server 后，建议你在用于存储 MySQL 表数据的主目录（[`datadir`](/5/5.1/5.1.8/server-system-variables)）上禁用病毒扫描。病毒扫描软件中通常内置一个系统，以便忽略特定目录。
 
   此外，默认情况下，MySQL 在标准 Windows 临时目录中创建临时文件。要防止临时文件也被扫描，请为 MySQL 临时文件配置单独的临时目录，并将此目录添加到病毒扫描排除列表中。为此，请将 [`tmpdir`](/5/5.1/5.1.7/server-options) 参数的配置选项添加到 `my.ini` 配置文件。有关更多信息，参阅[章节 2.3.4.2，“创建选项文件”](/2/2.3/2.3.4/2.3.4.2/windows-create-option-file)。
 

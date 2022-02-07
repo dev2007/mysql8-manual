@@ -49,6 +49,6 @@
 
 ![Kleopatra: the Decrypt and Verify Results Dialog: Bad](../../../_media/gnupg-kleopatra-decrypt-invalid-sig.png)
 
-[章节 2.1.4.2，“使用 GnuPG 进行签名检查”](/2/2.1/2.1.4/2.1.4.2/checking-gpg-signature)，部分解释了为什么您没有看到绿色良好的签名结果。
+[章节 2.1.4.2，“使用 GnuPG 进行签名检查”](/2/2.1/2.1.4/2.1.4.2/checking-gpg-signature)，部分解释了为什么你没有看到绿色良好的签名结果。
 
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/checking-gpg-signature-windows.html)

@@ -42,6 +42,8 @@
     * [Microsoft Windows上的 MySQL 安装布局](/2/2.3/2.3.1/windows-installation-layout)
     * [选择安装包](/2/2.3/2.3.2/windows-choosing-package)
     * [Windows 版 MySQL 安装程序](/2/2.3/2.3.3/mysql-installer)
+      * [MySQL 安装程序初始设置](/2/2.3/2.3.3/2.3.3.1/mysql-installer-setup)
+      * [使用 MySQL 安装程序设置其他服务器路径](/2/2.3/2.3.3/2.3.3.2/mysql-installer-change-path-proc)
   * [在 macOS 上安装 MySQL](/2/2.4/macos-installation)
   * [在 Linux 上安装 MySQL](/2/2.5/linux-installation)
   * [使用不可破坏的 Linux 网络（ULN）安装 MySQL](/2/2.6/uln-installation)
