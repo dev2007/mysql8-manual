@@ -6,7 +6,7 @@
 
 [2.3.3.3 MySQL 安装程序的安装工作流](/2/2.3/2.3.3/2.3.3.3/mysql-installer-workflow)
 
-[2.3.3.4 MySQL 安装程序产品目录和仪表板](/2/2.3/2.3.3/2.3.3.4/mysql-installer-catalog-dashboard)
+[2.3.3.4 MySQL 安装程序产品目录和面板](/2/2.3/2.3.3/2.3.3.4/mysql-installer-catalog-dashboard)
 
 [2.3.3.5 MySQLInstallerConsole参考](/2/2.3/2.3.3/2.3.3.5/MySQLInstallerConsole)
 
@@ -30,7 +30,7 @@ MySQL 安装程序是一个独立的应用程序，旨在减轻安装和配置�
 
 MySQL 安装程序需要 Microsoft .NET Framework 4.5.2 或更高版本。如果主机上未安装此版本，可以访问 [Microsoft 网站](https://www.microsoft.com/en-us/download/details.aspx?id=42643)下载。
 
-需要互联网连接才能下载包含最新 MySQL 产品元数据的清单，这些产品不是完整捆绑包的一部分。MySQL 安装程序在你第一次启动应用程序时尝试下载清单，然后以可配置的间隔定期下载（参阅 [MySQL 安装程序选项](/2/2.3/2.3.3/2.3.3.4/mysql-installer-catalog-dashboard)）。或者，你可以通过单击 [MySQL 安装程序仪表板](/2/2.3/2.3.3/2.3.3.4/mysql-installer-catalog-dashboard?id=MySQL-安装程序面板)中的 `Catalog` 手动检索更新的清单。
+需要互联网连接才能下载包含最新 MySQL 产品元数据的清单，这些产品不是完整捆绑包的一部分。MySQL 安装程序在你第一次启动应用程序时尝试下载清单，然后以可配置的间隔定期下载（参阅 [MySQL 安装程序选项](/2/2.3/2.3.3/2.3.3.4/mysql-installer-catalog-dashboard)）。或者，你可以通过单击 [MySQL 安装程序面板](/2/2.3/2.3.3/2.3.3.4/mysql-installer-catalog-dashboard?id=MySQL-安装程序面板)中的 `Catalog` 手动检索更新的清单。
 
 ?> **注意** 如果第一次或后续清单下载失败，则会记录一个错误，并且你在会话期间可能无法访问 MySQL 产品。MySQL 安装程序会在每次启动时尝试下载清单，直到更新初始清单结构。有关查找产品的帮助，参阅[查找要安装的产品](/2/2.3/2.3.3/2.3.3.4/mysql-installer-catalog-dashboard?id=查找要安装的产品)。
 

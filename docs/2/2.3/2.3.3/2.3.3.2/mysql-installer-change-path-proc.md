@@ -15,7 +15,7 @@
 
 2. 单击 `Advanced Options（高级选项）` 打开一个对话框，可以在其中输入替代路径名。验证路径名后，单击 `Next（下一步）` 继续执行配置步骤。
 
-图 2.9 更改 MySQL 服务器的路径
+**图 2.9 更改 MySQL 服务器的路径**
 
 ![Change MySQL Server Path](../../../_media/mi-path-advanced-options-annotated.png)
 

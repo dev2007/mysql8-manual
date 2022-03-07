@@ -7,7 +7,7 @@
 
 当你第一次下载 MySQL 安装程序时，安装向导会指导你完成 MySQL 产品的初始安装。如下图所示，初始设置是整个流程中的一次性活动。MySQL 安装程序在初始安装期间检测主机上安装的现有 MySQL产品，并将其添加到要管理的产品列表中。
 
-图 2.7 MySQL 安装程序安装处理过程
+**图 2.7 MySQL 安装程序安装处理过程**
 
 ![MySQL 安装程序Process Overview](../../../_media/mi-process-overview.png)
 
@@ -68,7 +68,7 @@ MySQL 安装程序在初始设置期间将配置文件（稍后介绍）提取�
 
 MySQL 安装程序使用 `package-rules.xml` 文件，以确定主机上是否安装了每个产品的必备软件。当需求检查失败时，MySQL 安装程序将显示 `Check Requirements（检查需求）` 步骤，以帮助你更新主机。每次下载新产品（或版本）进行安装时，都会评估需求。下图确定并描述了该步骤的关键领域。
 
-图 2.8 检查需求
+**图 2.8 检查需求**
 
 ![Check Requirements](../../../_media/mi-requirements-annotated.png)
 
