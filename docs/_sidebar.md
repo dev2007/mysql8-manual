@@ -45,6 +45,7 @@
       * [MySQL 安装程序初始设置](/2/2.3/2.3.3/2.3.3.1/mysql-installer-setup)
       * [使用 MySQL 安装程序设置其他服务器路径](/2/2.3/2.3.3/2.3.3.2/mysql-installer-change-path-proc)
       * [MySQL 安装程序的安装工作流](/2/2.3/2.3.3/2.3.3.3/mysql-installer-workflow)
+      * [MySQL 安装程序产品目录和面板](/2/2.3/2.3.3/2.3.3.4/mysql-installer-catalog-dashboard)
   * [在 macOS 上安装 MySQL](/2/2.4/macos-installation)
   * [在 Linux 上安装 MySQL](/2/2.5/linux-installation)
   * [使用不可破坏的 Linux 网络（ULN）安装 MySQL](/2/2.6/uln-installation)
