@@ -8,7 +8,7 @@
 
 [2.3.3.4 MySQL 安装程序产品目录和面板](/2/2.3/2.3.3/2.3.3.4/mysql-installer-catalog-dashboard)
 
-[2.3.3.5 MySQLInstallerConsole参考](/2/2.3/2.3.3/2.3.3.5/MySQLInstallerConsole)
+[2.3.3.5 MySQL 安装程序控制台参考](/2/2.3/2.3.3/2.3.3.5/MySQLInstallerConsole)
 
 MySQL 安装程序是一个独立的应用程序，旨在减轻安装和配置在 Microsoft Windows 上运行的 MySQL 产品的复杂性。它支持以下 MySQL 产品：
 
