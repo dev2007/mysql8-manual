@@ -40,4 +40,41 @@ Windows 上的文件名不区分大小写，因此 MySQL 数据库和表名在 W
 datadir="C:/私たちのプロジェクトのデータ"
 ```
 
+同样的限制也适用于 SQL 语句中引用的目录和文件名，例如 [LOAD DATA](/13/13.2/13.2.7/loda-data)中的数据文件路径名。
+
+- \ 路径分隔字符
+
+Windows 中的路径名组件由 \ 字符分隔，这也是 MySQL 中的转义字符。如果你使用的是 [LOAD DATA](/13/13.2/13.2.7/loda-data) 或 [SELECT ... INTO OUTFILE](/13/13.2/13.2.10/13.2.10.1/select-into) 中，请使用带有 / 字符的 Unix 风格文件名：
+
+```bash
+mysql> LOAD DATA INFILE 'C:/tmp/skr.txt' INTO TABLE skr;
+mysql> SELECT * INTO OUTFILE 'C:/tmp/skr.txt' FROM skr;
+```
+
+或者，你必须将 \ 字符重复：
+
+```bash
+mysql> LOAD DATA INFILE 'C:\\tmp\\skr.txt' INTO TABLE skr;
+mysql> SELECT * INTO OUTFILE 'C:\\tmp\\skr.txt' FROM skr;
+```
+
+- 管道问题
+
+在 Windows 命令行提示下，管道无法可靠工作。如果管道包含字符 ^Z/CHAR(24)，Windows 会认为它遇到了文件结尾并中止程序。
+
+当你尝试应用二进制日志时，这主要是一个问题，如下所示：
+
+```bash
+C:\> mysqlbinlog binary_log_file | mysql --user=root
+```
+
+如果应用日志时遇到问题，并怀疑是由于 ^Z/CHAR(24) 字符造成的，可以使用以下解决方法：
+
+```bash
+C:\> mysqlbinlog binary_log_file --result-file=/tmp/bin.sql
+C:\> mysql --user=root --execute "source /tmp/bin.sql"
+```
+
+后一个命令还可用于可靠地读取可能包含二进制数据的任何 SQL 文件。
+
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/windows-restrictions.html)

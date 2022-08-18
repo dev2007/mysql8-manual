@@ -47,6 +47,7 @@
       * [MySQL 安装程序的安装工作流](/2/2.3/2.3.3/2.3.3.3/mysql-installer-workflow)
       * [MySQL 安装程序产品目录和面板](/2/2.3/2.3.3/2.3.3.4/mysql-installer-catalog-dashboard)
       * [MySQL 安装程序控制台参考](/2/2.3/2.3.3/2.3.3.5/MySQLInstallerConsole)
+      * [Windows 平台限制](/2/2.3/2.3.7/windows-restrictions)
     * [使用非安装压缩包在 Microsoft Windows 上安装 MySQL](/2/2.3/2.3.4/windows-install-archive)
   * [在 macOS 上安装 MySQL](/2/2.4/macos-installation)
   * [在 Linux 上安装 MySQL](/2/2.5/linux-installation)
