@@ -19,6 +19,4 @@
 
 ## 发布
 
-发布网站 https://manual.mysql.shiyueshuyi.xyz
-
-翻译完成后再考虑搬移到`看云`等平台上。
+发布网站 https://mysql.bookhub.zone
