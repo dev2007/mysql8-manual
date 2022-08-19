@@ -6,7 +6,7 @@
 
 [2.3.3 适用于 Windows 的 MySQL 安装程序](/2/2.3/2.3.3/mysql-installer)
 
-[2.3.4 使用免安装 ZIP 存档在 Microsoft Windows 上安装 MySQL](/2/2.3/2.3.4/windows-install-archive)
+[2.3.4 使用免安装 ZIP 压缩包在 Microsoft Windows 上安装 MySQL](/2/2.3/2.3.4/windows-install-archive)
 
 [2.3.5 Microsoft Windows MySQL Server 安装故障排除](/2/2.3/2.3.5/windows-troubleshooting)
 
@@ -70,7 +70,7 @@ MySQL for Windows 有几种分发格式，详细信息如下。一般来说，�
 
 - 标准二进制发行版（打包为压缩文件）包含你解包到所选位置的所有必要文件。此软件包包含完整 Windows MSI 安装程序包中的所有文件，但不包括安装程序。
 
-  有关使用压缩文件安装 MySQL 的说明，参阅[章节 2.3.4，“使用 noinstall ZIP 存档在 Microsoft Windows上 安装 MySQL”](/2/2.3/2.3.4/windows-install-archive)
+  有关使用压缩文件安装 MySQL 的说明，参阅[章节 2.3.4，“使用免安装 ZIP 压缩包在 Microsoft Windows上 安装 MySQL”](/2/2.3/2.3.4/windows-install-archive)
 
 - 源代码分发格式包含用于使用 VisualStudio 编译器系统构建可执行文件的所有代码和支持文件。
 
