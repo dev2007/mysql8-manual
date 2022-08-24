@@ -61,6 +61,8 @@
     * [Windows 安装后程序](/2/2.3/2.3.6/windows-postinstallation)
     * [Windows 平台限制](/2/2.3/2.3.7/windows-restrictions)
   * [在 macOS 上安装 MySQL](/2/2.4/macos-installation)
+    * [在 macOS 上安装 MySQL 的通用说明](/2/2.4/2.4.1/macos-installation-notes)
+    * [使用本机软件包在 macOS 上安装 MySQL](/2/2.4/2.4.2/macos-installation-pkg)
   * [在 Linux 上安装 MySQL](/2/2.5/linux-installation)
   * [使用不可破坏的 Linux 网络（ULN）安装 MySQL](/2/2.6/uln-installation)
   * [在 Solaris 上安装 MySQL](/2/2.7/solaris-installation)

@@ -19,4 +19,4 @@
 
 ## 发布
 
-发布网站 https://mysql.bookhub.zone
+发布网站 https://mysql.bookhub.tech
