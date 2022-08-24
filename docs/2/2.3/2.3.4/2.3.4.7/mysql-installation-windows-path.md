@@ -16,6 +16,4 @@
 
     通过单击“`OK`”关闭此对话框，并依次关闭每个对话框，直到所有打开的对话框都已关闭。新的 `PATH` 值现在应该可用于您打开的任何新命令 shell，允许你通过在 DOS 提示符下从系统上的任何目录键入其名称来调用任何 MySQL 可执行程序，而无需提供路径。这包括服务器、[mysql](/4/4.5/4.5.1/mysql) 客户端和所有 MySQL 命令行实用程序，如 [mysqladmin](/4/4.5/4.5.2/mysqladmin) 和 [mysqldump](/4/4.5/4.5.4/mysqldump)。
 
-如果在同一台计算机上运行多个 MySQL 服务器，则不应将MySQL `bin` 目录添加到 Windows `PATH`。
-
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/mysql-installation-windows-path.html)

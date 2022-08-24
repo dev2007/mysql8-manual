@@ -55,6 +55,8 @@
       * [首次启动服务器](/2/2.3/2.3.4/2.3.4.5/windows-server-first-start)
       * [从 Windows 命令行启动 MySQL](/2/2.3/2.3.4/2.3.4.6/windows-start-command-line)
       * [自定义 MySQL 工具的路径](/2/2.3/2.3.4/2.3.4.7/mysql-installation-windows-path)
+      * [将 MySQL 作为 Windows 服务启动](/2/2.3/2.3.4/2.3.4.8/windows-start-service)
+      * [测试 MySQL 安装](/2/2.3/2.3.4/2.3.4.9/windows-testing)
     * [Microsoft Windows MySQL 服务器安装故障排除](/2/2.3/2.3.5/windows-troubleshooting)
     * [Windows 安装后程序](/2/2.3/2.3.6/windows-postinstallation)
     * [Windows 平台限制](/2/2.3/2.3.7/windows-restrictions)
