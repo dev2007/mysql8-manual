@@ -20,11 +20,11 @@
 
 **图 2.13 MySQL 包安装程序向导：安装类型**
 
-![MySQL Package Installer Wizard: Installation Type](../../../_media/mac-installer-installation-type-standard.png)
+![MySQL Package Installer Wizard: Installation Type](../../_media/mac-installer-installation-type-standard.png)
 
 **图2.14 MySQL 包安装程序向导：自定义**
 
-![MySQL Package Installer Wizard: Customize](../../../_media/mac-installer-installation-type-customize.png)
+![MySQL Package Installer Wizard: Customize](../../_media/mac-installer-installation-type-customize.png)
 
 4. 单击`安装`以安装 MySQL 服务器。如果升级当前的 MySQL 服务器安装，安装过程在此结束，否则，请按照向导的其他配置步骤进行新的MySQL Server安装。
 
@@ -34,7 +34,7 @@
 
 **图 2.15 MySQL 包安装程序向导：选择密码加密类型**
 
-![MySQL Package Installer Wizard: Choose a Password Encryption Type](../../../_media/mac-installer-configuration-password-type.png)
+![MySQL Package Installer Wizard: Choose a Password Encryption Type](../../_media/mac-installer-configuration-password-type.png)
 
 选择传统密码机制会更改生成的 launchd 文件，以在 `ProgramArguments` 下设置 [--default_authentication_plugin=mysql_native_password](/5/5.1/5.1.8/server-system-variables)。选择强密码加密不会设置 `--default_authentication_plugin`，因为使用了默认的 MySQL 服务器值就是 `caching_sha2_password`。
 
@@ -42,13 +42,13 @@
 
 **图 2.16 MySQL 包安装程序向导：定义根密码**
 
-![MySQL Package Installer Wizard: Define Root Password](../../../_media/mac-installer-configuration-password-define.png)
+![MySQL Package Installer Wizard: Define Root Password](../../_media/mac-installer-configuration-password-define.png)
 
 8. `总结`是最后一步，它引用了成功和完整的 MySQL 服务器安装。`关闭`向导。
 
 **图 2.17 MySQL 包安装向导：总结**
 
-![MySQL Package Installer Wizard: Summary](../../../_media/mac-installer-summary.png)
+![MySQL Package Installer Wizard: Summary](../../_media/mac-installer-summary.png)
 
 MySQL 服务器现已安装。如果你选择不启动 MySQL，则从命令行使用 launchctl 或使用 MySQL 首选项面板单击“开始”启动MySQL。有关更多信息，参阅[章节 2.4.3，“安装和使用 MySQL 启动守护程序”](/2/2.4/2.4.3/macos-installation-launchd)和[章节 2.2.4，“安装并使用 MySQL 首选项面板”](/2/2.4/2.4.4/macos-installation-prefpane)。使用 MySQL 首选项面板或 launchd 将 MySQL 配置为在启动时自动启动。
 

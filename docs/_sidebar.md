@@ -63,6 +63,8 @@
   * [在 macOS 上安装 MySQL](/2/2.4/macos-installation)
     * [在 macOS 上安装 MySQL 的通用说明](/2/2.4/2.4.1/macos-installation-notes)
     * [使用本机软件包在 macOS 上安装 MySQL](/2/2.4/2.4.2/macos-installation-pkg)
+    * [安装和使用 MySQL 启动守护程序](/2/2.4/2.4.3/macos-installation-launchd)
+    * [安装和使用 MySQL 首选项面板](/2/2.4/2.4.4/macos-installation-prefpane)
   * [在 Linux 上安装 MySQL](/2/2.5/linux-installation)
   * [使用不可破坏的 Linux 网络（ULN）安装 MySQL](/2/2.6/uln-installation)
   * [在 Solaris 上安装 MySQL](/2/2.7/solaris-installation)
