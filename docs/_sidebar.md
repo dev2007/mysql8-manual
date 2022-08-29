@@ -69,6 +69,7 @@
     * [使用 MySQL Yum 存储库在 Linux 上安装 MySQL](/2/2.5/2.5.1/linux-installation-yum-repo)
     * [使用 MySQL APT 存储库在 Linux 上安装 MySQL](/2/2.5/2.5.2/linux-installation-apt-repo)
     * [使用 MySQL SLES 仓库在 Linux 上安装 MySQL](/2/2.5/2.5.3/linux-installation-sles-repo)
+    * [使用 Oracle 的 RPM 包在 Linux 上安装 MySQL](/2/2.5/2.5.4/linux-installation-rpm)
   * [使用不可破坏的 Linux 网络（ULN）安装 MySQL](/2/2.6/uln-installation)
   * [在 Solaris 上安装 MySQL](/2/2.7/solaris-installation)
   * [在 FreeBSD 上安装 MySQL](/2/2.8/freebsd-installation)
