@@ -47,12 +47,13 @@
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
   <script>
     const gitalk = new Gitalk({
+      proxy: 'https://cors-server.bookhub.tech/github_access_token',
       clientID: '52409e38c79dc585daf6',
       clientSecret: 'b0488376f290b732da76de711ceda194166d6058',
       repo: 'gitalk-comment',
       owner: 'dev2007',
       admin: ['dev2007'],
-      id: MD5(location.pathname),
+      id: MD5(location.href),
       // facebook-like distraction free mode
       distractionFreeMode: false
     })
