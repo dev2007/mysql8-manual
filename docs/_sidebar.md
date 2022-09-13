@@ -73,6 +73,7 @@
     * [使用 Oracle 的 Debian 软件包在 Linux上 安装 MySQL](/2/2.5/2.5.5/linux-installation-debian)
     * [使用 Docker 在 Linux 上部署 MySQL](/2/2.5/2.5.6/linux-installation-docker)
       * [使用 Docker 部署 MySQL 服务器的基本步骤](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started)
+      * [关于使用 Docker 部署 MySQL 服务的更多主题](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics)
   * [使用不可破坏的 Linux 网络（ULN）安装 MySQL](/2/2.6/uln-installation)
   * [在 Solaris 上安装 MySQL](/2/2.7/solaris-installation)
   * [在 FreeBSD 上安装 MySQL](/2/2.8/freebsd-installation)
