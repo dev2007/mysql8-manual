@@ -46,7 +46,7 @@ CREATE TABLE t1(a INT, KEY (a)) /*!50110 KEY_BLOCK_SIZE=1024 */;
 
   - [`SET`](/13/13.7/13.7.6/13.7.6.1/set-variable) 语句。参阅[章节 13.7.6.1，“变量赋值的 SET 语法”](/13/13.7/13.7.6/13.7.6.1/set-variable)。
 
-  - [`SHOW`](/13/13.7/13.7.7/show) 语句。参阅[章节 13.7.7，“SHOW 语句”](/13/13.7/13.7.7/show)。通过使用 `SELECT` 查询 `INFORMATION_SCHEMA`，可以以更标准的方式获得许多特定于 MySQL 的 [`SHOW`](/13/13.7/13.7.7/show) 语句生成的信息。参阅 [章节 26，INFORMATION_SCHEMA 表](/26/information-schema)。
+  - [`SHOW`](/13/13.7/13.7.7/show) 语句。参阅[章节 13.7.7，“SHOW 语句”](/13/13.7/13.7.7/show)。通过使用 `SELECT` 查询 `INFORMATION_SCHEMA`，可以以更标准的方式获得许多特定于 MySQL 的 [`SHOW`](/13/13.7/13.7.7/show) 语句生成的信息。参阅 [章节 26，“INFORMATION_SCHEMA 表”](/26/information-schema)。
 
   - [`LOAD DATA`](/13/13.2/13.2.7/load-data) 的使用。在许多情况下，此语法与 Oracle 的 [`LOAD DATA`](/13/13.2/13.2.7/load-data) 兼容。参阅[章节 13.2.7，“LOAD DATA 语句”](/13/13.2/13.2.7/load-data)。
 

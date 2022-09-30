@@ -37,7 +37,9 @@ macOS 使用启动守护进程来自动启动、停止和管理进程和应用�
 </plist>
 ```
 
-?> **注意** 一些用户报告说，添加 plist DOCTYPE 声明会导致 launchd 操作失败，尽管它通过了 lint 检查。我们怀疑这是复制粘贴错误。包含上述代码段的文件的 md5 校验和为 `d925f05f6d1b6ee5ce5451b596d6baed`。
+::: tip 注意
+一些用户报告说，添加 plist DOCTYPE 声明会导致 launchd 操作失败，尽管它通过了 lint 检查。我们怀疑这是复制粘贴错误。包含上述代码段的文件的 md5 校验和为 `d925f05f6d1b6ee5ce5451b596d6baed`。
+:::
 
 要启用launchd服务，你可以：
 
@@ -66,7 +68,9 @@ $> sudo launchctl load -F com.oracle.oss.mysql.mysqld.plist
 $> sudo launchctl load -w com.oracle.oss.mysql.mysqld.plist
 ```
 
-?> **注意** 升级 MySQL 服务器时，launchd 安装过程会删除 MySQL 服务器 5.7.7 及以下版本中安装的旧启动项。升级还将替换现有的名为 `com.oracle.oss.mysql.mysqld.plist` 的 launchd 文件。
+::: tip 注意
+升级 MySQL 服务器时，launchd 安装过程会删除 MySQL 服务器 5.7.7 及以下版本中安装的旧启动项。升级还将替换现有的名为 `com.oracle.oss.mysql.mysqld.plist` 的 launchd 文件。
+:::
 
 更多 launchd 相关信息：
 

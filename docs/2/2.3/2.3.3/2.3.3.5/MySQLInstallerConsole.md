@@ -59,7 +59,9 @@ Upgrade   - Upgrades one or more of your installed programs.
 
 [MySQLInstallerConsole](https://dev.mysql.com/doc/refman/8.0/en/MySQLInstallerConsole.html) 支持以下命令选项：
 
-?> **注意** 包含冒号（:）的配置块值必须用引号括起来。例如，`installdir=“C:\MySQL\MySQL Server 8.0”`。
+::: tip 注意
+包含冒号（:）的配置块值必须用引号括起来。例如，`installdir=“C:\MySQL\MySQL Server 8.0”`。
+:::
 
 - configure [***product1***]:[***setting***]=[***value***]; [***product2***]:[***setting***]=[***value***]; [...]
 
@@ -108,7 +110,9 @@ Upgrade   - Upgrades one or more of your installed programs.
       - `Full`：安装全部东西。
       - `Custom`：安装用户选择的产品。此为默认选项。
 
-      ?> **注意** 只有在未安装其他 MySQL 产品时，非自定义安装类型才有效。
+      ::: tip 注意
+      只有在未安装其他 MySQL 产品时，非自定义安装类型才有效。
+      :::
 
   `-showsettings`
 
@@ -132,7 +136,9 @@ Upgrade   - Upgrades one or more of your installed programs.
 
     包含冒号（:）的配置块值必须用引号括起来。例如，`installdir=“C:\MySQL\MySQL Server 8.0”`。每个产品只能定义一个配置类型块。应为在产品安装期间创建的每个用户定义一个用户块。
 
-    ?> **注意** 重新配置产品时不支持 `user` 类型密钥。
+    ::: tip 注意
+    重新配置产品时不支持 `user` 类型密钥。
+    :::
 
   ```bash
   C:\> MySQLInstallerConsole install server;5.6.25:*:port=3307;serverid=2:type=user;username=foo;password=bar;role=DBManager

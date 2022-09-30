@@ -2,9 +2,9 @@
 
 验证包的完整性和真实性的另一种方法是使用加密签名。这比使用 [MD5 校验和](/2/2.1/2.1.4/2.1.4.1/verifying-md5-checksum)更可靠，但需要更多的工作。
 
-我们用 **GnuPG**（GNU 隐私保护）签署 MySQL 可下载包。**GnuPG** 是 Phil Zimmermann 著名的 Pretty Good Privacy（**PGP**）的开源替代方案。大多数 Linux 发行版默认安装了 **GnuPG**。否则，参阅 http://www.gnupg.org/ 有关 **GnuPG** 以及如何获取和安装它的更多信息。
+我们用 **GnuPG**（GNU 隐私保护）签署 MySQL 可下载包。**GnuPG** 是 Phil Zimmermann 著名的 Pretty Good Privacy（**PGP**）的开源替代方案。大多数 Linux 发行版默认安装了 **GnuPG**。否则，参阅 [http://www.gnupg.org/](http://www.gnupg.org/) 有关 **GnuPG** 以及如何获取和安装它的更多信息。
 
-要验证特定包的签名，你首先需要获得我们的公共 GPG 构建密钥副本，你可以从 http://pgp.mit.edu/ 下载。 你想要获取的密钥名为 `mysql-build@oss.oracle.com`。 或者，你可以直接从以下文本复制和粘贴密钥：
+要验证特定包的签名，你首先需要获得我们的公共 GPG 构建密钥副本，你可以从 [http://pgp.mit.edu/](http://pgp.mit.edu/) 下载。 你想要获取的密钥名为 `mysql-build@oss.oracle.com`。 或者，你可以直接从以下文本复制和粘贴密钥：
 
 ```bash
 -----BEGIN PGP PUBLIC KEY BLOCK-----

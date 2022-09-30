@@ -4,7 +4,7 @@
 
 如下表所示的结构，所有文件都位于该父目录中。
 
-表 2.6 Microsoft Windows 的默认 MySQL 安装布局
+**表 2.6 Microsoft Windows 的默认 MySQL 安装布局**
 
 |目录|目录内容|备注|
 |--|--|--|

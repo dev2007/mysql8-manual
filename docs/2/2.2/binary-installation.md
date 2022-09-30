@@ -8,15 +8,13 @@ MySQL 压缩 **tar** 文件二进制发行版的名称为 `mysql-VERSION-OS.tar.
 
 Linux 通用二进制发行版还提供了 MySQL 压缩 **tar** 文件的“最小安装”版本，其名称为 `mysql-VERSION-OS-GLIBCVER-ARCH-minimal.tar.xz`。最小安装发行版不包括调试二进制文件，并且去掉了调试符号，使其比常规二进制发行版小得多。如果你选择安装最小安装发行版，请记住根据以下说明中的文件名格式差异进行调整。
 
-!> **警告**
-
----
+::: warning 警告
 
 - 如果以前使用操作系统本机软件包管理系统，如 Yum 或 APT，安装过 MySQL，则使用本机二进制文件安装时可能会遇到问题。确保你以前的 MySQL 安装已完全删除（使用你的包管理系统），并且任何其他文件（如数据文件的旧版本）也已删除。你还应该检查配置文件，如 `/etc/my.cnf` 或 `/etc/mysql` 目录，并将其删除。
 
 有关使用官方 MySQL 软件包替换第三方软件包的信息，参阅相关的 [APT 指南](https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/) 或 [Yum 指南](https://dev.mysql.com/doc/refman/5.7/en/replace-third-party-yum.html)。
 
-MySQL 依赖于 libaio 库。如果未在本地安装此库，则数据目录初始化和后续服务器启动步骤将失败。如有必要，请使用适当的软件包管理器进行安装。例如，在基于 Yum 的系统上：
+- MySQL 依赖于 libaio 库。如果未在本地安装此库，则数据目录初始化和后续服务器启动步骤将失败。如有必要，请使用适当的软件包管理器进行安装。例如，在基于 Yum 的系统上：
 
 ```bash
 $> yum search libaio  # search for info
@@ -36,7 +34,7 @@ $> apt-get install libaio1 # install library
 $> yum install ncurses-compat-libs
 ```
 
----
+:::
 
 要安装压缩的 **tar** 文件二进制发行版，请在你选择的安装位置（通常为 `/usr/local/mysql`）将其解压缩。这将创建下表所示的目录。
 
@@ -73,7 +71,9 @@ $> bin/mysqld_safe --user=mysql &
 $> cp support-files/mysql.server /etc/init.d/mysql.server
 ```
 
-?> **注意**  此过程假定你具有系统的 `root`（administrator）访问权限。或者，可以使用 **sudo**（Linux）或 **pfexec**（Solaris）命令为每个命令添加前缀。
+::: tip 注意
+此过程假定你具有系统的 `root`（administrator）访问权限。或者，可以使用 **sudo**（Linux）或 **pfexec**（Solaris）命令为每个命令添加前缀。
+:::
 
 `mysql-files` 目录提供了一个方便的位置，可以用作 `secure_file_priv` 系统变量的值，该变量将导入和导出操作限制到特定目录。参阅[章节 5.1.8，“服务器系统变量”](/5/5.1/5.1.8/server-system-variables)。
 
@@ -88,7 +88,9 @@ $> groupadd mysql
 $> useradd -r -g mysql -s /bin/false mysql
 ```
 
-?> **注意** 由于仅出于所有权目的而非登录目的才需要该用户，因此 **useradd** 命令使用 `-r` 和 `-s/bin/false` 选项来创建对服务器主机没有登录权限的用户。如果 **useradd** 不支持这些选项，请忽略这些选项。
+::: tip 注意
+由于仅出于所有权目的而非登录目的才需要该用户，因此 **useradd** 命令使用 `-r` 和 `-s/bin/false` 选项来创建对服务器主机没有登录权限的用户。如果 **useradd** 不支持这些选项，请忽略这些选项。
+:::
 
 ## 获取并打开分发包
 
@@ -106,21 +108,23 @@ $> cd /usr/local
 $> tar xvf /path/to/mysql-VERSION-OS.tar.xz
 ```
 
- **tar** 命令创建名为 `mysql-VERSION-OS` 的目录。
+**tar** 命令创建名为 `mysql-VERSION-OS` 的目录。
 
- 要从压缩的 **tar** 文件二进制发行版安装MySQL，你的系统必须具有 GNU `XZ Utils` 来解压缩发行版，以及适合的 **tar** 来解压缩发行版。
+要从压缩的 **tar** 文件二进制发行版安装MySQL，你的系统必须具有 GNU `XZ Utils` 来解压缩发行版，以及适合的 **tar** 来解压缩发行版。
 
- ?> **注意** 在 MySQL Server 8.0.12 中，压缩算法从 Gzip 更改为 XZ；通用二进制文件的文件扩展名从 .tar.gz 变更为 .tar.xz。
+::: tip 注意
+在 MySQL Server 8.0.12 中，压缩算法从 Gzip 更改为 XZ；通用二进制文件的文件扩展名从 .tar.gz 变更为 .tar.xz。
+:::
 
- GNU tar 是已知可用。一些操作系统提供的标准 **tar** 无法解压缩 MySQL 发行版中的长文件名。你应该下载并安装 GNU **tar**，或者如果可用，使用预安装的 GNU tar 版本。通常，这可以作为 **gnutar**、**gtar** 或者从 GNU 中或从 自由软件目录（如/usr/sfw/bin或/usr/local/bin）中获得的 **tar**。GNU **tar** 可从以下网址获得：http://www.gnu.org/software/tar/ 。
+GNU tar 是已知可用。一些操作系统提供的标准 **tar** 无法解压缩 MySQL 发行版中的长文件名。你应该下载并安装 GNU **tar**，或者如果可用，使用预安装的 GNU tar 版本。通常，这可以作为 **gnutar**、**gtar** 或者从 GNU 中或从 自由软件目录（如/usr/sfw/bin或/usr/local/bin）中获得的 **tar**。GNU **tar** 可从以下网址获得：[http://www.gnu.org/software/tar/](http://www.gnu.org/software/tar/)。
 
- 如果你的 **tar** 不支持 `xz` 格式，则使用 **xz** 命令解包发行版，使用 **tar** 解包发行版。用以下替代命令替换前面的 **tar** 命令以解压缩和提取分发：
+如果你的 **tar** 不支持 `xz` 格式，则使用 **xz** 命令解包发行版，使用 **tar** 解包发行版。用以下替代命令替换前面的 **tar** 命令以解压缩和提取分发：
 
- ```bash
- $> xz -dc /path/to/mysql-VERSION-OS.tar.xz | tar x
- ```
+```bash
+$> xz -dc /path/to/mysql-VERSION-OS.tar.xz | tar x
+```
 
- 然后，创建指向 **tar** 创建的安装目录的符号链接：
+然后，创建指向 **tar** 创建的安装目录的符号链接：
 
 ```bash
 $> ln -s full-path-to-mysql-VERSION-OS mysql

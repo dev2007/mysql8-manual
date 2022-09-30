@@ -3,13 +3,15 @@
 在基于 RPM 的 Linux 发行版上安装 MySQL 的推荐方法是使用 Oracle 提供的 RPM 软件包。对于 MySQL 的社区版，有两个来源可以获得它们：
 
 - 从 MySQL 软件仓库：
-    - MySQL Yum 仓库（有关详细信息，参阅[章节 2.5.1，“使用 MySQL Yum 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.1/linux-installation-yum-repo)
+  - MySQL Yum 仓库（有关详细信息，参阅[章节 2.5.1，“使用 MySQL Yum 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.1/linux-installation-yum-repo)
 ）。
-    - MySQL SLES 仓库（有关详细信息，参阅[章节 2.5.3，“使用 MySQL SLE 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.3/linux-installation-sles-repo)）。
+  - MySQL SLES 仓库（有关详细信息，参阅[章节 2.5.3，“使用 MySQL SLE 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.3/linux-installation-sles-repo)）。
 
 - 从 [MySQL 开发区](https://dev.mysql.com/)的[下载 MySQL 社区服务器](https://dev.mysql.com/downloads/mysql/)页面。
 
-?> **注意** MySQL 的 RPM 发行版也由其他供应商提供。请注意，它们在功能、功能和约定（包括通信设置）方面可能与 Oracle 构建的不同，本手册中的安装说明不一定适用于它们。应参考供应商的说明。
+::: tip 注意
+MySQL 的 RPM 发行版也由其他供应商提供。请注意，它们在功能、功能和约定（包括通信设置）方面可能与 Oracle 构建的不同，本手册中的安装说明不一定适用于它们。应参考供应商的说明。
+:::
 
 ## MySQL RPM 包
 
@@ -110,7 +112,9 @@ $> sudo yum install mysql-community-{client,common,libs}-*
 
 安装还将在系统上创建名为 `mysql` 的用户和名为 `mysql` 的组。
 
-?> **注意** 使用旧软件包安装以前版本的 MySQL 可能会创建一个名为 `/usr/my.cnf` 的配置文件。强烈建议你检查文件的内容，并将所需的设置迁移到文件 `/etc/my.cnf` 文件中，然后删除 `/usr/my.cnf`。
+::: tip 注意
+使用旧软件包安装以前版本的 MySQL 可能会创建一个名为 `/usr/my.cnf` 的配置文件。强烈建议你检查文件的内容，并将所需的设置迁移到文件 `/etc/my.cnf` 文件中，然后删除 `/usr/my.cnf`。
+:::
 
 MySQL 不会在安装过程结束时自动启动。对于 Red Hat 企业版 Linux、Oracle Linux、CentOS 和 Fedora 系统，请使用以下命令启动 MySQL：
 
@@ -152,7 +156,9 @@ $> mysql -uroot -p
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
 ```
 
-?> **注意** 默认情况下安装了 [validate_password](/6/6.4/6.4.3/validate-password)。[validate_password](/6/6.4/6.4.3/validate-password) 实现的默认密码策略要求密码至少包含一个大写字母、一个小写字母、一位数字和一个特殊字符，并且总密码长度至少为 8 个字符。
+::: tip 注意
+默认情况下安装了 [validate_password](/6/6.4/6.4.3/validate-password)。[validate_password](/6/6.4/6.4.3/validate-password) 实现的默认密码策略要求密码至少包含一个大写字母、一个小写字母、一位数字和一个特殊字符，并且总密码长度至少为 8 个字符。
+:::
 
 如果安装过程中出现问题，你可能会在错误日志文件 `/var/log/mysqld.log` 中找到调试信息。
 
@@ -166,7 +172,9 @@ $> rpm --oldpackage -ivh mysql-community-libs-5.5.50-2.el6.x86_64.rpm
 
 **调试包**。使用[调试包](/5/5.9/5.9.4/dbug-package)编译的 MySQL 服务器的一个特殊变体已包含在服务器 RPM 包中。它执行调试和内存分配检查，并在服务器运行时生成跟踪文件。要使用该调试版本，请使用 `/usr/sbin/mysqld-debug` 启动 MySQL，而不是将其作为服务或 `/usr/sbin/mysqld` 启动。有关可以使用的调试选项，参阅[章节 5.9.4，“DBUG 包”](/5/5.9/5.9.4/dbug-package)。
 
-?> **注意** 在 MySQL 8.0.4 中，调试构建的默认插件目录从 `/usr/lib64/mysql/plugin` 更改为 `/usr/lib64/mysql/plugin/debug`。之前，需要将 [plugin_dir](/5/5.1/5.1.8/server-system-variables) 更改为 `/usr/lib64/mysql/plugin/debug` 以进行调试构建。
+::: tip 注意
+在 MySQL 8.0.4 中，调试构建的默认插件目录从 `/usr/lib64/mysql/plugin` 更改为 `/usr/lib64/mysql/plugin/debug`。之前，需要将 [plugin_dir](/5/5.1/5.1.8/server-system-variables) 更改为 `/usr/lib64/mysql/plugin/debug` 以进行调试构建。
+:::
 
 **从源 SRPM 重建 RPM**。MySQL 的源代码 SRPM 包可供下载。它们可以按原样使用标准 **rpmbuild** 工具链重建 MySQL RPM。
 

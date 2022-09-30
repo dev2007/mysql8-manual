@@ -1,26 +1,28 @@
 # 2.5.6.2 关于使用 Docker 部署 MySQL 服务的更多主题
 
-?> **注意** 以下大多数示例命令都将 `mysql/mysql-server` 作为 Docker 镜像仓库（如 **docker pull** 和 **docker run** 命令）；如果你的镜像来自另一个仓库，请将其替换为 `container-registry.oracle.com/mysql/enterprise` 服务器，用于从 Oracle 容器注册表（OCR）下载的 MySQL 企业版镜像，或从[我的 Oracle 支持](https://support.oracle.com/)下载的，用于 MySQL 企业版镜像的 `mysql/enterprise-server`。
+::: tip 注意
+以下大多数示例命令都将 `mysql/mysql-server` 作为 Docker 镜像仓库（如 **docker pull** 和 **docker run** 命令）；如果你的镜像来自另一个仓库，请将其替换为 `container-registry.oracle.com/mysql/enterprise` 服务器，用于从 Oracle 容器注册表（OCR）下载的 MySQL 企业版镜像，或从[我的 Oracle 支持](https://support.oracle.com/)下载的，用于 MySQL 企业版镜像的 `mysql/enterprise-server`。
+:::
 
-- [为 Docker 优化的 MySQL 安装](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=为-Docker-优化的-MySQL-安装)
+- [为 Docker 优化的 MySQL 安装](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#为-Docker-优化的-MySQL-安装)
 
-- [配置 MySQL 服务器](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=配置-MySQL-服务器)
+- [配置 MySQL 服务器](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#配置-MySQL-服务器)
 
-- [持久化数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=持久化数据和配置更改)
+- [持久化数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)
 
-- [运行其他初始化脚本](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=运行其他初始化脚本)
+- [运行其他初始化脚本](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#运行其他初始化脚本)
 
-- [从另一个 Docker 容器应用连接到 MySQL](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=从另一个-Docker-容器应用连接到-MySQL)
+- [从另一个 Docker 容器应用连接到 MySQL](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#从另一个-Docker-容器应用连接到-MySQL)
 
-- [服务器错误日志](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=服务器错误日志)
+- [服务器错误日志](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#服务器错误日志)
 
-- [Docker 中使用 MySQL 企业备份](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=Docker-中使用-MySQL-企业备份)
+- [Docker 中使用 MySQL 企业备份](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#Docker-中使用-MySQL-企业备份)
 
-- [Docker 中使用 mysqldump](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=Docker-中使用-mysqldump)
+- [Docker 中使用 mysqldump](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#Docker-中使用-mysqldump)
 
-- [已知问题](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=已知问题)
+- [已知问题](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#已知问题)
 
-- [Docker 环境变量](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=Docker-环境变量)
+- [Docker 环境变量](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#Docker-环境变量)
 
 ## 为 Docker 优化的 MySQL 安装
 
@@ -64,7 +66,7 @@ docker run --name mysql1 -d mysql/mysql-server:tag --character-set-server=utf8mb
 
 该命令启动 MySQL 服务器，将 `utf8mb4` 作为默认字符集，并将 `utf8mb4_col` 作为数据库的默认排序规则。
 
-配置 MySQL 服务器的另一种方法是准备一个配置文件，并将其安装在容器中服务器配置文件的位置。有关详细信息，参阅[持久化数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=持久化数据和配置更改)。
+配置 MySQL 服务器的另一种方法是准备一个配置文件，并将其安装在容器中服务器配置文件的位置。有关详细信息，参阅[持久化数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)。
 
 ## 持久化数据和配置更改
 
@@ -152,17 +154,17 @@ docker exec -it myapp1 mysql --host=mysql1 --user=myuser --password
 
 当使用服务器容器首次启动 MySQL 服务器时，如果以下任一条件为真，则不会生成服务器错误日志：
 
-- 已装载主机的服务器配置文件，但该文件不包含系统变量 [log_error](/5/5.1/5.1.8/server-system-variables)（参阅绑定装载服务器配置文件时的[持久数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=持久化数据和配置更改)）。
+- 已装载主机的服务器配置文件，但该文件不包含系统变量 [log_error](/5/5.1/5.1.8/server-system-variables)（参阅绑定装载服务器配置文件时的[持久数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)）。
 
-- 来自主机的服务器配置文件尚未挂载，但 Docker 环境变量 [MYSQL_LOG_CONSOLE](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=Docker-环境变量) 为true（这是 MYSQL 8.0 服务器容器的默认状态）。然后，MySQL 服务器的错误日志被重定向到 stderr，以便错误日志进入 Docker 容器的日志，并可以使用 `docker logs mysqld-container` 容器命令查看。
+- 来自主机的服务器配置文件尚未挂载，但 Docker 环境变量 [MYSQL_LOG_CONSOLE](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#Docker-环境变量) 为true（这是 MYSQL 8.0 服务器容器的默认状态）。然后，MySQL 服务器的错误日志被重定向到 stderr，以便错误日志进入 Docker 容器的日志，并可以使用 `docker logs mysqld-container` 容器命令查看。
 
-要使 MySQL 服务器在这两个条件之一为真时生成错误日志，请使用 [--log-error](/5/5.1/5.1.7/server-options) 选项将[配置服务器](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=配置-MySQL-服务器)为在容器内的特定位置生成错误日志。要持久化错误日志，请在容器内的错误日志位置安装主机文件，如[持久数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=持久化数据和配置更改)中所述。但是，你必须确保容器中的 MySQL 服务器对装载的主机文件具有写访问权限。
+要使 MySQL 服务器在这两个条件之一为真时生成错误日志，请使用 [--log-error](/5/5.1/5.1.7/server-options) 选项将[配置服务器](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#配置-MySQL-服务器)为在容器内的特定位置生成错误日志。要持久化错误日志，请在容器内的错误日志位置安装主机文件，如[持久数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)中所述。但是，你必须确保容器中的 MySQL 服务器对装载的主机文件具有写访问权限。
 
 ## Docker 中使用 MySQL 企业备份
 
 [MySQL 企业备份](https://dev.mysql.com/doc/mysql-enterprise-backup/8.0/en/)是 MySQL 服务器的商业授权备份实用程序，可与 [MySQL 企业版](https://dev.mysql.com/doc/mysql-enterprise-backup/8.0/en/)一起使用。MySQL 企业备份包含在 MySQL 企业版的 Docker 安装中。
 
-在下面的示例中，我们假设您已经在 Docker 容器中运行了 MySQL 服务器（参阅[章节 2.5.6.1，“使用 Docker 部署 MySQL 服务器的基本步骤”](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started)，了解如何使用 Docker 启动 MySQL 服务器实例）。为了使 MySQL 企业备份能够备份 MySQL 服务器，它必须能够访问服务器的数据目录。例如，可以通过在启动服务器时[将主机目录绑定到 MySQL 服务器的数据目录](持久数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=持久化数据和配置更改)来实现：
+在下面的示例中，我们假设您已经在 Docker 容器中运行了 MySQL 服务器（参阅[章节 2.5.6.1，“使用 Docker 部署 MySQL 服务器的基本步骤”](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started)，了解如何使用 Docker 启动 MySQL 服务器实例）。为了使 MySQL 企业备份能够备份 MySQL 服务器，它必须能够访问服务器的数据目录。例如，可以通过在启动服务器时[将主机目录绑定到 MySQL 服务器的数据目录](持久数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)来实现：
 
 ```bash
 docker run --name=mysqlserver \
@@ -272,9 +274,9 @@ docker run --name=mysqlserver2 \
 
 ## Docker 中使用 mysqldump
 
-除了[使用 MySQL 企业备份来备份运行在 Docker 容器中的 MySQL 服务器](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=Docker-中使用-MySQL-企业备份)，你还可以使用运行在 Docker 容器中的 [mysqldump](/4/4.5/4.5.4/mysqldump) 工具来对服务器进行逻辑备份。
+除了[使用 MySQL 企业备份来备份运行在 Docker 容器中的 MySQL 服务器](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#Docker-中使用-MySQL-企业备份)，你还可以使用运行在 Docker 容器中的 [mysqldump](/4/4.5/4.5.4/mysqldump) 工具来对服务器进行逻辑备份。
 
-下面的说明假设你已经在 Docker 容器中运行了一个 MySQL 服务器，并且当容器第一次启动时，一个主机目录 */path-on-host-machine/datadir/* 已经挂载到服务器的数据目录 `/var/lib/mysql` 上(详细信息参阅[在 MySQL 服务器的数据目录上绑定挂载一个主机目录](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=持久化数据和配置更改))，该目录包含Unix套接字文件，[mysqldump](/4/4.5/4.5.4/mysqldump) 和 [mysql](/4/4.5/4.5.1/mysql) 可以通过该套接字文件连接到服务器。我们还假设，在服务器启动之后，创建了一个具有适当权限的用户(在本例中为 `admin`)， mysqldump 可以通过该用户访问服务器。备份和恢复 MySQL 服务器数据的操作步骤如下:
+下面的说明假设你已经在 Docker 容器中运行了一个 MySQL 服务器，并且当容器第一次启动时，一个主机目录 */path-on-host-machine/datadir/* 已经挂载到服务器的数据目录 `/var/lib/mysql` 上(详细信息参阅[在 MySQL 服务器的数据目录上绑定挂载一个主机目录](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改))，该目录包含Unix套接字文件，[mysqldump](/4/4.5/4.5.4/mysqldump) 和 [mysql](/4/4.5/4.5.1/mysql) 可以通过该套接字文件连接到服务器。我们还假设，在服务器启动之后，创建了一个具有适当权限的用户(在本例中为 `admin`)， mysqldump 可以通过该用户访问服务器。备份和恢复 MySQL 服务器数据的操作步骤如下:
 
 *在 Docker 中使用 [mysqldump](/4/4.5/4.5.4/mysqldump) 备份 MySQL 服务器数据:*
 
@@ -321,13 +323,13 @@ mysql -uadmin --password='password' -e "source /data/backups/all-databases.sql"
 
 ## Docker 环境变量
 
-当你创建 MySQL 服务器容器时，你可以使用 `--env` 选项(简写形式 `-e`)并指定一个或多个环境变量来配置 MySQL 实例。如果挂载的数据目录不为空，则不执行服务器初始化，在这种情况下，设置任何这些变量都不起作用(参阅[持久化数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=持久化数据和配置更改))，并且在容器启动期间不会修改目录的现有内容(包括服务器设置)。
+当你创建 MySQL 服务器容器时，你可以使用 `--env` 选项(简写形式 `-e`)并指定一个或多个环境变量来配置 MySQL 实例。如果挂载的数据目录不为空，则不执行服务器初始化，在这种情况下，设置任何这些变量都不起作用(参阅[持久化数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改))，并且在容器启动期间不会修改目录的现有内容(包括服务器设置)。
 
 可以用来配置 MySQL 实例的环境变量如下:
 
 - 布尔变量包括 `MYSQL_RANDOM_ROOT_PASSWORD`、`[`MYSQL_ONETIME_PASSWORD`、`MYSQL_ALLOW_EMPTY_PASSWORD` 和 `MYSQL_LOG_CONSOLE` 通过使用任何非零长度的字符串来设置它们，使其为真。因此，将它们设置为“0”、“false” 或 “no” 并不会使它们为假，而是实际上使它们为真。这是一个众所周知的问题。
 
-- `MYSQL_RANDOM_ROOT_PASSWORD`：当该变量为 true(这是它的默认状态，除非 `MYSQL_ROOT_PASSWORD` 被设置或 `MYSQL_ALLOW_EMPTY_PASSWORD` 被设置为 true)时，在 Docker 容器启动时为服务器的 root 用户生成一个随机密码。密码被打印到容器的 `stdout`，可以通过查看容器的日志找到(参阅[启动 MySQL 服务器实例](/2/2.5/2.5.6/2.5.6.2/docker-mysql-getting-started?id=启动 MySQL 服务器实例))。
+- `MYSQL_RANDOM_ROOT_PASSWORD`：当该变量为 true(这是它的默认状态，除非 `MYSQL_ROOT_PASSWORD` 被设置或 `MYSQL_ALLOW_EMPTY_PASSWORD` 被设置为 true)时，在 Docker 容器启动时为服务器的 root 用户生成一个随机密码。密码被打印到容器的 `stdout`，可以通过查看容器的日志找到(参阅[启动 MySQL 服务器实例](/2/2.5/2.5.6/2.5.6.2/docker-mysql-getting-started.html#启动 MySQL 服务器实例))。
 
 - `MYSQL_ONETIME_PASSWORD`：当变量为 true(这是它的默认状态，除非 `MYSQL_ROOT_PASSWORD` 被设置或 `MYSQL_ALLOW_EMPTY_PASSWORD` 被设置为 true)时，root 用户的密码被设置为过期，必须修改后 MySQL 才能正常使用。
 
@@ -335,17 +337,23 @@ mysql -uadmin --password='password' -e "source /data/backups/all-databases.sql"
 
 - `MYSQL_USER`、`MYSQL_PASSWORD`：这些变量一起用来创建一个用户并设置该用户的密码，并且该用户被授予 `MYSQL_DATABASE` 变量指定的数据库的超级用户权限。要创建用户，`MYSQL_USER` 和 `MYSQL_PASSWORD` 都是必需的——如果没有设置这两个变量中的任何一个，则忽略另一个。如果两个变量都设置了，但 `MYSQL_DATABASE` 没有设置，则创建的用户没有任何特权。
 
-?> **注意** 不需要使用这种机制来创建 root 超级用户，默认情况下创建 root 超级用户时使用的密码由 `MYSQL_ROOT_PASSWORD` 和 `MYSQL_RANDOM_ROOT_PASSWORD` 描述中讨论的任何一种机制设置，除非 `MYSQL_ALLOW_EMPTY_PASSWORD` 为 true。
+::: tip 注意
+不需要使用这种机制来创建 root 超级用户，默认情况下创建 root 超级用户时使用的密码由 `MYSQL_ROOT_PASSWORD` 和 `MYSQL_RANDOM_ROOT_PASSWORD` 描述中讨论的任何一种机制设置，除非 `MYSQL_ALLOW_EMPTY_PASSWORD` 为 true。
+:::
 
-- `MYSQL_ROOT_HOST`：默认情况下，MySQL 创建 `'root'@'localhost'` 帐户。该帐户只能从容器内连接，如[从容器内连接 MySQL 服务器](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=从另一个-Docker-容器应用连接到-MySQL)中所述。若要允许来自其他主机的 root 连接，请设置此环境变量。例如，值 `172.17.0.1` 是默认的 Docker 网关 IP，它允许来自运行容器的主机的连接。该选项只接受一个条目，但是允许通配符(例如，`MYSQL_ROOT_HOST=172.*.*.*` 或 `MYSQL_ROOT_HOST=%`)。
+- `MYSQL_ROOT_HOST`：默认情况下，MySQL 创建 `'root'@'localhost'` 帐户。该帐户只能从容器内连接，如[从容器内连接 MySQL 服务器](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#从另一个-Docker-容器应用连接到-MySQL)中所述。若要允许来自其他主机的 root 连接，请设置此环境变量。例如，值 `172.17.0.1` 是默认的 Docker 网关 IP，它允许来自运行容器的主机的连接。该选项只接受一个条目，但是允许通配符(例如，`MYSQL_ROOT_HOST=172.*.*.*` 或 `MYSQL_ROOT_HOST=%`)。
 
 - `MYSQL_LOG_CONSOLE`：当变量为 true 时(这是 MySQL 8.0 服务器容器的默认状态)，MySQL 服务器的错误日志被重定向到 stderr，这样错误日志就会进入 Docker 容器的日志中，并且可以使用 **docker logs** *mysqld-container* 命令查看。
 
-?> **注意** 如果已经挂载了来自主机的服务器配置文件，则该变量将不起作用(参阅在绑定挂载配置文件时[持久化数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=持久化数据和配置更改))。
+::: tip 注意
+如果已经挂载了来自主机的服务器配置文件，则该变量将不起作用(参阅在绑定挂载配置文件时[持久化数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改))。
+:::
 
 - `MYSQL_ROOT_PASSWORD`：该变量指定为 MySQL root 帐户设置的密码。
 
-!> **警告** 在命令行设置 MySQL root用户密码是不安全的。作为显式指定密码的替代方法，您可以使用密码文件的容器文件路径设置变量，然后在容器文件路径上挂载主机上包含密码的文件。这仍然不是很安全，因为密码文件的位置仍然暴露在外。最好使用 `MYSQL_RANDOM_ROOT_PASSWORD` 和 `MYSQL_ONETIME_PASSWORD` 的默认设置都为 true。
+::: warning 警告
+在命令行设置 MySQL root用户密码是不安全的。作为显式指定密码的替代方法，您可以使用密码文件的容器文件路径设置变量，然后在容器文件路径上挂载主机上包含密码的文件。这仍然不是很安全，因为密码文件的位置仍然暴露在外。最好使用 `MYSQL_RANDOM_ROOT_PASSWORD` 和 `MYSQL_ONETIME_PASSWORD` 的默认设置都为 true。
+:::
 
 - `MYSQL_ALLOW_EMPTY_PASSWORD`。将其设置为 true 将允许容器以 root 用户的空密码启动。
 

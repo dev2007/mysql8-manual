@@ -4,15 +4,15 @@
 
 本节总结了 MySQ L8.0 中添加、弃用和删除的内容。附带的一节列出了 MySQL 8.0 中添加、弃用或删除的 MySQL server 选项和变量；参阅[章节 1.4，“MySQL 8.0 中添加、弃用或删除的服务器和状态变量及选项”](/1/1.4/added-deprecated-removed)。
 
-- [MySQL 8.0 新增特性](/1/1.3/mysql-nutshell?id=MySQL-80-新增特性)
-- [MySQL 8.0 弃用特性](/1/1.3/mysql-nutshell?id=MySQL-80-弃用特性)
-- [MySQL 8.0 移除特性](/1/1.3/mysql-nutshell?id=MySQL-80-移除特性)
+- [MySQL 8.0 新增特性](/1/1.3/mysql-nutshell.html#MySQL-80-新增特性)
+- [MySQL 8.0 弃用特性](/1/1.3/mysql-nutshell.html#MySQL-80-弃用特性)
+- [MySQL 8.0 移除特性](/1/1.3/mysql-nutshell.html#MySQL-80-移除特性)
 
 ## MySQL 8.0 新增特性
 
 以下特性已添加到 MySQL 8.0：
 
-- **数据字典**。MySQL 现在集成了一个事务性数据字典，它存储数据库对象的信息。在以前的 MySQL 版本中，字典数据存储在元数据文件和非事务表中。更多信息，参阅[章节14，MySQL 数据字典](/14/data-dictionary)。
+- **数据字典**。MySQL 现在集成了一个事务性数据字典，它存储数据库对象的信息。在以前的 MySQL 版本中，字典数据存储在元数据文件和非事务表中。更多信息，参阅[章节 14，“MySQL 数据字典”](/14/data-dictionary)。
 
 - **原子数据定义语句（原子 DDL）**。原子 DDL 语句将数据字典更新、存储引擎操作和与 DDL 操作相关联的二进制日志写入合并到单个原子事务中。更多信息，参阅[章节 13.1.1，“原子数据定义语句支持”](/13/13.1/13.1.1/atomic-ddl)。
 
@@ -26,7 +26,7 @@
 
   - 提供了一个新的 `caching_sha2_password` 认验插件。与 `sha256_password` 插件一样，`caching_sha2_password` 实现 SHA-256 密码散列，但使用缓存来解决连接时的延迟问题。它还支持更多的传输协议，不要求与 OpenSSL 链接，以实现基于 RSA 密钥对的密码交换功能。参阅[章节 6.4.1.2，“缓存 SHA-2 可插拔身份验证”](/6/6.4/6.4.1/6.4.1.2/caching-sha2-pluggable-authentication)。
 
-  `caching_sha2_password` 和 `sha256_password` 认证插件提供了比 `mysql_native_password` 插件更安全的密码加密，`caching_sha2_password` 提供了比 `sha256_password`更好的性能。由于 `caching_sha2_password` 的这些优越的安全性和性能特点，它现在是首选的身份验证插件，也是默认的身份验证插件，而不是 `mysql_native_password`。有关此默认插件更改对服务器操作的影响以及服务器与客户端和连接器的兼容性的信息,参阅[caching-sha2-password 作为首选认证插件](/2/2.11/2.11.4/upgrading-from-previous-series?id=caching-sha2-password-作为首选认证插件)。
+  `caching_sha2_password` 和 `sha256_password` 认证插件提供了比 `mysql_native_password` 插件更安全的密码加密，`caching_sha2_password` 提供了比 `sha256_password`更好的性能。由于 `caching_sha2_password` 的这些优越的安全性和性能特点，它现在是首选的身份验证插件，也是默认的身份验证插件，而不是 `mysql_native_password`。有关此默认插件更改对服务器操作的影响以及服务器与客户端和连接器的兼容性的信息，参阅[caching-sha2-password 作为首选认证插件](/2/2.11/2.11.4/upgrading-from-previous-series.html#caching-sha2-password-作为首选认证插件)。
 
   - MySQL 现在支持角色，这些角色被命名为权限集合。角色可以创建和删除。角色也可以被授予或撤消权限。可以向用户帐户授予角色，也可以撤消角色。可以从授予帐户的角色中选择帐户的激活的适用角色，并且可以在该帐户的会话期间更改这些角色。更多信息，参阅[章节 6.2.10，“使用角色”](/6/6.2/6.2.10/roles)。
 
@@ -46,7 +46,7 @@
 
   - MySQL 现在支持 FIPS 模式，如果使用 OpenSSL 编译，在运行时就可以使用 OpenSSL 库和 FIPS 对象模块。FIPS 模式对加密操作施加条件，例如对可接受的加密算法的限制或对更长的密钥长度的要求。参阅[章节 6.8，“FIPS 支持”](/6/6.8/fips-mode)。
 
-  - 服务器用于新连接的 TLS 上下文现在在运行时是可重新配置的。这个功能可能很有用，例如，避免重新启动运行了很长时间以至于 SSL 证书已经过期的 MySQL server。参阅[加密连接服务端运行配置及监控](/6/6.3/6.3.1/using-encrypted-connections?id=加密连接服务端运行配置及监控)。
+  - 服务器用于新连接的 TLS 上下文现在在运行时是可重新配置的。这个功能可能很有用，例如，避免重新启动运行了很长时间以至于 SSL 证书已经过期的 MySQL server。参阅[加密连接服务端运行配置及监控](/6/6.3/6.3.1/using-encrypted-connections.html#加密连接服务端运行配置及监控)。
 
   - OpenSSL 1.1.1 支持 TLS v1.3 协议进行加密连接，如果服务器和客户端都使用 OpenSSL 1.1.1 或更高版本编译，MySQL 8.0.16 及更高版本也支持 TLS v1.3协议。参阅[章节 6.3.2，“加密连接 TLS 协议和密码”](/6/6.3/6.3.2/encrypted-connection-protocols-ciphers)。
 
@@ -54,7 +54,7 @@
 
 - **资源管理**。现在可以要求验证尝试更改帐户密码的行为，方式是通过指定要替换的当前密码。这使得 DBA 能够防止用户在不知道当前密码的情况下更改密码。可以在全局以及每个帐户的基础上建立密码验证策略。更多信息，参阅[章节 5.1.6，“资源组”](/5/5.1/5.1.6/resource-groups)。
 
-- **表加密管理**。现在可以通过定义和强制加密默认值来全局管理表加密。`default_table_encryption` 变量定义新创建的模式和常规表空间的加密默认值。在创建模式时，还可以使用 `DEFAULT ENCRYPTION` 子句定义架构的加密默认值。默认情况下，表继承它在创建时所在的模式或常规表空间的加密。加密默认值通过启用表 `table_encryption_privilege_check` 变量来强制开启。当使用与 `default_table_encryption`设置不同的加密设置来创建或修改模式或常规表空间时，或使用与默认模式加密不同的加密设置来创建或更改表时，会发生权限检查。`TABLE_ENCRYPTION_ADMIN` 权限允许在启用 `table_encryption_privilege_check` 时重写默认加密设置。更多信息，参阅[为模式和常规表空间定义加密默认值](/15/15.13/innodb-data-encryption?id=为模式和常规表空间定义加密默认值)。
+- **表加密管理**。现在可以通过定义和强制加密默认值来全局管理表加密。`default_table_encryption` 变量定义新创建的模式和常规表空间的加密默认值。在创建模式时，还可以使用 `DEFAULT ENCRYPTION` 子句定义架构的加密默认值。默认情况下，表继承它在创建时所在的模式或常规表空间的加密。加密默认值通过启用表 `table_encryption_privilege_check` 变量来强制开启。当使用与 `default_table_encryption`设置不同的加密设置来创建或修改模式或常规表空间时，或使用与默认模式加密不同的加密设置来创建或更改表时，会发生权限检查。`TABLE_ENCRYPTION_ADMIN` 权限允许在启用 `table_encryption_privilege_check` 时重写默认加密设置。更多信息，参阅[为模式和常规表空间定义加密默认值](/15/15.13/innodb-data-encryption.html#为模式和常规表空间定义加密默认值)。
 
 - **InnoDB 增强功能**。添加了以下 InnoDB 增强功能：
   - 每次值改变时，当前自动增量计数器的最大值就被写入 redo log（重做日志），并保存到每个检查点上的引擎专用系统表中。这些更改使当前最大自动增量计数器值在服务器重启时保持不变。另外:
@@ -62,18 +62,18 @@
     - 在 [`ROLLBACK`](/13/13.3/13.3.1/commit) 操作之后立即重启服务器将不再导致分配给回滚事务的自动增量值的重用。
     - 如果将 `AUTO_INCREMENT` 列值修改为大于当前最大自动增量值的值(例如，在 [`UPDATE`](/13/13.2/13.2.13/update) 操作中)，则新值将被持久化，后续的 [`INSERT`](/13/13.2/13.2.6/insert) 操作将从新的更大的值开始分配自动增量值。
 
-    更多信息，参阅[章节 15.6.1.6，“InnoDB 中的 AUTO_INCREMENT 处理”](/15/15.6/15.6.1/15.6.1.6/innodb-auto-increment-handling)和["InnoDB AUTO_INCREMENT 计数器初始化"](/15/15.6/15.6.1/15.6.1.6/innodb-auto-increment-handling?id=InnoDB-AUTO_INCREMENT-计数器初始化)。
+    更多信息，参阅[章节 15.6.1.6，“InnoDB 中的 AUTO_INCREMENT 处理”](/15/15.6/15.6.1/15.6.1.6/innodb-auto-increment-handling)和["InnoDB AUTO_INCREMENT 计数器初始化"](/15/15.6/15.6.1/15.6.1.6/innodb-auto-increment-handling.html#InnoDB-AUTO_INCREMENT-计数器初始化)。
 
   - 当遇到索引树损坏时，`InnoDB` 会在重做日志中写入一个损坏标志，这会使损坏标志崩溃是安全的。`InnoDB` 还将内存中的损坏标志数据写入每个检查点上的引擎专用系统表。在恢复过程中，`InnoDB` 从这两个位置读取损坏标志并合并结果，然后将内存中的表和索引对象标记为损坏。
 
   - `InnoDB` **memcached** 插件支持多个获取操作（在一个 **memcached** 查询中获取多个键值对）和范围查询。参阅[章节 15.20.4，“InnoDB memcached 多个获取和范围查询支持”](/15/15.20/15.20.4/innodb-memcached-multiple-get-range-query)。
 
-  - 一个新的动态变量 [`innodb_deadlock_detect`](/15/15.14/innodb-parameters?id=innodb_deadlock_detect) 可用于禁用死锁检测。在高并发系统上，当多个线程等待同一个锁时，死锁检测可能会导致速度减慢。有时，禁用死锁检测并在死锁发生时依赖 [`innodb_lock_wait_timeout`](/15/15.14/innodb-parameters?id=innodb_lock_wait_timeout) 设置事务回滚可能更有效。
+  - 一个新的动态变量 [`innodb_deadlock_detect`](/15/15.14/innodb-parameters.html#innodb_deadlock_detect) 可用于禁用死锁检测。在高并发系统上，当多个线程等待同一个锁时，死锁检测可能会导致速度减慢。有时，禁用死锁检测并在死锁发生时依赖 [`innodb_lock_wait_timeout`](/15/15.14/innodb-parameters.html#innodb_lock_wait_timeout) 设置事务回滚可能更有效。
 
   - 新的 [`INFORMATION_SCHEMA.INNODB_CACHED_INDEXES`](/26/26.4/26.4.5/information-schema-innodb-cached-indexes-table) 表报告每个索引在 `INNODB` 缓冲池中缓存的索引页数。
   - `InnoDB` 临时表现在是在共享临时表空间 `ibtmp1 中创建的。
-  - `InnoDB` [表空间加密功能](/15/15.13/innodb-data-encryption)支持重做日志和撤消日志数据的加密。参阅[重做日志加密](/15/15.13/innodb-data-encryption?id=重做日志加密)，及[撤销日志加密](/15/15.13/innodb-data-encryption?id=撤销日志加密)。
-  - `InnoDB` 支持 `NOWAIT` 和 `SKIP LOCKED` 选项，以及 `SELECT ... FOR SHARE` 及 `SELECT ... FOR UPDATE` 锁定读取语句。如果请求的行被另一个事务锁定，`NOWAIT` 会导致语句立即返回。`SKIP LOCKED` 从结果集中删除锁定的行。参阅[读锁](/15/15.7/15.7.2/15.7.2.4/innodb-locking-reads?id=用-NOWAIT-和-SKIP-锁定读并发)。
+  - `InnoDB` [表空间加密功能](/15/15.13/innodb-data-encryption)支持重做日志和撤消日志数据的加密。参阅[重做日志加密](/15/15.13/innodb-data-encryption.html#重做日志加密)，及[撤销日志加密](/15/15.13/innodb-data-encryption.html#撤销日志加密)。
+  - `InnoDB` 支持 `NOWAIT` 和 `SKIP LOCKED` 选项，以及 `SELECT ... FOR SHARE` 及 `SELECT ... FOR UPDATE` 锁定读取语句。如果请求的行被另一个事务锁定，`NOWAIT` 会导致语句立即返回。`SKIP LOCKED` 从结果集中删除锁定的行。参阅[读锁](/15/15.7/15.7.2/15.7.2.4/innodb-locking-reads.html#用-NOWAIT-和-SKIP-锁定读并发)。
 
   `SELECT ... FOR SHARE` 替代了 `SELECT ... LOCK IN SHARE MODE`，但 `LOCK IN SHARE MODE` 仍然向后兼容。这两个语句是等价的。然而，`FOR UPDATE` 和 `FOR SHARE` 支持 `NOWAIT`，`SKIP LOCKED` 和 `OF tbl_name` 选项。参阅[章节 13.2.10，“SELECT 语句”](/13/13.2/13.2.10/select)。
 
@@ -83,7 +83,7 @@
 
   `DROP PARTITION` 带 `ALGORITHM=INPLACE` 删除存储在分区中的数据并删除分区。然而，`DROP PARTITION` 带 `ALGORITHM=COPY` 或 [`old_alter_table=ON`](/5/5.1/5.1.8/server-system-variables) 重新生成分区表，并尝试将数据从删除的分区移动到通过兼容 `PARTITION ... VALUES` 定义另一个分区。
 
-  - `InnoDB` 存储引擎现在使用 MySQL 数据字典，而不是它自己的存储引擎特定的数据字典。有关数据字典更多信息，参阅[章节 14，MySQL 数据字典](/14/data-dictionary)。
+  - `InnoDB` 存储引擎现在使用 MySQL 数据字典，而不是它自己的存储引擎特定的数据字典。有关数据字典更多信息，参阅[章节 14，“MySQL 数据字典”](/14/data-dictionary)。
   - `mysql` 系统表和数据字典表现在在 MySQL 数据目录中的一个名为 `mysql.ibd` 的 `InnoDB` 表空间文件中创建。以前，这些表是在 `mysql` 数据库目录中的单个 `InnoDB` 表空间文件中创建的。
   - MySQL 8.0 中引入了以下 undo（撤消）表空间更改：
     - 默认情况下，撤销日志现在驻留在两个撤销表空间中，这两个表空间是在 MySQL 实例初始化时创建的。撤消日志不再在系统表空间中创建。
@@ -112,7 +112,7 @@
   - 已修改影响缓冲池预刷新和刷新行为的变量的默认值：
     - [`innodb_max_dirty_pages_pct_lwm`](/15/15.14/innodb-parameters) 默认值现在为 10。以前默认值 0 禁用缓冲池预刷新。当缓冲池中脏页的百分比超过 10% 时，值 10 将启用预刷新。启用预冲洗可提高性能一致性。
     - [`innodb_max_dirty_pages_pct`](/15/15.14/innodb-parameters) 默认值由 75 增加到 90。`InnoDB` 尝试从缓冲池中刷新数据，以便脏页的百分比不超过此值。增加的默认值允许缓冲池中脏页的百分比增加。
-  - 默认的 [`innodb_autoinc_lock_mode`](/15/15.14/innodb-parameters) 设置现在为 2（交错）。交错锁模式允许并行执行多行插入，提高了并发性和可扩展性。[`innodb_autoinc_lock_mode`](/15/15.14/innodb-parameters) 新的默认设置反映了 MySQL 5.7 中默认复制类型从基于语句的复制到基于行的复制的变化。基于语句的复制需要连续自动增量锁定模式（以前的默认模式），以确保以可预测和可重复的顺序为给定的 SQL 语句序列分配自动增量值，而基于行的复制对 SQL 语句的执行顺序不敏感。更多信息，参阅[](/15/15.6/15.6.1/15.6.1.6/innodb-auto-increment-handling?id=InnoDB-AUTO_INCREMENT-锁模式)。
+  - 默认的 [`innodb_autoinc_lock_mode`](/15/15.14/innodb-parameters) 设置现在为 2（交错）。交错锁模式允许并行执行多行插入，提高了并发性和可扩展性。[`innodb_autoinc_lock_mode`](/15/15.14/innodb-parameters) 新的默认设置反映了 MySQL 5.7 中默认复制类型从基于语句的复制到基于行的复制的变化。基于语句的复制需要连续自动增量锁定模式（以前的默认模式），以确保以可预测和可重复的顺序为给定的 SQL 语句序列分配自动增量值，而基于行的复制对 SQL 语句的执行顺序不敏感。更多信息，参阅[章节 15.6.1.6，“InnoDB AUTO_INCREMENT 锁模式”](/15/15.6/15.6.1/15.6.1.6/innodb-auto-increment-handling.html#InnoDB-AUTO_INCREMENT-锁模式)。
 
   对于使用基于语句的复制的系统，新的 [`innodb_autoinc_lock_mode`](/15/15.14/innodb-parameters) 默认设置可能会中断依赖于顺序自动增量值的应用程序。为了恢复以前的默认值，设置 [`innodb_autoinc_lock_mode`](/15/15.14/innodb-parameters) 为 1。
 
@@ -181,15 +181,15 @@
 
   - 从 8.0.14 开始，当启用 [`innodb_dedicated_server`](/15/15.14/innodb-parameters) 变量时，将根据自动配置的缓冲池大小配置日志文件的大小和数量。以前，日志文件大小是根据服务器上检测到的内存量配置的，日志文件的数量不是自动配置的。
   - 从 8.0.14 开始，[`CREATE TABLESPACE`](/13/13.1/13.1.21/create-tablespace) 语句的 `ADD DATAFILE` 子句是可选的，它允许没有 [`FILE`](/6/6.2/6.2.2/privileges-provided) 权限的用户创建表空间。在没有 `ADD DATAFILE` 子句的情况下执行的 [`CREATE TABLESPACE`](/13/13.1/13.1.21/create-tablespace) 语句会隐式地创建具有唯一文件名的表空间数据文件。
-  - 默认情况下，当试探性存储引擎占用的内存量超过试探性 [`temptable_max_ram`](/5/5.1/5.1.8/server-system-variables) 变量定义的内存限制时，试探性存储引擎开始从磁盘分配内存映射的临时文件。从 MySQL 8.0.16 开始，这个行为由 [`temptable_use_mmap`](/5/5.1/5.1.8/server-system-variables) 变量控制。禁用 [`tettable_use_mmap`](/5/5.1/5.1.8/server-system-variables) 会导致 `TempTable` 存储引擎使用 `InnoDB` 在硬盘的内部临时表，而不是内存映射文件作为其溢出机制。更多信息，参阅[内部临时表存储引擎](/8/8.4/8.4.4/internal-temporary-tables?id=内部临时表存储引擎)。
+  - 默认情况下，当试探性存储引擎占用的内存量超过试探性 [`temptable_max_ram`](/5/5.1/5.1.8/server-system-variables) 变量定义的内存限制时，试探性存储引擎开始从磁盘分配内存映射的临时文件。从 MySQL 8.0.16 开始，这个行为由 [`temptable_use_mmap`](/5/5.1/5.1.8/server-system-variables) 变量控制。禁用 [`tettable_use_mmap`](/5/5.1/5.1.8/server-system-variables) 会导致 `TempTable` 存储引擎使用 `InnoDB` 在硬盘的内部临时表，而不是内存映射文件作为其溢出机制。更多信息，参阅[内部临时表存储引擎](/8/8.4/8.4.4/internal-temporary-tables.html#内部临时表存储引擎)。
   - 从 MySQL 8.0.16 开始，`InnoDB` 静态数据加密功能支持 MySQL 系统表空间的加密。MySQL 系统表空间包含 MySQL 系统数据库和 MySQL 数据字典表。更多信息，参阅[章节 15.13，“InnoDB 静态数据加密”](/15/15.13/innodb-data-encryption)。
   - 在 MySQL 8.0.16 中引入的 `innodb_spin_wait_pause_multiplier` 变量可以更好地控制线程等待获取互斥锁或读写锁时发生的自旋锁轮询延迟的持续时间。可以对延迟进行更精细的调整，以考虑不同处理器体系结构上暂停指令持续时间的差异。更多信息，参阅[章节 15.8.8，“配置自旋锁轮询”](/15/15.8/15.8.8/innodb-performance-spin_lock_polling)。
   - MySQL 8.0.17 通过更好地利用读取线程、减少并行扫描期间发生的预取活动的读线程 I/O 以及支持分区的并行扫描，提高了 MySQL 8.0.17 中大型数据集的 `InnoDB` 并行读取线程性能。
 
   并行读取线程功能由变量 [`innodb_parallel_read_threads0`](/15/15.14/innodb-parameters) 控制。最大设置现在是 256，这是所有客户端连接的线程总数。如果达到线程限制，连接将返回到使用单个线程。
 
-  - MySQL 8.0.18 中引入的变量 [`innodb_idle_flush_pct`](/15/15.14/innodb-parameters) 允许在空闲期间限制页面刷新，这有助于延长固态存储设备的寿命。参阅[在空闲期间限制缓冲区刷新](/15/15.8/15.8.3/15.8.3.5/innodb-buffer-pool-flushing?id=在空闲期间限制缓冲区刷新)。
-  - 从 MySQL 8.0.19 开始，支持对 `InnoDB` 数据进行有效采样，以生成直方图统计信息。参阅[直方图统计分析](/13/13.7/13.7.3/13..3.1/analyze-table?id=直方图统计分析)。
+  - MySQL 8.0.18 中引入的变量 [`innodb_idle_flush_pct`](/15/15.14/innodb-parameters) 允许在空闲期间限制页面刷新，这有助于延长固态存储设备的寿命。参阅[在空闲期间限制缓冲区刷新](/15/15.8/15.8.3/15.8.3.5/innodb-buffer-pool-flushing.html#在空闲期间限制缓冲区刷新)。
+  - 从 MySQL 8.0.19 开始，支持对 `InnoDB` 数据进行有效采样，以生成直方图统计信息。参阅[直方图统计分析](/13/13.7/13.7.3/13..3.1/analyze-table.html#直方图统计分析)。
   - 从 MySQL 8.0.20 开始，doublewrite（双写）缓冲区存储区驻留在双写文件中。在以前的版本中，存储区域位于系统表空间中。将存储区域移出系统表空间可减少写入延迟，提高吞吐量，并在放置双写缓冲页方面提供灵活性。为高级双写缓冲区配置引入了以下系统变量：
     - [`innodb_doublewrite_dir`](/15/15.14/innodb-parameters)
 
@@ -258,7 +258,7 @@
 
     新的 [`Innodb_redo_log_enabled`](/5/5.1/5.1.10/server-status-variables) 状态变量允许监视重做日志状态。
 
-    参阅[禁用重做日志](/innodb-redo-log?id=禁用重做日志)。
+    参阅[禁用重做日志](/innodb-redo-log.html#禁用重做日志)。
 
   - 在启动时，`InnoDB` 根据数据字典中存储的表空间文件路径验证已知表空间文件的路径，以防表空间文件被移动到其他位置。MySQL 8.0.21 中引入的新 [`innodb_validate_tablespace_paths`](/15/15.14/innodb-parameters) 变量允许禁用表空间路径验证。此功能适用于不移动表空间文件的环境。禁用表空间路径验证可以缩短具有大量表空间文件的系统的启动时间。
 
@@ -287,14 +287,14 @@
 
     `AUTOEXTEND_SIZE` 列添加在表 [`INFORMATION_SCHEMA.INNODB_TABLESPACES`](/26/26.4/26.4.24/information-schema-innodb-tablespaces-table) 中。
 
-  - MySQL 8.0.26 中引入的 [`innodb_segment_reserve_factor`](/15/15.14/innodb-parameters) 系统变量允许配置保留为空页的表空间文件段页的百分比。更多信息，参阅[章节 15.11.2，“文件空间管理”](innodb-file-space?id=配置保留文件段页的百分比)。
+  - MySQL 8.0.26 中引入的 [`innodb_segment_reserve_factor`](/15/15.14/innodb-parameters) 系统变量允许配置保留为空页的表空间文件段页的百分比。更多信息，参阅[章节 15.11.2，“文件空间管理”](innodb-file-space.html#配置保留文件段页的百分比)。
   - 在支持 `fdatasync()` 系统调用的平台上，MySQL 8.0.26 中引入的 [`innodb_use_fdatasync`](/15/15.14/innodb-parameter) 变量允许使用 `fdatasync()` 而不是 `fsync()` 进行操作系统刷新。`fdatasync()` 系统调用不会刷新对文件元数据的更改，除非后续数据检索需要这样做，从而提供了潜在的性能优势。
 
 - **字符集支持**。默认字符集已从 `latin1` 更改为 `utf8mb4`。`utf8mb4` 字符集有几个新的排序规则，包括 `utf8mb4_ja_0900_as_cs`，这是 MySQL 中第一个针对 Unicode 的日语特定排序规则。更多信息，参阅[章节 10.10.1，“Unicode 字符集”](/10/10.10/10.10.1/charset-unicode-sets)。
 - **JSON 增强**。对 MySQL 的 JSON 功能进行了以下增强或添加：
   - 添加了 [`->>`](/12/12.18/12.18.3/json-search-functions)（行内路径）操作符，相当于对 [`JSON_EXTRACT()`](/12/12.18/12.18.4/json-modification-functions) 的结果调用 [`JSON_UNQUOTE()`](/12/12.18/12.18.3/json-search-functions)。
 
-    这是 MySQL 5.7 中引入的列路径操作符 [`->`](/12/12.18/12.18.3/json-search-functions) 的改进；`col->>"$.path"` 等同于 `JSON(col->"$.path")`。行内路径操作符可以在任何可以使用 `JSON_UNQUOTE(JSON_EXTRACT())` 的地方使用，例如 [`SELECT`](/13/13.2/13.2.10/select) 列列表、`WHERE` 和 `HAVING` 子句以及 `ORDER BY` 和`GROUP BY` 子句。更多信息，参阅操作符描述，即 [`JSON 路径语法`](/11/11.5/json?id=JSON-路径语法)
+    这是 MySQL 5.7 中引入的列路径操作符 [`->`](/12/12.18/12.18.3/json-search-functions) 的改进；`col->>"$.path"` 等同于 `JSON(col->"$.path")`。行内路径操作符可以在任何可以使用 `JSON_UNQUOTE(JSON_EXTRACT())` 的地方使用，例如 [`SELECT`](/13/13.2/13.2.10/select) 列列表、`WHERE` 和 `HAVING` 子句以及 `ORDER BY` 和`GROUP BY` 子句。更多信息，参阅操作符描述，即 [`JSON 路径语法`](/11/11.5/json.html#JSON-路径语法)
   
   - 添加了两个 JSON 聚合函数 [`JSON_ARRAYAGG()`](/12/12.20/12.20.1/aggregate-functions) 和 [`JSON_OBJECTAGG()`](/12/12.20/12.20.1/aggregate-functions)。`JSON_ARRAYAGG()` 将列或表达式作为其参数，并将结果聚合为单个 [`JSON`](/11/11.5/json) 数组。表达式可以对任何 MySQL 数据类型求值；这不必是 JSON 值。`JSON_OBJECTAGG()` 接受两个列或表达式，并将其解释为键和值；它将结果作为单个 JSON 对象返回。更多信息和示例，参阅[章节 12.20，“聚合函数”](/12/12.20/aggregate-functions-and-modifiers)。
 
@@ -307,7 +307,7 @@
   - 在使用 `ORDER BY` 对查询中的 [`JSON`](/11/11.5/json) 值进行排序时，每个值现在都由排序键的可变长度部分来表示，而不是固定 1K 大小。在许多情况下，这可以减少过量使用。例如，标记为 `INT` 甚至 `BIGINT` 值实际上只需要很少的字节，因此这个空间的剩余部分（高达 90% 或更多）被填充占用。此更改对性能有以下好处：
     - 排序缓冲区空间现在得到了更有效的利用，这样文件排序就不必像固定长度排序键那样提前或频繁地刷新到磁盘。这意味着可以在内存中对更多数据进行排序，从而避免不必要的磁盘访问。
     - 较短的键可以比较长的键更快地进行比较，从而显著提高了性能。对于完全在内存中执行的排序，以及需要向磁盘写入和从磁盘读取的排序，都是这样。
-  - 在MySQL 8.0.2 中增加了对 `JSON` 列值的部分原地更新的支持，这比完全删除现有的 JSON 值并在其位置写入新的 JSON 值更有效，正如以前在更新任何 `JSON` 列时所做的那样。要应用此优化，必须使用 [`JSON_SET()`](/12/12.18/12.18.4/json-modification-functions)、[`JSON_REPLACE()`](/12/12.18/12.18.4/json-modification-functions) 或 [`JSON_REMOVE()`](/12/12.18/12.18.4/json-modification-functions) 应用更新。无法将新元素添加到正在更新的 JSON 文档中；文档中的值不能比更新前占用更多空间。参阅[JSON 值部分更新](/11/11.5/json?id=JSON-值部分更新)，获取更多的信息和讨论。
+  - 在MySQL 8.0.2 中增加了对 `JSON` 列值的部分原地更新的支持，这比完全删除现有的 JSON 值并在其位置写入新的 JSON 值更有效，正如以前在更新任何 `JSON` 列时所做的那样。要应用此优化，必须使用 [`JSON_SET()`](/12/12.18/12.18.4/json-modification-functions)、[`JSON_REPLACE()`](/12/12.18/12.18.4/json-modification-functions) 或 [`JSON_REMOVE()`](/12/12.18/12.18.4/json-modification-functions) 应用更新。无法将新元素添加到正在更新的 JSON 文档中；文档中的值不能比更新前占用更多空间。参阅[JSON 值部分更新](/11/11.5/json.html#JSON-值部分更新)，获取更多的信息和讨论。
 
     JSON 文档的部分更新可以写入二进制日志，比记录完整的 JSON 文档占用更少的空间。当使用基于语句的复制时，部分更新总是这样记录的。要让这个对基于行的复制生效，你必须先设置 [`binlog_row_value_options=PARTIAL_JSON`](/17/17.1/17.1.6/17.1.6.4/replication-options-binary-log)；参阅这此变量的描述获取更多信息。
 
@@ -318,7 +318,7 @@
     更多信息和示例，参阅[章节 12.18.8，“JSON 实用函数”](/12/12.18/12.18.8/json-utility-functions)。
 
     `JSON_STORAGE_SIZE()` 和 `JSON_STORAGE_FREE()` 是在 MySQL 8.0.2 实现的。
-  - 在 MySQL 8.0.2 中添加了对 XPath 表达式的范围支持，如 `$[1 to 5]`。此外，在该版本中还添加了对 `last` 关键字和相对寻址的支持，这样，`$[last]` 始终选择数组中的最后一个（最高编号）元素，而 `$[last-1]` 选择靠近最后一个元素的元素 。`last` 和使用它的表达式也可以包含在范围定义中。例如，`$[last-2 to last-1]` 返回最后两个元素，但一个来自数组。更多信息和示例，参阅[搜索和修改 JSON 值](/11/11.5/json?id=搜索和修改-JSON-值)。
+  - 在 MySQL 8.0.2 中添加了对 XPath 表达式的范围支持，如 `$[1 to 5]`。此外，在该版本中还添加了对 `last` 关键字和相对寻址的支持，这样，`$[last]` 始终选择数组中的最后一个（最高编号）元素，而 `$[last-1]` 选择靠近最后一个元素的元素 。`last` 和使用它的表达式也可以包含在范围定义中。例如，`$[last-2 to last-1]` 返回最后两个元素，但一个来自数组。更多信息和示例，参阅[搜索和修改 JSON 值](/11/11.5/json.html#搜索和修改-JSON-值)。
 
   - 添加了一个 JSON 合并函数，以符合 [RFC 7396](https://tools.ietf.org/html/rfc7396)。当在两个 JSON 对象上使用 [`JSON_MERGE_PATCH()`](/12/12.18/12.18.4/json-modification-functions) 时，它会将这两个对象合并到一个 JSON 对象中，该对象的成员是以下集合的并集：
 
@@ -481,7 +481,7 @@
 
   - 在 MySQL 8.0.17 及更高版本中，`WHERE` 条件 `NOT IN` （子查询）或 `NOT EXISTS`（子查询）在内部转换为反连接(反联接返回表中的所有行，该表中没有与联接条件匹配的行被联接到该表中。）这将删除子查询，因为子查询的表现在在顶层处理，因此可以更快地执行查询。
 
-    这与外部联接的现有 `IS NULL`（不存在）优化类似，并重复使用。参阅[EXPLAIN 额外信息](/8/8.8/8.8.2/explain-output?id=EXPLAIN-额外信息)。
+    这与外部联接的现有 `IS NULL`（不存在）优化类似，并重复使用。参阅[EXPLAIN 额外信息](/8/8.8/8.8.2/explain-output.html#EXPLAIN-额外信息)。
   
   - 从 MySQL 8.0.21 开始，单个表 [`UPDATE`](/13/13.2/13.2.13/update) 或 [`DELETE`](/13/13.2/13.2.2/delete) 语句现在在许多情况下都可以使用半连接转换或子查询具体化。这适用于以下示例语句：
     - `UPDATE t1 SET t1.a=value WHERE t1.a IN (SELECT t2.a FROM t2)`
@@ -494,7 +494,7 @@
     - 目标表不支持先读后写删除（仅与 [`NDB`](/23/mysql-cluster) 表相关）。
     - 基于子查询中包含的任何提示和 [`optimizer_switch`](/5/5.1/5.1.8/server-system-variables) 的值，允许半联接或子查询具体化。
 
-    当半联接优化用于符合条件的单表 `DELETE` 或 `UPDATE` 时，这在优化器跟踪中可见：对于多表语句，跟踪中有一个 `join_optimization` 对象，而对于单表语句则没有。转换在 `EXPLAIN FORMAT=TREE` 或 [`EXPLAIN ANALYZE`](/13/13.8/13.8.2/explain?id=EXPLAIN-ANALYZE-包含信息) 的输出中也可见；单个表语句显示 `<notexecutable by iterator executor>`，而多表语句报告完整的计划。
+    当半联接优化用于符合条件的单表 `DELETE` 或 `UPDATE` 时，这在优化器跟踪中可见：对于多表语句，跟踪中有一个 `join_optimization` 对象，而对于单表语句则没有。转换在 `EXPLAIN FORMAT=TREE` 或 [`EXPLAIN ANALYZE`](/13/13.8/13.8.2/explain.html#EXPLAIN-ANALYZE-包含信息) 的输出中也可见；单个表语句显示 `<notexecutable by iterator executor>`，而多表语句报告完整的计划。
 
     同样从 MySQL 8.0.21 开始，使用 [`InnoDB`](/15/innodb-storage-engine) 表的多表 `UPDATE` 语句支持半一致读取，因为事务隔离级别弱于[`REPEATABLE READ`](/15/15.7/15.7.2/15.7.2.1/innodb-transaction-isolation-levels)（可重复读）。
   - **改进哈希连接性能**。MySQL 8.0.23 重新实现了用于哈希连接的哈希表，从而在哈希连接性能方面取得了一些改进。这项工作包括对一个问题（Bug#31516149，Bug#99933）的修复，其中只有大约 2/3 分配给连接缓冲区（[`join_buffer_size`](/5/5.1/5.1.8/server-system-variables)）的内存，可以被散列联接实际使用。
@@ -502,16 +502,16 @@
     新的哈希表通常比旧的快，并且在对齐、键/值以及存在许多相等键的情况下使用更少的内存。此外，当哈希表的大小增加时，服务器现在可以释放旧内存。
 - **通用表表达式**。MySQL 现在支持通用表表达式，包括非递归和递归。公共表表达式允许使用命名的临时结果集，通过允许 [`SELECT`](/13/13.2/13.2.10/select) 语句和某些其他语句前面的 [`WITH`](/13/13.2/13.2.15/with) 子句实现。更多信息，参阅[章节 13.2.15，“WITH（通用表表达式）”](/13/13.2/13.2.15/with)。
 
-  从 MySQL 8.0.19 开始，递归公共表表达式（CTE）的递归 [`SELECT`](/13/13.2/13.2.10/select) 部分支持 `LIMIT` 子句。还支持 `LIMIT` 带 `OFFSET`。更多信息，参阅[递归通用表表达式](/13/13.2/13.2.15/with?id=递归通用表表达式)。
+  从 MySQL 8.0.19 开始，递归公共表表达式（CTE）的递归 [`SELECT`](/13/13.2/13.2.10/select) 部分支持 `LIMIT` 子句。还支持 `LIMIT` 带 `OFFSET`。更多信息，参阅[递归通用表表达式](/13/13.2/13.2.15/with.html#递归通用表表达式)。
 - **窗口函数**。MySQL 现在支持窗口函数，对于查询中的每一行，使用与该行相关的行执行计算。这些函数包括[`RANK()`](/12/12.21/12.21.1/window-function-descriptions)、[`LAG()`](/12/12.21/12.21.1/window-function-descriptions) 和 [`NTILE()`](/12/12.21/12.21.1/window-function-descriptions) 等函数。此外，一些现有的聚合函数现在可以用作窗口函数（例如，[`SUM()`](/12/12.20/12.20.1/aggregate-functions)和[`AVG()`](/12/12.20/12.20.1/aggregate-functions)）。更多信息，参阅[章节 12.21，“窗口函数”](/12/12.21/window-functions)。
 - **横向派生表**。现在，派生表的前面可以加上关键字 `LATERAL`，以指定允许它在同一 `FROM` 子句中引用（依赖）前面表的列。横向派生表使某些 SQL 操作成为可能，这些 SQL 操作无法使用非横向派生表完成，或者需要效率较低的变通方法。参阅[章节 13.2.11.9，“横向派生表”](/13/13.2/13.2.11/13.2.11.9/lateral-derived-tables)。
 - **单表 DELETE 语句中的别名**。在 MySQL 8.0.16 及更高版本中，单表 DELETE 语句支持使用表别名。
-- **支持正则表达式**。以前，MySQL 使用 Henry Spencer 正则表达式库来支持正则表达式操作符（[`REGEXP`](/12/12.8/12.8.2/regexp)，[`RLIKE`](/12/12.8/12.8.2/regexp)）。正则表达式支持已使用国际 Unicode 组件（International Components for Unicode，ICU）重新实现，ICU 提供了完整的 Unicode 支持，并且是多字节安全。[`REGEXP_LIKE()`](/12/12.8/12.8.2/regexp) 函数以 [`REGEXP`](/12/12.8/12.8.2/regexp) 和 [`RLIKE`](/12/12.8/12.8.2/regexp) 运算符的方式执行正则表达式匹配，现在这两个运算符是该函数的同义词。此外，[`REGEXP_INSTR()`](/12/12.8/12.8.2/regexp)、[`REGEXP_REPLACE()`](/12/12.8/12.8.2/regexp) 和 [`REGEXP_SUBSTR()`](/12/12.8/12.8.2/regexp) 函数分别用于查找匹配位置和执行子字符串替换和提取。[`regexp_stack_limit`](/5/5.1/5.1.8/server-system-variables) 和 [`regexp_time_limit`](/5/5.1/5.1.8/server-system-variables) 系统变量提供对匹配引擎的资源消耗的控制。更多信息，参阅[章节 12.8.2，“正则表达式”](/12/12.8/12.8.2/regexp)。有关使用正则表达式的应用程序可能受到实现更改影响的方式的信息，参阅[正则表达式兼容性注意事项](/12/12.8/12.8.2/regexp?id=正则表达式兼容性注意事项)。
+- **支持正则表达式**。以前，MySQL 使用 Henry Spencer 正则表达式库来支持正则表达式操作符（[`REGEXP`](/12/12.8/12.8.2/regexp)，[`RLIKE`](/12/12.8/12.8.2/regexp)）。正则表达式支持已使用国际 Unicode 组件（International Components for Unicode，ICU）重新实现，ICU 提供了完整的 Unicode 支持，并且是多字节安全。[`REGEXP_LIKE()`](/12/12.8/12.8.2/regexp) 函数以 [`REGEXP`](/12/12.8/12.8.2/regexp) 和 [`RLIKE`](/12/12.8/12.8.2/regexp) 运算符的方式执行正则表达式匹配，现在这两个运算符是该函数的同义词。此外，[`REGEXP_INSTR()`](/12/12.8/12.8.2/regexp)、[`REGEXP_REPLACE()`](/12/12.8/12.8.2/regexp) 和 [`REGEXP_SUBSTR()`](/12/12.8/12.8.2/regexp) 函数分别用于查找匹配位置和执行子字符串替换和提取。[`regexp_stack_limit`](/5/5.1/5.1.8/server-system-variables) 和 [`regexp_time_limit`](/5/5.1/5.1.8/server-system-variables) 系统变量提供对匹配引擎的资源消耗的控制。更多信息，参阅[章节 12.8.2，“正则表达式”](/12/12.8/12.8.2/regexp)。有关使用正则表达式的应用程序可能受到实现更改影响的方式的信息，参阅[正则表达式兼容性注意事项](/12/12.8/12.8.2/regexp.html#正则表达式兼容性注意事项)。
 - **内部临时表**。`TempTable` 存储引擎替代 `MEMORY` 存储引擎作为内存内部临时表的默认引擎。`TempTable` 存储引擎为 [`VARCHAR`](/11/11.3/11.3.2/char) 和 [`VARBINARY`](/11/11.3/11.3.3/binary-varbinary) 列提供了高效的存储。[`internal_tmp_mem_storage_engine`](/5/5.1/5.1.8/server-system-variables) 会话变量定义了内存内部临时表的存储引擎。允许的值是 `TempTable`（默认值）和 `MEMORY`。[`temptable_max_ram`](/5/5.1/5.1.8/server-system-variables) 变量定义了 `TempTable` 存储引擎在将数据存储到磁盘之前可以使用的最大内存量。
 - **日志**。错误日志被重写为使用 MySQL 组件体系结构。传统的错误日志记录是使用内置组件实现的，而使用系统日志的日志记录是作为可加载组件实现的。此外，还提供了可加载的 JSON 日志编写器。要控制要启用的日志组件，请使用 [`log_error_services`](/5/5.1/5.1.8/server-system-variables) 系统变量。
 - **备用锁**。一种新型的备份锁允许在联机备份期间使用 DML，同时防止可能导致快照不一致的操作。新的备份锁由语法 [`LOCK INSTANCE FOR BACKUP`](/13/13.3/13.3.5/lock-instance-for-backup) 和 [`UNLOCK INSTANCE`](/13/13.3/13.3.5/lock-instance-for-backup) 支持。使用这些语句需要具有 [`BACKUP_ADMIN`](/6/6.2/6.2.2/privileges-provided) 权限。
 - **复制**。对 MySQL 复制进行了以下增强：
-  - MySQL 复制现在支持使用紧凑的二进制格式对 JSON 文档的部分更新进行二进制记录，从而在记录完整的 JSON 文档时节省了日志空间。当使用基于语句的日志记录时，这种紧凑日志记录会自动完成，并且可以通过将新的 `binlog_row_value_options` 系统变量设置为 `PARTIAL_JSON` 来启用。更多信息，参阅[JSON 值的部分更新](/11/11.5/json?id=JSON-值的部分更新)，以及 [`binlog_row_value_options`](/17/17.1/17.1.6/17.1.6.4/replication-options-binary-log) 的描述。
+  - MySQL 复制现在支持使用紧凑的二进制格式对 JSON 文档的部分更新进行二进制记录，从而在记录完整的 JSON 文档时节省了日志空间。当使用基于语句的日志记录时，这种紧凑日志记录会自动完成，并且可以通过将新的 `binlog_row_value_options` 系统变量设置为 `PARTIAL_JSON` 来启用。更多信息，参阅[JSON 值的部分更新](/11/11.5/json.html#JSON-值的部分更新)，以及 [`binlog_row_value_options`](/17/17.1/17.1.6/17.1.6.4/replication-options-binary-log) 的描述。
 - **连接管理**。MySQL Server 现在允许专门为管理连接配置 TCP/IP 端口。这提供了一种替代单一管理连接的方法，该方法允许在用于普通连接的网络接口上使用，即使已经建立了 [`max_connections`](/5/5.1/5.1.8/server-system-variables)。参阅[章节 5.1.12.1，“连接接口”](/5/5.1/5.1.12/5.1.12.1/connection-interfaces)。
 
   MySQL 现在提供了对压缩使用的更多控制，以最小化通过连接发送到服务器的字节数。以前，给定的连接要么未压缩，要么使用 `zlib` 压缩算法。现在，还可以使用 `zstd` 算法，并为 `zstd` 连接选择压缩级别。允许的压缩算法可以在服务器端配置，也可以在连接发起端配置，以通过客户端程序和参与源/副本复制或组复制的服务器进行连接。更多信息，参阅[章节 4.2.8，“连接压缩控制”](/4/4.2/4.2.8/connection-compression-control)。
@@ -537,10 +537,10 @@
   - `MEMBER OF()` 测试第一个操作数（标量或 JSON 文档）是否是作为第二个操作数传递的 JSON 数组的成员，如果是，则返回 `TRUE(1)`，如果不是，则返回 `FALSE(0)`。不执行操作数的类型转换。
   - CAST（expression AS type ARRAY）允许通过将 JSON 文档中 `json_path` 处的 JSON 数组转换为 SQL 数组来创建函数索引。类型说明符仅限于 `CAST()` 已支持的类型说明符，`BINARY`（不支持）除外。只有 [`InnoDB`](/15/innodb-storage-engine) 支持使用 `CAST()`（以及 `ARRAY` 关键字），并且仅用于创建多值索引。
 
-  有关多值索引的更多信息，包括示例，参阅[多值索引](/13/13.1/13.1.15/create-index?id=多值索引)。[章节 12.18.3，“搜索 JSON 值的函数”](/12/12.18/12.18.3/json-search-functions)，提供了更多有关 `JSON_OVERLAPS()` 和 `MEMBER OF()` 的信息及使用示例。
+  有关多值索引的更多信息，包括示例，参阅[多值索引](/13/13.1/13.1.15/create-index.html#多值索引)。[章节 12.18.3，“搜索 JSON 值的函数”](/12/12.18/12.18.3/json-search-functions)，提供了更多有关 `JSON_OVERLAPS()` 和 `MEMBER OF()` 的信息及使用示例。
 
-- **暗示性 time_zone**。从 MySQL 8.0.17 开始，可以通过 [`SET_VAR`](/8/8.9/8.9.3/optimizer-hints?id=变量设置提示语法) 将 [`time_zone`](/5/5.1/5.1.8/server-system-variables) 会话变量设置为暗示性。
-- **重做日志归档**。从 MySQL 8.0.17 开始，InnoDB 支持重做日志归档。备份操作正在进行时，复制重做日志记录的备份实用程序有时可能无法跟上重做日志生成的速度，从而导致由于覆盖这些记录而丢失重做日志记录。重做日志存档功能通过将重做日志记录顺序写入存档文件来解决此问题。备份实用程序可以根据需要从归档文件复制重做日志记录，从而避免潜在的数据丢失。更多信息，参阅[重做日志归档](/15/15.6/15.6.5/innodb-redo-log?id=重做日志归档)。
+- **暗示性 time_zone**。从 MySQL 8.0.17 开始，可以通过 [`SET_VAR`](/8/8.9/8.9.3/optimizer-hints.html#变量设置提示语法) 将 [`time_zone`](/5/5.1/5.1.8/server-system-variables) 会话变量设置为暗示性。
+- **重做日志归档**。从 MySQL 8.0.17 开始，InnoDB 支持重做日志归档。备份操作正在进行时，复制重做日志记录的备份实用程序有时可能无法跟上重做日志生成的速度，从而导致由于覆盖这些记录而丢失重做日志记录。重做日志存档功能通过将重做日志记录顺序写入存档文件来解决此问题。备份实用程序可以根据需要从归档文件复制重做日志记录，从而避免潜在的数据丢失。更多信息，参阅[重做日志归档](/15/15.6/15.6.5/innodb-redo-log.html#重做日志归档)。
 - **克隆插件**。从 MySQL 8.0.17 开始，MySQL 提供了一个克隆插件，允许在本地或从远程 MySQL 服务器实例克隆 `InnoDB` 数据。本地克隆操作将克隆数据存储在运行 MySQL 实例的同一服务器或节点上。远程克隆操作通过网络将克隆数据从提供方 MySQL 服务器实例传输到发起克隆操作的接收方服务器或节点。
 
   克隆插件支持复制。除了克隆数据外，克隆操作还从供体提取和传输复制坐标，并将其应用于接收方，从而允许使用克隆插件来配置组复制成员和副本。使用克隆插件进行资源调配比复制大量事务要快得多、效率更高。还可以将组复制成员配置为使用克隆插件作为恢复的替代方法，以便成员自动选择从种子成员检索组数据的最有效方式。
@@ -565,23 +565,23 @@
 
   当未指定联接条件时，哈希联接也可用于笛卡尔乘积。
 
-  你可以使用 [`EXPLAIN FORMAT=TREE`](/13/13.8/13.8.2/explain) 或 [`EXPLAIN ANALYZE`](/13/13.8/13.8.2/explain?id=通过-EXPLAIN-ANALYZE-获取信息) 查看哈希连接优化何时用于特定查询(在 MySQL 8.0.20 及更高版本中，还可以使用 `EXPLAIN`，省略 `FORMAT=TREE`。）
+  你可以使用 [`EXPLAIN FORMAT=TREE`](/13/13.8/13.8.2/explain) 或 [`EXPLAIN ANALYZE`](/13/13.8/13.8.2/explain.html#通过-EXPLAIN-ANALYZE-获取信息) 查看哈希连接优化何时用于特定查询(在 MySQL 8.0.20 及更高版本中，还可以使用 `EXPLAIN`，省略 `FORMAT=TREE`。）
 
   哈希联接可用的内存量受 [`join_buffer_size`](/5/5.1/5.1.8/server-system-variables) 的值限制。在磁盘上执行的哈希连接需要的内存超过了这个数量；磁盘上哈希联接可以使用的磁盘文件数受 [`open_files_limit`](/5/5.1/5.1.8/server-system-variables) 限制。
 
-  从 MySQL 8.0.19 开始，MySQL 8.0.18 中引入的 [`hash_join`](/8/8.9/8.9.2/switchable-optimizations) 优化器不再受支持（hash_join=on 仍然作为 optimizer_switch 值的一部分出现，但设置它不再有任何效果）。[`HASH_JOIN`](/8/8.9/8.9.3/optimizer-hints?id=表级优化器提示) 和 `NO_HASH_JOIN` 优化器提示也不再受支持。开关和提示现在都不推荐使用；希望在将来的 MySQL 版本中删除它们。在 MySQL 8.0.18 及更高版本中，可以使用 [`NO_BNL`](/8/8.9/8.9.3/optimizer-hints?id=表级优化器提示) 优化器开关禁用哈希联接。
+  从 MySQL 8.0.19 开始，MySQL 8.0.18 中引入的 [`hash_join`](/8/8.9/8.9.2/switchable-optimizations) 优化器不再受支持（hash_join=on 仍然作为 optimizer_switch 值的一部分出现，但设置它不再有任何效果）。[`HASH_JOIN`](/8/8.9/8.9.3/optimizer-hints.html#表级优化器提示) 和 `NO_HASH_JOIN` 优化器提示也不再受支持。开关和提示现在都不推荐使用；希望在将来的 MySQL 版本中删除它们。在 MySQL 8.0.18 及更高版本中，可以使用 [`NO_BNL`](/8/8.9/8.9.3/optimizer-hints.html#表级优化器提示) 优化器开关禁用哈希联接。
 
-  在 MySQL 8.0.20 及更高版本中，MySQL 服务器不再使用块嵌套循环，并且在以前使用块嵌套循环的任何时候都会使用哈希联接，即使查询不包含相等联接条件。这适用于内部非等联接、半联接、反联接、左外部联接和右外部联接。[`optimizer_switch`](/5/5.1/5.1.8/server-system-variables) 系统变量的 [`block_nested_loop`](/8/8.9/8.9.2/switchable-optimizations) 标志以及 [`BNL`](/8/8.9/8.9.3/optimizer-hints?id=表级优化器提示) 和 `NO_BNL` 优化器提示仍受支持，但此后仅控制哈希联接的使用。此外，内部联接和外部联接（包括半联接和反联接）现在都可以使用批处理密钥访问（batched key access，BKA），它以增量方式分配联接缓冲区内存，这样单个查询就不需要占用它们实际不需要的大量资源来解决。从 MySQL 8.0.18 开始，仅支持用于内部联接的 BKA。
+  在 MySQL 8.0.20 及更高版本中，MySQL 服务器不再使用块嵌套循环，并且在以前使用块嵌套循环的任何时候都会使用哈希联接，即使查询不包含相等联接条件。这适用于内部非等联接、半联接、反联接、左外部联接和右外部联接。[`optimizer_switch`](/5/5.1/5.1.8/server-system-variables) 系统变量的 [`block_nested_loop`](/8/8.9/8.9.2/switchable-optimizations) 标志以及 [`BNL`](/8/8.9/8.9.3/optimizer-hints.html#表级优化器提示) 和 `NO_BNL` 优化器提示仍受支持，但此后仅控制哈希联接的使用。此外，内部联接和外部联接（包括半联接和反联接）现在都可以使用批处理密钥访问（batched key access，BKA），它以增量方式分配联接缓冲区内存，这样单个查询就不需要占用它们实际不需要的大量资源来解决。从 MySQL 8.0.18 开始，仅支持用于内部联接的 BKA。
 
   MySQL 8.0.20 还将以前版本的 MySQL 中使用的执行器替换为迭代器执行器。这项工作包括替换旧的索引子查询引擎，该引擎管理 `WHERE value IN (SELECT column FROM table WHERE ...)`形式的查询，用于那些未优化为半联接的查询，以及以相同形式具体化的查询，这些查询以前依赖于旧的执行器。
 
-  更多信息和示例，参阅[章节 8.2.1.4，“哈希连接优化”](/8/8.2/8.2.1/8.2.1.4/hash-joins)。也可参阅[批处理密钥访问联接](/bnl-bka-optimization?id=批处理密钥访问联接)。
+  更多信息和示例，参阅[章节 8.2.1.4，“哈希连接优化”](/8/8.2/8.2.1/8.2.1.4/hash-joins)。也可参阅[批处理密钥访问联接](/bnl-bka-optimization.html#批处理密钥访问联接)。
 
-- **EXPLAIN ANALYZE 语句**。MySQL 8.0.18 中实现了一种新形式的 [`EXPLAIN`](/13/13.8/13.8.2/explain) 语句 [`EXPLAIN ANALYSE`](/13/13.8/13.8.2/explain?id=通过-EXPLAIN-ANALYZE-获取信息)，它以 `TREE` 的形式为处理查询时使用的每个迭代器提供了 `SELECT` 语句执行情况的扩展信息，并可以将估计成本与查询的实际成本进行比较。此信息包括启动成本、总成本、迭代器返回的行数以及执行的循环数。
+- **EXPLAIN ANALYZE 语句**。MySQL 8.0.18 中实现了一种新形式的 [`EXPLAIN`](/13/13.8/13.8.2/explain) 语句 [`EXPLAIN ANALYSE`](/13/13.8/13.8.2/explain.html#通过-EXPLAIN-ANALYZE-获取信息)，它以 `TREE` 的形式为处理查询时使用的每个迭代器提供了 `SELECT` 语句执行情况的扩展信息，并可以将估计成本与查询的实际成本进行比较。此信息包括启动成本、总成本、迭代器返回的行数以及执行的循环数。
 
   在 MySQL 8.0.21 及更高版本中，此语句还支持 `FORMAT=TREE` 标识。`TREE` 是唯一受支持的格式。
 
-  参阅[通过 EXPLAIN ANALYZE 获取信息](/13/13.8/13.8.2/explain?id=通过-EXPLAIN-ANALYZE-获取信息)，获取更多信息。
+  参阅[通过 EXPLAIN ANALYZE 获取信息](/13/13.8/13.8.2/explain.html#通过-EXPLAIN-ANALYZE-获取信息)，获取更多信息。
 
 - **查询转换注入**。在版本 8.0.18 和更高版本中，MySQL 在参数的数据类型和预期数据类型不匹配的表达式和条件中向查询项树中注入强制转换操作。这对查询结果或执行速度没有影响，但使执行时的查询相当于符合 SQL 标准的查询，同时保持与 MySQL 早期版本的向后兼容性。
 
@@ -589,7 +589,7 @@
 
   从 MySQL 8.0.21 开始，在比较字符串类型与其他类型时也会执行此类强制转换。强制转换的字符串类型包括 [`CHAR`](/11/11.3/11.3.2/char)、[`VARCHAR`](/11/11.3/11.3.2/char)、[`BINARY`](/11/11.3/11.3.3/binary-varbinary)、[`VARBINARY`](/11/11.3/11.3.3/binary-varbinary)、[`BLOB`](/11/11.3/11.3.4/blob)、[`TEXT`](/11/11.3/11.3.4/blob)、[`ENUM`](/11/11.3/11.3.5/enum) 和 [`SET`](/11/11.3/11.3.6/set)。将字符串类型的值与数字类型或 `YEAR` 进行比较时，字符串类型转换为 [`DOUBLE`]；如果另一个参数的类型不是 [`FLOAT`](/11/11.1/11.1.4/floating-point-types)、[`DOUBLE`](/11/11.1/11.1.4/floating-point-types) 或 [`REAL`](/11/11.1/11.1.4/floating-point-types)，那么它也将转换为 [`DOUBLE`](/11/11.1/11.1.4/floating-point-types)。将字符串类型与 [`DATETIME`](/11/11.2/11.2.2/datetime) 或 [`TIMESTAMP`](/11/11.2/11.2.2/datetime) 值进行比较时，字符串被强制转换为 [`DATETIME`](/11/11.2/11.2.2/datetime)；将字符串类型与日期进行比较时，字符串将强制转换为 [`DATE`](/11/11.2/11.2.2/datetime)。
 
-  通过查看 [`EXPLAIN ANALYZE`](/13/13.8/13.8.2/explain?id=通过-EXPLAIN-ANALYZE-获取信息)、`EXPLAIN FORMAT=JSON` 或 `EXPLAIN FORMAT=TREE` 的输出，可以查看何时将转换注入给定查询：
+  通过查看 [`EXPLAIN ANALYZE`](/13/13.8/13.8.2/explain.html#通过-EXPLAIN-ANALYZE-获取信息)、`EXPLAIN FORMAT=JSON` 或 `EXPLAIN FORMAT=TREE` 的输出，可以查看何时将转换注入给定查询：
 
   ```bash
   mysql> CREATE TABLE d (dt DATETIME, d DATE, t TIME);
@@ -638,7 +638,7 @@
 
   包含时区偏移量的 Datetime 文字可以用作 prepared 语句参数值。
 
-  作为这项工作的一部分，用于设置 [`time_zone`](/5/5.1/5.1.8/server-system-variables) 系统变量的值现在也限制在 `-13:59` 到 `+14:00`（包含上下界）的范围内(仍然可以将名称值分配给 `time_zone`，例如把 “EST”、“Posix/Australia/Brisbane” 和 “Europe/Stockholm” 分配给该变量，前提是加载了 MySQL 时区表；参阅[填充时区表](/5/5.1/5.1.15/time-zone-support?id=填充时区表))。
+  作为这项工作的一部分，用于设置 [`time_zone`](/5/5.1/5.1.8/server-system-variables) 系统变量的值现在也限制在 `-13:59` 到 `+14:00`（包含上下界）的范围内(仍然可以将名称值分配给 `time_zone`，例如把 “EST”、“Posix/Australia/Brisbane” 和 “Europe/Stockholm” 分配给该变量，前提是加载了 MySQL 时区表；参阅[填充时区表](/5/5.1/5.1.15/time-zone-support.html#填充时区表))。
 
   更多信息和示例，参阅[章节 5.1.15，“MySQL Server 时区支持”](/5/5.1/5.1.15/time-zone-support)，以及[章节 11.2.2，“DATE、DATETIME 和 TIMESTAMP 类型”](/11/11.2/11.2.2/datetime)。
 
@@ -693,14 +693,14 @@
 
 - **FORCE INDEX，IGNORE INDEX 的优化器提示**。MySQL 8.0 引入了索引级优化器提示，与[章节 8.9.4，“索引提示”](/8/8.9/8.9.4/index-hints)中描述的传统索引提示类似。此处列出了新提示及其强制索引或忽略索引等价项：
 
-  - [`GROUP_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示): 等价于 `FORCE INDEX FOR GROUP BY`
-  - [`NO_GROUP_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示): 等价于 `IGNORE INDEX FOR GROUP BY`
-  - [`JOIN_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示): 等价于 `FORCE INDEX FOR JOIN`
-  - [`NO_JOIN_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示): 等价于 `IGNORE INDEX FOR JOIN`
-  - [`ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示): 等价于 `FORCE INDEX FOR ORDER BY`
-  - [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示): 等价于 `IGNORE INDEX FOR ORDER BY`
-  - [`INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示): 与 [`GROUP_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示) 加 [`JOIN_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示) 加 [`ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示) 相同； 等价于不带修饰符的 `FORCE INDEX`
-  - [`NO_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示): 与 [`NO_GROUP_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示) 加 [`NO_JOIN_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示) 加 [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示) 相同； 等价于不带修饰符的 `IGNORE INDEX`
+  - [`GROUP_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示): 等价于 `FORCE INDEX FOR GROUP BY`
+  - [`NO_GROUP_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示): 等价于 `IGNORE INDEX FOR GROUP BY`
+  - [`JOIN_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示): 等价于 `FORCE INDEX FOR JOIN`
+  - [`NO_JOIN_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示): 等价于 `IGNORE INDEX FOR JOIN`
+  - [`ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示): 等价于 `FORCE INDEX FOR ORDER BY`
+  - [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示): 等价于 `IGNORE INDEX FOR ORDER BY`
+  - [`INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示): 与 [`GROUP_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示) 加 [`JOIN_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示) 加 [`ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示) 相同； 等价于不带修饰符的 `FORCE INDEX`
+  - [`NO_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示): 与 [`NO_GROUP_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示) 加 [`NO_JOIN_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示) 加 [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示) 相同； 等价于不带修饰符的 `IGNORE INDEX`
 
   例如，以下是两个等价查询：
 
@@ -712,7 +712,7 @@
 
   前面列出的优化器提示遵循与现有索引级优化器提示相同的语法和用法基本规则。
 
-  这些优化器提示旨在取代 `FORCE INDEX` 和 `IGNORE INDEX`，我们计划在未来的 MySQL 版本中弃用它们，并随后从 MySQL 中删除。它们没有为 `USE INDEX` 实现一个完全相同的功能;相反，你可以使用一个或多个 [`NO_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示) 加 [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示)、[`NO_JOIN_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示) 加 [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示)、[`NO_GROUP_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示) 加 [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示) 或 [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示) 加 [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints?id=索引级优化器提示) 来实现相同的效果。
+  这些优化器提示旨在取代 `FORCE INDEX` 和 `IGNORE INDEX`，我们计划在未来的 MySQL 版本中弃用它们，并随后从 MySQL 中删除。它们没有为 `USE INDEX` 实现一个完全相同的功能;相反，你可以使用一个或多个 [`NO_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示) 加 [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示)、[`NO_JOIN_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示) 加 [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示)、[`NO_GROUP_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示) 加 [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示) 或 [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示) 加 [`NO_ORDER_INDEX`](/8/8.9/8.9.3/optimizer-hints.html#索引级优化器提示) 来实现相同的效果。
 
 - **JSON_VALUE() 函数**。MySQL 8.0.21 实现了一个新函数 [`JSON_VALUE()`](/12/12.18/12.18.3/json-search-functions)，用于简化 [`JSON`](/11/11.5/json) 列的索引。在其最基本的形式中，它将JSON文档和指向该文档中单个值的 JSON 路径作为参数，并且（可选）允许你使用 `RETURNING` 关键字指定返回类型。JSON_VALUE(json_doc, path RETURNING type) 等价于：
 
@@ -854,7 +854,7 @@
 
   当派生表不使用任何聚合或窗口函数时，可以将外部 `WHERE` 条件直接下推到具体化的派生表。当派生表具有 `GROUP BY` 且不使用任何窗口函数时，可以将外部 `WHERE` 条件作为 `HAVING` 条件下推到派生表。当派生表使用窗口函数时，`WHERE` 条件也可以向下推，而外部 `WHERE` 引用列在窗口函数的 `PARTITION` 子句中使用。
 
-  派生条件下推默认启用，如 `[`optimizer_switch`](/5/5.1/5.1.8/server-system-variables)` 系统变量的 [`derived_condition_pushdown`](/8/8.9/8.9.2/switchable-optimizations) 标志所标示。MySQL 8.0.22 中添加的标志默认设置为 `on`；要禁用特定查询的优化，可以使用 [`NO_DERIVED_CONDITION_PUSHDOWN`](/8/8.9/8.9.3/optimizer-hints?id=表级优化器提示) 优化器提示（也添加在 MySQL 8.0.22 中）。如果由于 [`derived_condition_pushdown`](/8/8.9/8.9.2/switchable-optimizations) 设置为 `off` 而禁用优化，则可以通过 [`DERIVED_CONDITION_PUSHDOWN`](/8/8.9/8.9.3/optimizer-hints?id=表级优化器提示) 为给定查询启用优化。
+  派生条件下推默认启用，如 `[`optimizer_switch`](/5/5.1/5.1.8/server-system-variables)` 系统变量的 [`derived_condition_pushdown`](/8/8.9/8.9.2/switchable-optimizations) 标志所标示。MySQL 8.0.22 中添加的标志默认设置为 `on`；要禁用特定查询的优化，可以使用 [`NO_DERIVED_CONDITION_PUSHDOWN`](/8/8.9/8.9.3/optimizer-hints.html#表级优化器提示) 优化器提示（也添加在 MySQL 8.0.22 中）。如果由于 [`derived_condition_pushdown`](/8/8.9/8.9.2/switchable-optimizations) 设置为 `off` 而禁用优化，则可以通过 [`DERIVED_CONDITION_PUSHDOWN`](/8/8.9/8.9.3/optimizer-hints.html#表级优化器提示) 为给定查询启用优化。
 
   派生条件下推优化不能用于包含 `UNION` 或 `LIMIT` 子句的派生表。此外，不能将本身使用子查询的条件下推，也不能将 `WHERE` 条件下推到也是外部联接的内部表的派生表。更多信息及示例，参阅[章节 8.2.2.5，“导出条件下推优化”](/8/8.2/8.2.2/8.2.2.5/derived-condition-pushdown-optimization)。
 
@@ -866,7 +866,7 @@
 
   - 使用任何事务隔离级别从授权表（通过联接列表或子查询）读取数据但不修改数据的 DML 操作。
 
-  更多信息，参阅[授权表并发](/6/6.2/6.2.3/grant-tables?id=授权表并发)。
+  更多信息，参阅[授权表并发](/6/6.2/6.2.3/grant-tables.html#授权表并发)。
 
 ## MySQL 8.0 弃用特性
 
@@ -898,8 +898,10 @@
 
 - 非标准C风格 [`&&`](/12/12.4/12.4.3/logical-operators)、[`||`](/12/12.4/12.4.3/logical-operators) 和[`!`](/12/12.4/12.4.3/logical-operators) 分别作为标准 SQL [`AND`](/12/12.4/12.4.3/logical-operators)、[`OR`](/12/12.4/12.4.3/logical-operators) 和 [`NOT`](/12/12.4/12.4.3/logical-operators) 运算符同义词的运算符，不推荐使用。应该把使用非标准运算符的应用程序调整为使用标准运算符。
 
-  ?> 注意：除非启用了 [`PIPES_AS_CONCAT`](/5/5.1/5.1.11/sql-mode) 作为 SQL 模式，否则不推荐使用 [`||`](/12/12.4/12.4.3/logical-operators)。在这种情况下，[`||`](/12/12.4/12.4.3/logical-operators) 表示 SQL 标准字符串连接运算符）。
-
+  ::: tip 提示
+  注意：除非启用了 [`PIPES_AS_CONCAT`](/5/5.1/5.1.11/sql-mode) 作为 SQL 模式，否则不推荐使用 [`||`](/12/12.4/12.4.3/logical-operators)。在这种情况下，[`||`](/12/12.4/12.4.3/logical-operators) 表示 SQL 标准字符串连接运算符）。
+  :::
+  
 - [`JSON_MERGE()`](/12/12.18/12.18.4/json-modification-functions) 函数废弃。改为使用 [`JSON_MERGE_PRESERVE()`](/12/12.18/12.18.4/json-modification-functions)。
 
 - `SQL_CALC_FOUND_ROWS` 查询修饰符和附带的 [`FOUND_ROWS()`](/12/12.16/information-functions) 函数弃用。有关替代策略的信息，请参阅 [`FOUND_ROWS()`](/12/12.16/information-functions) 说明。
@@ -1021,7 +1023,7 @@
 
 - 数据字典提供有关数据库对象的信息，因此服务器不再检查数据目录中的目录名以查找数据库。因此，`--ignore db dir` 选项和 `ignore_db_dirs` 系统变量是无关的，将被删除。
 
-- DDL 日志（也称为元数据日志）已被删除。从 MySQL 8.0.3 开始，此功能由数据字典 `innodb_ddl_log` 表处理。参阅[`查看 DDL 日志`](/13/13.1/13.1.1/atomic-ddl?id=查看-DDL-日志)。
+- DDL 日志（也称为元数据日志）已被删除。从 MySQL 8.0.3 开始，此功能由数据字典 `innodb_ddl_log` 表处理。参阅[`查看 DDL 日志`](/13/13.1/13.1.1/atomic-ddl.html#查看-DDL-日志)。
 
 - `tx_isolation` 和 `tx_read_only` 系统变量被移除。使用 `transaction_isolation` 和 `transaction_read_only` 替代。
 
@@ -1273,7 +1275,7 @@
 
 - 支持语句 `ALTER TABLE ... UPGRADE PARTITIONING` 已被移除。
 
-- 从 MySQL 8.0.16 开始，已删除对 [`internal_tmp_disk_storage_engine`](/5/5.1/5.1.8/server-system-variables) 系统变量的支持；磁盘上的内部临时表现在总是使用 [`InnoDB`](/15/innodb-storage-engine) 存储引擎。更多信息，参阅[磁盘上内部临时表的存储引擎](/8/8.4/8.4.4/internal-temporary-tables?id=磁盘上内部临时表的存储引擎)。
+- 从 MySQL 8.0.16 开始，已删除对 [`internal_tmp_disk_storage_engine`](/5/5.1/5.1.8/server-system-variables) 系统变量的支持；磁盘上的内部临时表现在总是使用 [`InnoDB`](/15/innodb-storage-engine) 存储引擎。更多信息，参阅[磁盘上内部临时表的存储引擎](/8/8.4/8.4.4/internal-temporary-tables.html#磁盘上内部临时表的存储引擎)。
 
 - [`DISABLE_SHARED`](/2/2.9/2.9.7/source-configuration-options) **CMake** 选项不再使用，已被移除。
 

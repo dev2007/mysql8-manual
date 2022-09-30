@@ -2,7 +2,7 @@
 
 在发布有关问题的 bug 报告之前，请尝试验证该错误是否为 bug，以及该 bug 是否尚未报告：
 
-- 首先从以下位置搜索 MySQL 在线手册：https://dev.mysql.com/doc/ 。我们试图通过频繁更新手册以解决新发现的问题，使手册保持最新。此外，手册随附的发行说明可能特别有用，因为更新版本很可能包含问题的解决方案。发布说明可在刚刚为手册提供的位置获得。
+- 首先从以下位置搜索 MySQL 在线手册：[https://dev.mysql.com/doc/](https://dev.mysql.com/doc/) 。我们试图通过频繁更新手册以解决新发现的问题，使手册保持最新。此外，手册随附的发行说明可能特别有用，因为更新版本很可能包含问题的解决方案。发布说明可在刚刚为手册提供的位置获得。
 
 - 如果 SQL 语句出现解析错误，请仔细检查语法。如果你找不到错误，那么你当前版本的 MySQL Server 极有可能不支持你使用的语法。如果你使用的是当前版本，并且手册中没有介绍你使用的语法，那么 MySQL Server 不支持你的语句。
 
@@ -10,23 +10,23 @@
 
 - 有关一些常见问题的解决方案，请参见[章节B.3节 “问题和常见错误”](/appendix/b/b.3/problems)。
 
-- 在以下位置搜索bugs数据库：http://bugs.mysql.com/ 查看是否已报告并修复该错误。
+- 在以下位置搜索bugs数据库：[http://bugs.mysql.com/](http://bugs.mysql.com/) 查看是否已报告并修复该错误。
 
-- 你也可以使用http://www.mysql.com/search/ 搜索MySQL网站上的所有网页（包括手册）。
+- 你也可以使用 [http://www.mysql.com/search/](http://www.mysql.com/search/) 搜索 MySQL 网站上的所有网页（包括手册）。
 
 如果你在手册、bug 数据库或邮件列表档案中找不到答案，请咨询你当地的 MySQL 专家。如果你仍然无法找到问题的答案，请使用以下准则报告错误。
 
-报告bug的正常方法是访问http://bugs.mysql.com/，这是 bug 数据库的地址。这个数据库是公共的，任何人都可以浏览和搜索。如果登录到系统，则可以输入新报告。
+报告bug的正常方法是访问 [http://bugs.mysql.com/](http://bugs.mysql.com/)，这是 bug 数据库的地址。这个数据库是公共的，任何人都可以浏览和搜索。如果登录到系统，则可以输入新报告。
 
-发布在 bug 数据库中的（http://bugs.mysql.com/ ）bug，在发行说明中注明了针对给定发行版进行的更正。
+发布在 bug 数据库中的（[http://bugs.mysql.com/](http://bugs.mysql.com/) ）bug，在发行说明中注明了针对给定发行版进行的更正。
 
-如果你发现 MySQL Server 存在安全漏洞，请立即向<secalert_us@oracle.com> 发送电子邮件告知我们。 例外情况：支持客户应在以下位置向 Oracle 支持部门报告所有问题，包括安全漏洞：http://support.oracle.com/ 。
+如果你发现 MySQL Server 存在安全漏洞，请立即向 <secalert_us@oracle.com> 发送电子邮件告知我们。 例外情况：支持客户应在以下位置向 Oracle 支持部门报告所有问题，包括安全漏洞：[http://support.oracle.com/](http://support.oracle.com/)。
 
 要与其他用户讨论问题，可以使用 [MySQL 社区](https://mysqlcommunity.slack.com/)。
 
 写一个好的 bug 报告需要耐心，但是第一次就把它做好可以为我们和你自己节省时间。一个好的 bug 报告，包含 bug 的完整测试用例，使得我们很可能在下一个版本中修复 bug。本节帮助你正确编写报告，这样你就不会浪费时间做对我们帮助不大或根本没有帮助的事情。请仔细阅读本节，并确保你的报告中包含此处描述的所有信息。
 
-最好在发布之前使用最新的 MySQL Server 生产或开发版本测试问题。任何人只要在测试用例中使用 `mysql test < script_file`，或者运行 bug 报告中包含的 shell 或 Perl脚本，就可以重现这个 bug。我们能够重现的任何 bug 都有很高的机会在下一个 MySQL 版本中被修复。
+最好在发布之前使用最新的 MySQL Server 生产或开发版本测试问题。任何人只要在测试用例中使用 `mysql test < script_file`，或者运行 bug 报告中包含的 shell 或 Perl 脚本，就可以重现这个 bug。我们能够重现的任何 bug 都有很高的机会在下一个 MySQL 版本中被修复。
 
 当错误报告中包含了对问题的良好描述时，它会非常有用。也就是说，举一个好例子，说明你所做的一切导致了问题，并详细描述问题本身。最好的报告包括一个完整的例子，说明如何重现错误或问题。参阅[章节5.9，“调试 MySQL”](/5/5.9/debugging-mysql)。
 

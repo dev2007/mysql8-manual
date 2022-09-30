@@ -13,11 +13,15 @@ C:\> "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqladmin"
           -u root shutdown
 ```
 
-?> **注意** 如果 MySQL `root` 用户帐户有密码，则需要使用 `-p` 选项调用 [mysqladmin](/4/4.5/4.5.2/mysqladmin)，并在提示时提供密码。
+::: tip 注意
+如果 MySQL `root` 用户帐户有密码，则需要使用 `-p` 选项调用 [mysqladmin](/4/4.5/4.5.2/mysqladmin)，并在提示时提供密码。
+:::
 
 此命令调用 MySQL 管理实用程序 [mysqladmin](/4/4.5/4.5.2/mysqladmin) 以连接到服务器并告诉它关闭。该命令以 MySQL `root` 用户身份连接，这是 MySQL 授权系统中的默认管理帐户。
 
-?> **注意** MySQL授权系统中的用户完全独立于Windows下的任何操作系统用户。
+::: tip 注意
+MySQL授权系统中的用户完全独立于Windows下的任何操作系统用户。
+:::
 
 使用以下命令将服务器安装为服务：
 
@@ -39,7 +43,9 @@ C:\> "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld" --install
 
 如果在同一台计算机上运行多个 MySQL 服务器，则不应将MySQL `bin` 目录添加到 Windows `PATH`。
 
-!> **警告** 手动编辑系统路径时，必须非常小心；意外删除或修改现有路径值的任何部分可能会导致系统出现故障，甚至无法使用。
+::: warning 警告
+手动编辑系统路径时，必须非常小心；意外删除或修改现有路径值的任何部分可能会导致系统出现故障，甚至无法使用。
+:::
 
 安装服务时可以使用以下附加参数：
 
@@ -68,7 +74,9 @@ C:\> "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld"
 
 这里，默认服务名称（MySQL）在--install选项之后给出。如果没有给出 [--defaults-file](/4/4.2/4.2.2/4.2.2.3/option-file-options) 选项，该命令将导致服务器从标准选项文件中读取[mysqld]组。但是，由于存在 [--defaults-file](/4/4.2/4.2.2/4.2.2.3/option-file-options) 选项，服务器从[mysqld]选项组中读取选项，并且仅从命名文件中读取选项。
 
-?> **注意** 在 Windows 上，如果服务器以 [--defaults-file](/4/4.2/4.2.2/4.2.2.3/option-file-options) 和 [`--install`](/5/5.1/5.1.7/server-options) 选项启动，则 [`--install`](/5/5.1/5.1.7/server-options) 必须在前。否则，`mysqld.exe` 尝试启动 MySQL 服务器。
+::: tip 注意
+在 Windows 上，如果服务器以 [--defaults-file](/4/4.2/4.2.2/4.2.2.3/option-file-options) 和 [`--install`](/5/5.1/5.1.7/server-options) 选项启动，则 [`--install`](/5/5.1/5.1.7/server-options) 必须在前。否则，`mysqld.exe` 尝试启动 MySQL 服务器。
+:::
 
 在启动 MySQL 服务之前，你还可以在 Windows 服务实用程序中指定选项作为启动参数。
 

@@ -1,24 +1,28 @@
 # 2.5.6.1 使用 Docker 部署 MySQL 服务器的基本步骤
 
-?> **警告** MySQL 团队维护的 MySQL Docker 镜像是专门为 Linux 平台构建的。其他平台不受支持，用户在其上使用这些 MySQL Docker 镜像将自行承担风险。有关在非 Linux 操作系统上运行这些容器的一些已知限制，参阅[此处的讨论](/2/2.5/2.5.6/2.5.6.3/deploy-mysql-nonlinux-docker)。
+::: warning 警告
+MySQL 团队维护的 MySQL Docker 镜像是专门为 Linux 平台构建的。其他平台不受支持，用户在其上使用这些 MySQL Docker 镜像将自行承担风险。有关在非 Linux 操作系统上运行这些容器的一些已知限制，参阅[此处的讨论](/2/2.5/2.5.6/2.5.6.3/deploy-mysql-nonlinux-docker)。
+:::
 
-- [下载 MySQL 服务器 Docker 镜像](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started?id=下载-MySQL-服务器-Docker-镜像)
+- [下载 MySQL 服务器 Docker 镜像](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started.html#下载-MySQL-服务器-Docker-镜像)
 
-- [启动 MySQL 服务器实例](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started?id=启动-MySQL-服务器实例)
+- [启动 MySQL 服务器实例](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started.html#启动-MySQL-服务器实例)
 
-- [从容器内连接到 MySQL 服务器](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started?id=从容器内连接到-MySQL-服务器)
+- [从容器内连接到 MySQL 服务器](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started.html#从容器内连接到-MySQL-服务器)
 
-- [容器 Shell 访问](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started?id=容器-Shell-访问)
+- [容器 Shell 访问](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started.html#容器-Shell-访问)
 
-- [停止和删除 MySQL 容器](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started?id=停止和删除-MySQL-容器)
+- [停止和删除 MySQL 容器](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started.html#停止和删除-MySQL-容器)
 
-- [升级 MySQL 服务器容器](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started?id=升级-MySQL-服务器容器)
+- [升级 MySQL 服务器容器](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started.html#升级-MySQL-服务器容器)
 
-- [有关使用 Docker 部署 MySQL 服务器的更多主题](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started?id=有关使用-Docker-部署-MySQL-服务器的更多主题)
+- [有关使用 Docker 部署 MySQL 服务器的更多主题](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started.html#有关使用-Docker-部署-MySQL-服务器的更多主题)
 
 ## 下载 MySQL 服务器 Docker 镜像
 
-!> **重要** 对于 MySQL 企业版用户：需要订阅才能使用MySQL企业版本的Docker映像。订阅采用自带许可证模式；有关详细信息，参阅[如何购买 MySQL 产品和服务](https://www.mysql.com/buy-mysql/)。
+::: danger 重要
+对于 MySQL 企业版用户：需要订阅才能使用MySQL企业版本的Docker映像。订阅采用自带许可证模式；有关详细信息，参阅[如何购买 MySQL 产品和服务](https://www.mysql.com/buy-mysql/)。
+:::
 
 在单独的步骤中下载服务器图像不是严格必要的；但是，在创建 Docker 容器之前执行此步骤可以确保本地镜像是最新的。要下载 MySQL 社区版镜像，请运行以下命令：
 
@@ -102,11 +106,11 @@ mysql/mysql-server   latest              3157d7f55f8d        4 weeks ago        
 docker run --name=container_name  --restart on-failure -d image_name:tag
 ```
 
-可以使用 **docker images** 命令获得镜像名称，如[下载 MySQL 服务器 Docker 镜像](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started?id=下载-MySQL-服务器-Docker-镜像)中所述。
+可以使用 **docker images** 命令获得镜像名称，如[下载 MySQL 服务器 Docker 镜像](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started.html#下载-MySQL-服务器-Docker-镜像)中所述。
 
 `--name` 选项是可选的，用于为服务器容器提供自定义名称；如果没有提供容器名称，则生成一个随机名称。
 
-`--restart` 选项用于配置容器的[重启策略](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started?id=下载-MySQL-服务器-Docker-镜像)；应将其设置为故障时的值，以支持客户端会话中的服务器重启（例如，当客户端执行重启语句或[配置 InnoDB 集群实例](/7/7.4/7.4.2/configuring-production-instances)时）。在启用[重启](/13/13.7/13.7.8/13.7.8.8/restart)支持的情况下，在客户端会话中发出重启会导致服务器和容器停止，然后重新启动。*MySQL 8.0.21 及更高版本支持服务器重启*。
+`--restart` 选项用于配置容器的[重启策略](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started.html#下载-MySQL-服务器-Docker-镜像)；应将其设置为故障时的值，以支持客户端会话中的服务器重启（例如，当客户端执行重启语句或[配置 InnoDB 集群实例](/7/7.4/7.4.2/configuring-production-instances)时）。在启用[重启](/13/13.7/13.7.8/13.7.8.8/restart)支持的情况下，在客户端会话中发出重启会导致服务器和容器停止，然后重新启动。*MySQL 8.0.21 及更高版本支持服务器重启*。
 
 例如，要为 MySQL 社区版服务器启动一个新的 Docker 容器，请使用以下命令：
 
@@ -156,7 +160,7 @@ GENERATED ROOT PASSWORD: Axegh3kAJyDLaRuBemecis&EShOs
 docker exec -it mysql1 mysql -uroot -p
 ```
 
-当询问时，输入生成的 root 密码（参阅上面[启动 MySQL 服务器实例](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started?id=启动-MySQL-服务器实例)的最后一步，了解如何查找密码）。由于默认情况下 [MYSQL_ONETIME_PASSWORD](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=Docker-环境变量) 选项为 true，因此将 [mysql](/4/4.5/4.5.1/mysql) 客户端连接到服务器后，必须通过发出以下语句重置服务器根密码：
+当询问时，输入生成的 root 密码（参阅上面[启动 MySQL 服务器实例](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started.html#启动-MySQL-服务器实例)的最后一步，了解如何查找密码）。由于默认情况下 [MYSQL_ONETIME_PASSWORD](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#Docker-环境变量) 选项为 true，因此将 [mysql](/4/4.5/4.5.1/mysql) 客户端连接到服务器后，必须通过发出以下语句重置服务器根密码：
 
 ```bash
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
@@ -219,7 +223,9 @@ docker rm mysql1
 
 ## 升级 MySQL 服务器容器
 
-!> **重要** 在执行任何 MySQL 升级之前，请仔细遵循[章节 2.11，“升级 MySQL”](/2/2.11/upgrading)中的说明。在这里讨论的其他说明中，在升级之前备份数据库尤其重要。<br> 本节中的说明要求将服务器的数据和配置保存在主机上。有关详细信息，参阅[持久化数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics?id=持久化数据和配置更改)。
+::: danger 重要
+在执行任何 MySQL 升级之前，请仔细遵循[章节 2.11，“升级 MySQL”](/2/2.11/upgrading)中的说明。在这里讨论的其他说明中，在升级之前备份数据库尤其重要。<br> 本节中的说明要求将服务器的数据和配置保存在主机上。有关详细信息，参阅[持久化数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)。
+:::
 
 按照以下步骤将 MySQL 5.7 的 Docker 安装升级到 8.0：
 
@@ -242,7 +248,7 @@ docker run --name=mysql80 \
 
 如果需要，将 `mysql/mysql-server` 调整为正确的镜像名称，例如，将其替换为 `container-registry.oracle。com/mysql/enterprise-server` 用于从 OCR 下载的 mysql 企业版镜像，或 `mysql/enterprise-server` 用于从 [我的 Oracle 支持](https://support.oracle.com/)下载的 MySQL 企业版镜像。
 
-- 等待服务器完成启动。你可以使用 **docker ps** 命令检查服务器的状态（参阅[启动 MySQL 服务器实例](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started?id=启动-MySQL-服务器实例)以了解如何做到这一点）。
+- 等待服务器完成启动。你可以使用 **docker ps** 命令检查服务器的状态（参阅[启动 MySQL 服务器实例](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started.html#启动-MySQL-服务器实例)以了解如何做到这一点）。
 
 在 8.0 系列（即从 `8.0.x` 版升级到 `8.0.y` 版）中，请遵循相同的步骤：停止原始容器，并在旧服务器数据和配置上使用更新的映像启动新容器。如果你在启动原始容器时使用了 `8.0` 或 `latest`，并且现在有一个新的 MySQL 8.0 版本要升级到它，你必须首先使用以下命令为新版本拉取镜像：
 
@@ -250,7 +256,7 @@ docker run --name=mysql80 \
 docker pull mysql/mysql-server:8.0
 ```
 
-然后，你可以通过在旧数据和配置上启动具有相同标记的新容器进行升级（如果你使用的是 MySQL 企业版，请调整仓库名称；参阅下载 [MySQL 服务器 Docker 镜像](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started?id=下载-MySQL-服务器-Docker-镜像)）：
+然后，你可以通过在旧数据和配置上启动具有相同标记的新容器进行升级（如果你使用的是 MySQL 企业版，请调整仓库名称；参阅下载 [MySQL 服务器 Docker 镜像](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started.html#下载-MySQL-服务器-Docker-镜像)）：
 
 ```bash
 docker run --name=mysql80new \
@@ -259,7 +265,17 @@ docker run --name=mysql80new \
 -d mysql/mysql-server:8.0
 ```
 
-?> **注意** 对于 MySQL 8.0.15 及更早版本：你需要通过在 MySQL8.0 服务器容器中运行 [mysql_upgrade]() 实用程序来完成升级过程（对于 MySQL 8.0.16 及更高版本，此步骤*非*必需）：<br> · docker exec -it mysql80 mysql_upgrade -uroot -p <br> 出现提示时，输入旧服务器的 root 密码。<br> · 通过重新启动新容器完成升级：<br> docker restart mysql80
+::: tip 注意
+对于 MySQL 8.0.15 及更早版本：你需要通过在 MySQL8.0 服务器容器中运行 [mysql_upgrade]() 实用程序来完成升级过程（对于 MySQL 8.0.16 及更高版本，此步骤*非*必需）：
+
+- docker exec -it mysql80 mysql_upgrade -uroot -p 
+
+   出现提示时，输入旧服务器的 root 密码。
+
+- 通过重新启动新容器完成升级：
+
+   docker restart mysql80
+:::
 
 ## 有关使用 Docker 部署 MySQL 服务器的更多主题
 

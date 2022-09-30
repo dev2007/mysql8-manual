@@ -2,9 +2,9 @@
 
 对于MySQL 8.0，在Windows上安装MySQL时有多种安装包格式可供选择。本节中描述的软件包格式为：
 
-- [MySQL 安装程序](/2/2.3/2.3.2/windows-choosing-package?id=MySQL-安装程序)
-- [MySQL 免安装的 ZIP 压缩包](/2/2.3/2.3.2/windows-choosing-package?id=MySQL-免安装的-ZIP-压缩包)
-- [MySQL Docker 镜像](/2/2.3/2.3.2/windows-choosing-package?id=MySQL-Docker-镜像)
+- [MySQL 安装程序](/2/2.3/2.3.2/windows-choosing-package.html#MySQL-安装程序)
+- [MySQL 免安装的 ZIP 压缩包](/2/2.3/2.3.2/windows-choosing-package.html#MySQL-免安装的-ZIP-压缩包)
+- [MySQL Docker 镜像](/2/2.3/2.3.2/windows-choosing-package.html#MySQL-Docker-镜像)
 
 程序数据库（PDB）文件（文件扩展名为 `PDB`）提供了在出现问题时调试 MySQL 安装的信息。这些文件包含在 MySQL 的 ZIP 压缩包发行版中（但不在 MSI 发行版）。
 
@@ -14,13 +14,15 @@
 
 MySQL 安装程序可以安装和管理（添加、修改、升级和删除）许多其他 MySQL 产品，包括：
 
-- 应用程序——MySQL Workbench、Visual Studio 版 MySQL、MySQL Shell 和 MySQL Router（参阅 https://dev.mysql.com/doc/mysql-compat-matrix/en/)
+- 应用程序——MySQL Workbench、Visual Studio 版 MySQL、MySQL Shell 和 MySQL Router（参阅 [https://dev.mysql.com/doc/mysql-compat-matrix/en/](https://dev.mysql.com/doc/mysql-compat-matrix/en/))
 - 连接器——MySQL Connector/C++、MySQL Connector/NET、Connector/ODBC、MySQL Connector/Python、MySQL Connector/J、MySQL Connector/Node.js
 - 文档——MySQL 手册（PDF 格式）、示例和例子
 
-MySQL 安装程序在所有支持 MySQL 的 Windows 版本上运行（参阅 https://www.mysql.com/support/supportedplatforms/database.html)。
+MySQL 安装程序在所有支持 MySQL 的 Windows 版本上运行（参阅 [https://www.mysql.com/support/supportedplatforms/database.html](https://www.mysql.com/support/supportedplatforms/database.html))。
 
-?> **注意** 因为 MySQL 安装程序不是 Microsoft Windows 的本机组件，并且依赖于 .NET，它不适用于像 Windows Server 的服务器核心版本这样的最小安装选项。
+::: tip 注意
+因为 MySQL 安装程序不是 Microsoft Windows 的本机组件，并且依赖于 .NET，它不适用于像 Windows Server 的服务器核心版本这样的最小安装选项。
+:::
 
 有关如何使用 MySQL 安装程序安装 MySQL 的说明，参阅[章节 2.3.3，“Windows MySQL 安装程序”](/2/2.3/2.3.3/mysql-installer)。
 
@@ -36,6 +38,8 @@ MySQL 安装程序在所有支持 MySQL 的 Windows 版本上运行（参阅 htt
 
 有关在 Windows 平台上使用 Oracle 提供的 MySQL Docker 镜像的信息，参阅[章节 2.5.6.3，“使用 Docker 在 Windows 和其他非 Linux 平台上部署 MySQL”](/2/2.5/2.5.6/2.5.6.3/deploy-mysql-nonlinux-docker)。
 
-!> **警告** Oracle 提供的 MySQL Docker 映像是专门为 Linux 平台构建的。其他平台不受支持，在其上运行 Oracle MySQL Docker 镜像的用户将自行承担风险。
+::: warning 警告
+Oracle 提供的 MySQL Docker 映像是专门为 Linux 平台构建的。其他平台不受支持，在其上运行 Oracle MySQL Docker 镜像的用户将自行承担风险。
+:::
 
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/windows-choosing-package.html)

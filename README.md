@@ -4,19 +4,24 @@
 
 搜索 MySQL 相关的中文文档，发现在 git 上相关项目，但使用的机翻，且翻译不全。于是考虑自己学习一下官方文档并翻译一次。
 
-## 计划
+## 本地运行
 
-一边学习官方文档 ，一边翻译官方手册。
-可能每周一到两篇。
+本文档基于 `VuePress` 编译后发布。本地通过 `npm` 安装 [`VuePress`](https://www.vuepress.cn/) 工具后，即可本地运行。
 
-## 文档构建
+> 1. 进入项目目录
+> 2. 执行 `npm run docs:dev`
 
-文档使用 `docsify` 构建
+```bash
+cd /mysql8-manual
+npm run docs:dev
+```
 
-## 目录结构
+控制台显示如下示例后，即可通过浏览器输入 URL 地址查看文档：
 
-文档文件全部放置于 `docs` 中，如果要部署为 GitHub Pages，部署目录请选择 `/docs`。
+```bash
+success [16:17:40] Build 9a5052 finished in 14671 ms!
+> VuePress dev server listening at http://localhost:8080/
 
-## 发布
+## 查看文档
 
-发布网站 https://mysql.bookhub.tech
+[在网站查看文档](https://mysql.bookhub.tech)

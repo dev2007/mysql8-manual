@@ -12,9 +12,9 @@
 
 - 用 C 和 C++ 编写。
 - 经过广泛的不同编译器测试。
-- 在许多不同的平台上工作。参阅 https://www.mysql.com/support/supportedplatforms/database.html
+- 在许多不同的平台上工作。参阅 [https://www.mysql.com/support/supportedplatforms/database.html](https://www.mysql.com/support/supportedplatforms/database.html)
 - 为了便于移植，使用 CMake 进行配置。
-- 用 Purify（一种商用内存泄漏检测器）以及 GPL 工具 Valgrind 进行测试(http://developer.kde.org/~sewardj/ )
+- 用 Purify（一种商用内存泄漏检测器）以及 GPL 工具 Valgrind 进行测试([http://developer.kde.org/~sewardj/](http://developer.kde.org/~sewardj/))
 - 采用具有独立模块的多层服务器设计。
 - 设计成使用内核线程的完全多线程的，如果有多个 CPU 可用的话，可以很容易地使用它们。
 - 提供事务性和非事务性存储引擎。
@@ -77,7 +77,7 @@ mysql> SELECT CONCAT(first_name, ' ', last_name)
   - 在 Windows 系统上，如果服务器启动时启用了 [name_pipe](/5/5.1/5.1.8/server-system-variables) 系统变量，则客户端可以使用命名管道进行连接。如果在启用 [shared_memory](/5/5.1/5.1.8/server-system-variable) 系统变量的情况下启动，Windows 服务器还支持共享内存连接。客户端可以使用 [--protocol=memory](/4/4.2/4.2.3/connection-options) 选项通过共享内存进行连接。
   - 在 Unix 系统上，客户端可以使用 Unix 域套接字文件进行连接。
 - MySQL 客户端程序可以用多种语言编写。C 中编写的客户端库可用于 C 或 C++ 编写的客户端，或支持 C 绑定的任何语言。
-- C、C++、Eiffel、java、perl、php、python、Ruby 和 TCL 都有 API，这使得 MySQL 客户端可以用多种语言编写。参阅[章节 29，连接器和 API](/29/connectors-apis)。
+- C、C++、Eiffel、java、perl、php、python、Ruby 和 TCL 都有 API，这使得 MySQL 客户端可以用多种语言编写。参阅[章节 29，“连接器和 API”](/29/connectors-apis)。
 - Connector/ODBC（MyODBC）接口为使用 ODBC（Open Database Connectivity/开放数据库连接）连接的客户机程序提供 MySQL 支持。例如，可以使用 MS-Access 连接到 MySQL 服务器。客户端可以在 Windows 或 Unix 上运行。Connector/ODBC 源可用。所有 ODBC 2.5 函数都受支持，其他许多函数也受支持。参阅 [MySQL Connector/ODBC 开发人员指南](https://dev.mysql.com/doc/connector-odbc/en/)。
 - Connector/J 接口为使用 JDBC 连接的 Java 客户端程序提供 MySQL 支持。客户端可以在 Windows 或 Unix 上运行。Connector/J 源可用。参阅 [MySQL Connector/J 5.1开发人员指南](https://dev.mysql.com/doc/connector-j/5.1/en/)。
 - MySQL Connector/NET 使开发人员能够轻松创建需要与 MySQL 安全、高性能数据连接的 .NET 应用程序。它实现了所需的 ADO.NET 接口，并集成到支持 ADO.NET 的工具中。开发人员可以使用自己选择的 .NET 语言构建应用程序。MySQL Connector/NET 是一个完全托管的 ADO.NET 驱动程序，用 100% 纯 C 语言编写。参阅 [MySQL Connector/NET 开发人员指南](https://dev.mysql.com/doc/connector-net/en/)。

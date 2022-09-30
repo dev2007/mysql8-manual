@@ -1,9 +1,9 @@
 # 2.4 在 macOS 上安装 MySQL
 
-[2.4.1 在 macOS 上安装 MySQL 的通用说明](/2/2.4/2.4.1/macos-installation-notes)
-[2.4.2 使用本机软件包在 macOS 上安装 MySQL](/2/2.4/2.4.2/macos-installation-pkg)
-[2.4.3 安装和使用 MySQL 启动守护程序](/2/2.4/2.4.3/macos-installation-launchd)
-[2.4.4 安装和使用 MySQL 首选项面板](/2/2.4/2.4.4/macos-installation-prefpane)
+- [2.4.1 在 macOS 上安装 MySQL 的通用说明](/2/2.4/2.4.1/macos-installation-notes)
+- [2.4.2 使用本机软件包在 macOS 上安装 MySQL](/2/2.4/2.4.2/macos-installation-pkg)
+- [2.4.3 安装和使用 MySQL 启动守护程序](/2/2.4/2.4.3/macos-installation-launchd)
+- [2.4.4 安装和使用 MySQL 首选项面板](/2/2.4/2.4.4/macos-installation-prefpane)
 
 有关 MySQL 服务器支持的 macOS 版本列表，参阅 https://www.mysql.com/support/supportedplatforms/database.html。
 

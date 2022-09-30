@@ -1,8 +1,8 @@
 # 1.4 MySQL 8.0 中添加、弃用或删除的服务器和状态变量及选项
 
-- [MySQL 8.0 中引入的选项和变量](/1/1.4/added-deprecated-removed?id=MySQL-80-中引入的选项和变量)
-- [MySQL 8.0 中弃用的选项和变量](/1/1.4/added-deprecated-removed?id=MySQL-80-中弃用的选项和变量)
-- [MySQL 8.0 中删除的选项和变量](/1/1.4/added-deprecated-removed?id=MySQL-80-中删除的选项和变量)
+- [MySQL 8.0 中引入的选项和变量](/1/1.4/added-deprecated-removed.html#MySQL-80-中引入的选项和变量)
+- [MySQL 8.0 中弃用的选项和变量](/1/1.4/added-deprecated-removed.html#MySQL-80-中弃用的选项和变量)
+- [MySQL 8.0 中删除的选项和变量](/1/1.4/added-deprecated-removed.html#MySQL-80-中删除的选项和变量)
 
 本节列出了 MySQL 8.0 中首次添加、已弃用或已删除的服务器变量、状态变量和选项。
 

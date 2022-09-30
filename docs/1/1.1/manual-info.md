@@ -1,14 +1,14 @@
 # 1.1 关于本手册
 
-这是 MySQL 数据库系统 8.0 版到 8.0.25 版的参考手册。MySQL 8.0 小版本之间的差异在本文中通过的发布版本号（8.0.x）提及。许可信息，参阅[法律条款](/mysql?id=法律条款)。
+这是 MySQL 数据库系统 8.0 版到 8.0.25 版的参考手册。MySQL 8.0 小版本之间的差异在本文中通过的发布版本号（8.0.x）提及。许可信息，参阅[法律条款](/mysql.html#法律条款)。
 
 由于 MySQL 8.0 与以前版本在功能和其他方面存在许多差异，因此本手册不适用于较旧版本的 MySQL 软件。如果你使用的是MySQL软件的早期版本，请参阅相应的手册。例如，[MySQL 5.7 参考手册](https://dev.mysql.com/doc/refman/5.7/en/)涵盖了 MySQL 5.7 系列软件版本。
 
 由于本手册只是作为参考，所以不提供有关 SQL 或关系数据库概念的通用指南。它也不会教你如何使用操作系统或命令行解释器。
 
-MySQL数据库软件持续开发，参考手册也频繁更新。该手册的最新版本可在 https://dev.mysql.com/doc/ 在线搜索。也提供其他格式，包括可下载的 HTML 和 PDF 版本。
+MySQL数据库软件持续开发，参考手册也频繁更新。该手册的最新版本可在 [https://dev.mysql.com/doc/](https://dev.mysql.com/doc/) 在线搜索。也提供其他格式，包括可下载的 HTML 和 PDF 版本。
 
-MySQL 本身的源代码包含使用 Doxygen 编写的内部文档。生成的 Doxygen 内容在 https://dev.mysql.com/doc/index-other.html 。也可以在本地参考指南[章节 2.9.10 “生成 MySQL Doxygen 文档内容”](/2/2.9/2.9.10/source-installation-doxygen)使用 MySQL 源发行版生成。
+MySQL 本身的源代码包含使用 Doxygen 编写的内部文档。生成的 Doxygen 内容在 [https://dev.mysql.com/doc/index-other.html](https://dev.mysql.com/doc/index-other.html) 。也可以在本地参考指南[章节 2.9.10 “生成 MySQL Doxygen 文档内容”](/2/2.9/2.9.10/source-installation-doxygen)使用 MySQL 源发行版生成。
 
 如果你对使用 MySQL 有疑问，可以加入 [MySQL Community Slack](https://mysqlcommunity.slack.com/)，或者在我们的论坛上提问，还可以[在 MySQL 论坛上查看 MySQL 社区支持](https://dev.mysql.com/doc/refman/8.0/en/information-sources.html#forums)。如果你对手册本身的添加或更正有任何建议，请发送至 http://www.mysql.com/company/contact/ 。
 
@@ -33,8 +33,6 @@ MySQL 本身的源代码包含使用 Doxygen 编写的内部文档。生成的 D
 - 文件名和目录名是这样写的：“global my.cnf文件位于/etc目录中。”
 
 - 字符序列是这样写的：“要指定通配符，请使用“%”字符。”
-
-?> （翻译说明：由于 Markdown 无法直接支持完全一致的字体样式，翻译不以官方文档的文本样式约定进行，但会尽量区分。）
 
 当显示要在特定程序中执行的命令时，命令前面显示的提示符指示要使用哪个命令。例如，`shell>`表示从登录 shell 执行的命令，`root shell>` 类似，但应作为 root 执行，`mysql>` 表示从 [mysql](/4/4.5/4.5.1/mysql) 客户端程序执行的语句：
 
@@ -110,7 +108,7 @@ shell> ./configure
 
 ## 手册作者
 
-参考手册源文件是以 DocBook XML 格式编写。HTML 版本和其他格式是自动生成，主要使用 DocBook XSL 样式表。有关 DocBook 的信息，请参阅 http://docbook.org/
+参考手册源文件是以 DocBook XML 格式编写。HTML 版本和其他格式是自动生成，主要使用 DocBook XSL 样式表。有关 DocBook 的信息，请参阅 [http://docbook.org/](http://docbook.org/)
 
 本手册最初由 David Axmark 和 Michael “Monty” Widenius 编写。它由 MySQL 文档团队维护，该团队由 Chris Cole、Paul DuBois、Margaret Fisher、Edward Gilmore、Stefan Hinz、David Moss、Philip Olson、Daniel Price、Daniel So 和 Jon Stephens 组成。
 

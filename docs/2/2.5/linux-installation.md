@@ -36,6 +36,8 @@ Linux 支持安装 MySQL 的多种不同解决方案。我们建议你使用 Ora
 
 作为替代方案，你可以使用系统上的软件包管理器从 Linux 发行版的本地软件库中自动下载和安装 MySQL 软件包。这些本机软件包通常比当前可用版本晚几个版本。你通常也无法安装开发里程碑版本（DMR），因为这些版本通常在本机仓库中不可用。有关使用本机软件包安装程序的更多信息，参阅[章节 2.5.7，“从本机软件库在 Linux 上安装 MySQL”](/2/2.5/2.5.7/linux-installation-native)。
 
-?> **注意** 对于许多 Linux 安装，你希望将 MySQL 设置为在机器启动时自动启动。许多本机软件包安装为你执行此操作，但对于源代码、二进制和RPM解决方案，你可能需要单独设置。所需的脚本 [mysql.server](/4/4.3/4.3.3/mysql-server)，可以在 MySQL 安装目录下的支持文件目录或 MySQL 源代码树中找到。你可以将其安装为 `/etc/init.d/mysql`，用于自动启动和关闭 MySQL。参阅[章节 4.3.3，“mysql.server——MySQL 服务器启动脚本”](/4/4.3/4.3.3/mysql-server)。
+::: tip 注意
+对于许多 Linux 安装，你希望将 MySQL 设置为在机器启动时自动启动。许多本机软件包安装为你执行此操作，但对于源代码、二进制和RPM解决方案，你可能需要单独设置。所需的脚本 [mysql.server](/4/4.3/4.3.3/mysql-server)，可以在 MySQL 安装目录下的支持文件目录或 MySQL 源代码树中找到。你可以将其安装为 `/etc/init.d/mysql`，用于自动启动和关闭 MySQL。参阅[章节 4.3.3，“mysql.server——MySQL 服务器启动脚本”](/4/4.3/4.3.3/mysql-server)。
+:::
 
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html)
