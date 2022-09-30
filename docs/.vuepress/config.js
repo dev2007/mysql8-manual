@@ -17,7 +17,7 @@ module.exports = {
     ],
     [
       '@renovamen/vuepress-plugin-baidu-tongji', {
-        'ba': '980d1ce98657f049452a6ed4d3d76d36'
+        'ba': 'ece50ab3c3bf1d0d5c67f008f83b769f'
       }
     ]
   ],
