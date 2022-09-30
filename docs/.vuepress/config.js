@@ -1,6 +1,6 @@
 module.exports = {
   title: 'MySQL 8.0 中文参考手册',
-  description: '本文档是对官方参考手册的翻译，持续翻译中',
+  description: '对官方参考手册的翻译，持续翻译中',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'keywords', content: 'mysql,sql,innodb' }]
