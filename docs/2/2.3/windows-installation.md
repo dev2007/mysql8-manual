@@ -18,7 +18,7 @@
 MySQL 8.0 Server 需要 Microsoft Visual C++ 2019 可重分发包在 Windows 平台上运行。在安装服务器之前，用户应确保软件包已安装在系统上。该软件包可在 [Microsoft 下载中心](http://www.microsoft.com/en-us/download/default.aspx)获得。此外，MySQL 调试二进制文件需要安装 Visual Studio 2019。
 :::
 
-MySQL 仅适用于 Microsoft Windows 64 位操作系统。有关支持的 Windows 平台信息，请参阅 https://www.mysql.com/support/supportedplatforms/database.html 。
+MySQL 仅适用于 Microsoft Windows 64 位操作系统。有关支持的 Windows 平台信息，请参阅 [https://www.mysql.com/support/supportedplatforms/database.html](https://www.mysql.com/support/supportedplatforms/database.html) 。
 
 在 Microsoft Windows 上安装 MySQL 有不同的方法。
 
@@ -26,7 +26,7 @@ MySQL 仅适用于 Microsoft Windows 64 位操作系统。有关支持的 Window
 
 最简单且推荐的方法是下载 MySQL 安装程序（适用于 Windows），让它安装并配置特定版本的 MySQL Server，如下所示：
 
-1. 从 https://dev.mysql.com/downloads/installer/ 下载 MySQL 安装程序并执行它。
+1. 从 [https://dev.mysql.com/downloads/installer/](https://dev.mysql.com/downloads/installer/) 下载 MySQL 安装程序并执行它。
 
   ::: tip 注意
   与标准 MySQL 安装程序不同，更小的 `web-community` 版本不捆绑任何 MySQL 应用程序，只下载你选择安装的 MySQL 产品。
