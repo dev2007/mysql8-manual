@@ -2,11 +2,11 @@
 
 要手动安装MySQL，请执行以下操作：
 
-1.如果你是从以前的版本升级，请在开始升级过程之前参考[章节 2.11.10，“在 Windows 上升级 MySQL”](/2/2.11/2.11.10/windows-upgrading)。
+1.如果你是从以前的版本升级，请在开始升级过程之前参考[章节 2.11.10，“在 Windows 上升级 MySQL”](/2/2.11/2.11.10/windows-upgrading.html)。
 
 2.确保你以具有管理员权限的用户身份登录。
 
-3.选择安装位置。通常，MySQL 服务器安装在 `C:\MySQL` 中。如果不在 `C:\MySQL` 安装 MySQL，则必须在启动期间或在选项文件中指定安装目录的路径。参阅[章节 2.3.4.2，“创建选项文件”](/2/2.3/2.3.4/2.3.4.2/windows-create-option-file)。
+3.选择安装位置。通常，MySQL 服务器安装在 `C:\MySQL` 中。如果不在 `C:\MySQL` 安装 MySQL，则必须在启动期间或在选项文件中指定安装目录的路径。参阅[章节 2.3.4.2，“创建选项文件”](/2/2.3/2.3.4/2.3.4.2/windows-create-option-file.html)。
 
 ::: tip 注意
 MySQL 安装程序在 `C:\Program Files\MySQL` 下安装 MySQL。

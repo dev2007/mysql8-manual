@@ -11,7 +11,7 @@
 - Red Hat Linux、Fedora、CentOS
 
 ::: tip 注意
-对于许多 Linux 发行版，你可以使用 MySQL Yum 存储库而不是平台的本地软件存储库来安装 MySQL。详情参阅[章节 2.5.1，“使用 MySQL Yum 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.1/linux-installation-yum-repo)。
+对于许多 Linux 发行版，你可以使用 MySQL Yum 存储库而不是平台的本地软件存储库来安装 MySQL。详情参阅[章节 2.5.1，“使用 MySQL Yum 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.1/linux-installation-yum-repo.html)。
 :::
 
 对于 Red Hat 和类似的发行版，MySQL 发行版分为多个单独的包，`mysql` 用于客户端工具，`mysql-server` 用于服务器和相关工具，`mysql-libs` 用于库。如果要提供来自不同语言和环境（如 Perl、Python 和其他）的连接，则需要这些库。
@@ -87,12 +87,12 @@ Complete!
 $> systemctl start mysqld
 ```
 
-如果数据库表尚不存在，则会自动为你建这些表。但是，你应该运行 [mysql_secure_installation](/4/4.4/4.4.2/mysql-secure-installation) 来设置服务器上的 root 密码。
+如果数据库表尚不存在，则会自动为你建这些表。但是，你应该运行 [mysql_secure_installation](/4/4.4/4.4.2/mysql-secure-installation.html) 来设置服务器上的 root 密码。
 
 - Debian、Ubuntu、Kubuntu
 
 ::: tip 注意
-对于支持的 Debian 和 Ubuntu 版本，可以使用 MySQL APT 仓库而不是平台的本地软件存储库来安装 MySQL。详情参阅[章节 2.5.2，“使用 MySQL APT 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.1/linux-installation-yum-repo)。
+对于支持的 Debian 和 Ubuntu 版本，可以使用 MySQL APT 仓库而不是平台的本地软件存储库来安装 MySQL。详情参阅[章节 2.5.2，“使用 MySQL APT 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.1/linux-installation-yum-repo.html)。
 :::
 
 在 Debian 和相关发行版上，MySQL 的软件仓库中有两个包，分别用于客户端和服务器组件，即 `mysql-client` 和 `mysql-server`。你应该指定一个显式版本，例如 `mysql-client-5.1`，以确保安装所需的 MySQL 版本。

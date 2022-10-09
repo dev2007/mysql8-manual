@@ -24,7 +24,7 @@
 
 - SWSoft
 
-  嵌入式 [mysqld](/4/4.3/4.3.1/mysqld) 版本的开发。
+  嵌入式 [mysqld](/4/4.3/4.3.1/mysqld.html) 版本的开发。
 
 - FutureQuest
 

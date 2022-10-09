@@ -28,6 +28,6 @@ $> rpm --import 5072e1f5.asc
 $> rpm --import https://dev.mysql.com/doc/refman/8.0/en/checking-gpg-signature.html
 ```
 
-如果需要获取 MySQL 公钥，参阅[章节 2.1.4.2，“使用 GnuPG 进行签名检查”](/2/2.1/2.1.4/2.1.4.2/checking-gpg-signature)。
+如果需要获取 MySQL 公钥，参阅[章节 2.1.4.2，“使用 GnuPG 进行签名检查”](/2/2.1/2.1.4/2.1.4.2/checking-gpg-signature.html)。
 
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/checking-rpm-signature.html)

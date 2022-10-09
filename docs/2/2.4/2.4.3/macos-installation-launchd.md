@@ -74,7 +74,7 @@ $> sudo launchctl load -w com.oracle.oss.mysql.mysqld.plist
 
 更多 launchd 相关信息：
 
-- plist 条目覆盖 `my.cnf` 条目，因为它们作为命令行参数传入。有关传入程序选项的更多信息，参阅[章节 4.2.2，“指定程序选项”](/4/4.2/4.2.2/program-options)。
+- plist 条目覆盖 `my.cnf` 条目，因为它们作为命令行参数传入。有关传入程序选项的更多信息，参阅[章节 4.2.2，“指定程序选项”](/4/4.2/4.2.2/program-options.html)。
 
 - **ProgramArguments** 部分定义了传递到程序中的命令行选项，在本例中是 `mysqld` 二进制文件。
 
@@ -117,6 +117,6 @@ $> sudo launchctl load -w com.oracle.oss.mysql.mysqld.plist
 </plist>
 ```
 
-在本例中，[basedir](/5/5.1/5.1.8/server-system-variables)、[datadir](/5/5.1/5.1.8/server-system-variables)、[plugin_dir](/5/5.1/5.1.8/server-system-variables)、[log_error](/5/5.1/5.1.8/server-system-variables)、[pid_file](/5/5.1/5.1.8/server-system-variables)、[keyring_file_data](/6/6.4/6.4.4/6.4.4.18/keyring-system-variables) 和 [--early-plugin-load](/5/5.1/5.1.7/server-options) 选项已从默认的 plist **ProgramArguments** 定义中删除，你可能已经在 `my.cnf` 中定义了。
+在本例中，[basedir](/5/5.1/5.1.8/server-system-variables.html)、[datadir](/5/5.1/5.1.8/server-system-variables.html)、[plugin_dir](/5/5.1/5.1.8/server-system-variables.html)、[log_error](/5/5.1/5.1.8/server-system-variables.html)、[pid_file](/5/5.1/5.1.8/server-system-variables.html)、[keyring_file_data](/6/6.4/6.4.4/6.4.4.18/keyring-system-variables.html) 和 [--early-plugin-load](/5/5.1/5.1.7/server-options.html) 选项已从默认的 plist **ProgramArguments** 定义中删除，你可能已经在 `my.cnf` 中定义了。
 
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/macos-installation-launchd.html)

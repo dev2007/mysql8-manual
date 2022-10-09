@@ -1,14 +1,14 @@
 # 2.3.4 使用非安装压缩包在 Microsoft Windows 上安装 MySQL
 
-[2.3.4.1 解压安装压缩包](/2/2.3/2.3.4/2.3.4.1/windows-extract-archive)
-[2.3.4.2 创建选项文件](/2/2.3/2.3.4/2.3.4.2/windows-create-option-file)
-[2.3.4.3 选择 MySQL 服务器类型](/2/2.3/2.3.4/2.3.4.3/windows-select-server)
-[2.3.4.4 初始化数据目录](/2/2.3/2.3.4/2.3.4.4/windows-initialize-data-directory)
-[2.3.4.5 首次启动服务器](/2/2.3/2.3.4/2.3.4.5/windows-server-first-start)
-[2.3.4.6 从 Windows 命令行启动 MySQL](/2/2.3/2.3.4/2.3.4.6/windows-start-command-line)
-[2.3.4.7 自定义 MySQL 工具的路径](/2/2.3/2.3.4/2.3.4.7/mysql-installation-windows-path)
-[2.3.4.8 将 MySQL 作为 Windows 服务启动](/2/2.3/2.3.4/2.3.4.8/windows-start-service)
-[2.3.4.9 测试 MySQL 安装](/2/2.3/2.3.4/2.3.4.9/windows-testing)
+- [2.3.4.1 解压安装压缩包](/2/2.3/2.3.4/2.3.4.1/windows-extract-archive.html)
+- [2.3.4.2 创建选项文件](/2/2.3/2.3.4/2.3.4.2/windows-create-option-file.html)
+- [2.3.4.3 选择 MySQL 服务器类型](/2/2.3/2.3.4/2.3.4.3/windows-select-server.html)
+- [2.3.4.4 初始化数据目录](/2/2.3/2.3.4/2.3.4.4/windows-initialize-data-directory.html)
+- [2.3.4.5 首次启动服务器](/2/2.3/2.3.4/2.3.4.5/windows-server-first-start.html)
+- [2.3.4.6 从 Windows 命令行启动 MySQL](/2/2.3/2.3.4/2.3.4.6/windows-start-command-line.html)
+- [2.3.4.7 自定义 MySQL 工具的路径](/2/2.3/2.3.4/2.3.4.7/mysql-installation-windows-path.html)
+- [2.3.4.8 将 MySQL 作为 Windows 服务启动](/2/2.3/2.3.4/2.3.4.8/windows-start-service.html)
+- [2.3.4.9 测试 MySQL 安装](/2/2.3/2.3.4/2.3.4.9/windows-testing.html)
 
 从`非安装（noinstall）`包安装的用户可以使用本节中的说明手动安装 MySQL。从 ZIP 压缩包安装 MySQL 的过程如下：
 

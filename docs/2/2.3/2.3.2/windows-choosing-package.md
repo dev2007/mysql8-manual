@@ -24,7 +24,7 @@ MySQL 安装程序在所有支持 MySQL 的 Windows 版本上运行（参阅 [ht
 因为 MySQL 安装程序不是 Microsoft Windows 的本机组件，并且依赖于 .NET，它不适用于像 Windows Server 的服务器核心版本这样的最小安装选项。
 :::
 
-有关如何使用 MySQL 安装程序安装 MySQL 的说明，参阅[章节 2.3.3，“Windows MySQL 安装程序”](/2/2.3/2.3.3/mysql-installer)。
+有关如何使用 MySQL 安装程序安装 MySQL 的说明，参阅[章节 2.3.3，“Windows MySQL 安装程序”](/2/2.3/2.3.3/mysql-installer.html)。
 
 ## MySQL 免安装的 ZIP 压缩包
 
@@ -32,11 +32,11 @@ MySQL 安装程序在所有支持 MySQL 的 Windows 版本上运行（参阅 [ht
 
 免安装的 ZIP 压缩包分为两个单独的压缩文件。主包名为 `mysql-VERSION-winx64.zip`。其中包含在系统上使用 MySQL 所需的组件。可选的 MySQL 测试套件、MySQL 基准测试套件和调试二进制文件/信息组件（包括 PDB 文件）位于名为`mySQL-VERSION-winx64-debug-test.zip` 的单独压缩文件中。
 
-如果选择安装免安装 ZIP 压缩包，参阅[章节 2.3.4，“使用免安装 ZIP 压缩包在 Microsoft Windows上安装 MySQL”](/2/2.3/2.3.4/windows-install-archive)。
+如果选择安装免安装 ZIP 压缩包，参阅[章节 2.3.4，“使用免安装 ZIP 压缩包在 Microsoft Windows上安装 MySQL”](/2/2.3/2.3.4/windows-install-archive.html)。
 
 ## MySQL Docker 镜像
 
-有关在 Windows 平台上使用 Oracle 提供的 MySQL Docker 镜像的信息，参阅[章节 2.5.6.3，“使用 Docker 在 Windows 和其他非 Linux 平台上部署 MySQL”](/2/2.5/2.5.6/2.5.6.3/deploy-mysql-nonlinux-docker)。
+有关在 Windows 平台上使用 Oracle 提供的 MySQL Docker 镜像的信息，参阅[章节 2.5.6.3，“使用 Docker 在 Windows 和其他非 Linux 平台上部署 MySQL”](/2/2.5/2.5.6/2.5.6.3/deploy-mysql-nonlinux-docker.html)。
 
 ::: warning 警告
 Oracle 提供的 MySQL Docker 映像是专门为 Linux 平台构建的。其他平台不受支持，在其上运行 Oracle MySQL Docker 镜像的用户将自行承担风险。

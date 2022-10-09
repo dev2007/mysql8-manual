@@ -12,7 +12,7 @@
 
 - **数据**：由于 MySQL 包安装程序将 MySQL 内容安装到特定于版本和平台的目录中，因此你可以使用它在不同版本之间升级和迁移数据库。你需要将数据目录从旧版本复制到新版本，或者指定另一个 `datadir` 值来设置数据目录的位置。默认情况下，MySQL 目录安装在 `/usr/local/` 下。
 
-- **别名**：你可能希望将别名添加到shell的资源文件中，以便于从命令行访问常用程序，如 [mysql](/4/4.5/4.5.1/mysql) 和 [mysqladmin](/4/4.5/4.5.2/mysqladmin)。**bash** 的语法为：
+- **别名**：你可能希望将别名添加到shell的资源文件中，以便于从命令行访问常用程序，如 [mysql](/4/4.5/4.5.1/mysql) 和 [mysqladmin](/4/4.5/4.5.2/mysqladmin.html)。**bash** 的语法为：
 
 ```bash
 alias mysql=/usr/local/mysql/bin/mysql
@@ -26,9 +26,8 @@ alias mysql /usr/local/mysql/bin/mysql
 alias mysqladmin /usr/local/mysql/bin/mysqladmin
 ```
 
-更好的方式是，将 `/usr/local/mysql/bin` 添加到 `PATH` 环境变量中。你可以通过修改 shell 合适的启动文件来实现这一点。更多信息，参阅[章节 4.2.1，“调用 MySQL 程序”](/4/4.2./4.2.1/invoking-programs)。
+更好的方式是，将 `/usr/local/mysql/bin` 添加到 `PATH` 环境变量中。你可以通过修改 shell 合适的启动文件来实现这一点。更多信息，参阅[章节 4.2.1，“调用 MySQL 程序”](/4/4.2./4.2.1/invoking-programs.html)。
 
 - **移除**：在复制了以前安装的 MySQL 数据库文件并成功启动新服务器之后，你应该考虑删除旧的安装文件以节省磁盘空间。此外，你还应该删除位于 `/Library/receives/mysql-VERSION.pkg` 中的包收据目录的旧版本。
-
 
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/macos-installation-notes.html)

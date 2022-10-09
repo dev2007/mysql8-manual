@@ -176,7 +176,8 @@ module.exports = {
                   ['/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics', '关于使用 Docker 部署 MySQL 服务的更多主题']
                 ]
               },
-              ['/2/2.5/2.5.7/linux-installation-native','从本地软件仓库在 Linux 上安装 MySQL']
+              ['/2/2.5/2.5.7/linux-installation-native','从本地软件仓库在 Linux 上安装 MySQL'],
+              ['/2/2.5/2.5.8/linux-installation-juju','在有 Juju 的 Linux 上安装 MySQL']
 
             ]
           },

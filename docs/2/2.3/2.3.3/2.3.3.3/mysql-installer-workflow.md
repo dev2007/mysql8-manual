@@ -69,21 +69,21 @@ MySQL安装程序执行MySQL服务器的初始配置。例如：
     - **X Protocol Port**，仅在配置 MySQL 8.0 服务器时显示。默认值为 `33060`。
     - **打开Windows防火墙端口进行网络访问**，默认情况下，TCP/IP 连接选择该端口。
   如果某个端口号已在使用中，您将看到默认值旁边的信息图标（![symbol](../../../_media/mi-info-symbol.png)），并且在您提供新的端口号之前，**Next（下一步）**处于禁用状态。
-  - **Named Pipe（命名管道）**：启用并定义管道名称，类似于设置系统变量 [`named_pipe`](/5/5.1/5.1.8/server-system-variables)。默认名称是 `MySQL`。
-  - **Shared Memory（共享内存）**：启用并定义内存名称，类似于设置系统变量 [`shared_memory`](/5/5.1/5.1.8/server-system-variables)。默认名称是 `MySQL`。
+  - **Named Pipe（命名管道）**：启用并定义管道名称，类似于设置系统变量 [`named_pipe`](/5/5.1/5.1.8/server-system-variables.html)。默认名称是 `MySQL`。
+  - **Shared Memory（共享内存）**：启用并定义内存名称，类似于设置系统变量 [`shared_memory`](/5/5.1/5.1.8/server-system-variables.html)。默认名称是 `MySQL`。
 
 - 高级配置
   选中 **Show Advanced and Logging Options（显示高级和日志选项）**，在后面的步骤中设置自定义日志和高级选项。日志选项步骤允许您为错误日志、常规日志、慢速查询日志（包括执行查询所需的秒数配置）和二进制日志定义自定义文件路径。在复制拓扑中启用二进制日志记录时，高级选项步骤允许您设置所需的唯一服务器 ID。
 
 - MySQL 企业防火墙（仅限企业版）
 
-  默认情况下，取消选中 **Enable MySQL Enterprise Firewall（启用 MySQL 企业防火墙）**复选框。选择此选项可启用针对特定类型攻击提供保护的安全列表。需要额外的安装后配置（参阅[章节 6.4.7，“MySQL 企业防火墙”](/6/6.4/.6.4.7/firewall)）。
+  默认情况下，取消选中 **Enable MySQL Enterprise Firewall（启用 MySQL 企业防火墙）**复选框。选择此选项可启用针对特定类型攻击提供保护的安全列表。需要额外的安装后配置（参阅[章节 6.4.7，“MySQL 企业防火墙”](/6/6.4/.6.4.7/firewall.html)）。
 
   ::: danger 重要
   MySQL 8.0.19 存在一个问题，如果在服务器配置步骤中选择 MySQL 企业防火墙，服务器将无法启动。如果服务器启动操作失败，请单击 **Cancel（取消）**结束配置过程并返回面板。你必须卸载服务器。
   :::
 
-解决方法是在不选择 MySQL 企业防火墙的情况下运行 MySQL 安装程序。（即，不要选中 **Enable MySQL Enterprise Firewall（启用 MySQL 企业防火墙）**复选框。）然后按照手动安装说明安装 MySQL 企业防火墙（参阅[章节 6.4.7.2，“安装或卸载 MySQL 企业防火墙”](/6/6.4/6.4.7/6.4.7.2/firewall-installation)）。
+解决方法是在不选择 MySQL 企业防火墙的情况下运行 MySQL 安装程序。（即，不要选中 **Enable MySQL Enterprise Firewall（启用 MySQL 企业防火墙）**复选框。）然后按照手动安装说明安装 MySQL 企业防火墙（参阅[章节 6.4.7.2，“安装或卸载 MySQL 企业防火墙”](/6/6.4/6.4.7/6.4.7.2/firewall-installation.html)）。
 
 ### 2.3.3.3.1.2 认证方法
 
@@ -158,13 +158,13 @@ Windows 认证允许您在每次添加或修改令牌时测试所有安全令牌
 
 高级配置选项与以下 MySQL 日志文件相关：
 
-- [错误日志](/5/5.4/5.4.2/error-log)
+- [错误日志](/5/5.4/5.4.2/error-log.html)
 
-- [普通日志](/5/5.4/5.4.3/query-log)
+- [普通日志](/5/5.4/5.4.3/query-log.html)
 
-- [慢查询日志](/5/5.4/5.4.5/slow-query-log)
+- [慢查询日志](/5/5.4/5.4.5/slow-query-log.html)
 
-- [二进制日志](/5/5.4/5.4.4/binary-log)
+- [二进制日志](/5/5.4/5.4.4/binary-log.html)
 
 ::: tip 注意
 二进制日志在 MySQL 5.7 及更高版本中默认开启。
@@ -177,16 +177,16 @@ Windows 认证允许您在每次添加或修改令牌时测试所有安全令牌
 高级配置选项包括：
 
 - **Server ID**
-  设置复制拓扑中使用的唯一标识符。如果启用了二进制日志记录，则必须指定服务器 ID。默认 ID 值取决于服务器版本。更多信息，参阅 [server_id](/17/17.1/17.1.6/replication-options) 系统变量的说明。
+  设置复制拓扑中使用的唯一标识符。如果启用了二进制日志记录，则必须指定服务器 ID。默认 ID 值取决于服务器版本。更多信息，参阅 [server_id](/17/17.1/17.1.6/replication-options.html) 系统变量的说明。
 
 - **Table Names Case**
   您可以在服务器的初始和后续配置期间设置以下选项。对于 MySQL 8.0 发行版系列，这些选项仅适用于服务器的初始配置。
 
   - 小写字母
-    将 [`lower_case_table_names`](/5/5.1/5.1.8/server-system-variables) 选项值设置为1（默认值），其中表名以小写形式存储在磁盘上，比较不区分大小写。
+    将 [`lower_case_table_names`](/5/5.1/5.1.8/server-system-variables.html) 选项值设置为 1（默认值），其中表名以小写形式存储在磁盘上，比较不区分大小写。
 
   - 保留原始字符
-    将 [`lower_case_table_names`](/5/5.1/5.1.8/server-system-variables) 选项值设置为2，在该选项中，表名按给定原值存储，但以小写字母进行比较。
+    将 [`lower_case_table_names`](/5/5.1/5.1.8/server-system-variables.html) 选项值设置为2，在该选项中，表名按给定原值存储，但以小写字母进行比较。
 
 ### 2.3.3.3.1.7 应用服务器配置
 

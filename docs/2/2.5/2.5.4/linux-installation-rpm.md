@@ -3,9 +3,9 @@
 在基于 RPM 的 Linux 发行版上安装 MySQL 的推荐方法是使用 Oracle 提供的 RPM 软件包。对于 MySQL 的社区版，有两个来源可以获得它们：
 
 - 从 MySQL 软件仓库：
-  - MySQL Yum 仓库（有关详细信息，参阅[章节 2.5.1，“使用 MySQL Yum 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.1/linux-installation-yum-repo)
+  - MySQL Yum 仓库（有关详细信息，参阅[章节 2.5.1，“使用 MySQL Yum 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.1/linux-installation-yum-repo.html)
 ）。
-  - MySQL SLES 仓库（有关详细信息，参阅[章节 2.5.3，“使用 MySQL SLE 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.3/linux-installation-sles-repo)）。
+  - MySQL SLES 仓库（有关详细信息，参阅[章节 2.5.3，“使用 MySQL SLE 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.3/linux-installation-sles-repo.html)）。
 
 - 从 [MySQL 开发区](https://dev.mysql.com/)的[下载 MySQL 社区服务器](https://dev.mysql.com/downloads/mysql/)页面。
 
@@ -95,11 +95,11 @@ $> sudo yum install mysql-community-{client,common,libs}-*
 |文件或资源|位置|
 |--|--|
 |客户端程序和脚本|`/usr/bin`|
-|[mysqld](/4/4.3/4.3.1/mysqld) 服务器|`/usr/sbin`|
+|[mysqld](/4/4.3/4.3.1/mysqld.html) 服务器|`/usr/sbin`|
 |配置文件|`/etc/my.cnf`|
 |数据目录|`/var/lib/mysql`|
 |错误日志文件|对 RHEL、Oracle Linux、CentOS 或 Fedora 平台: `/var/log/mysqld.log` <br> 对 SLES: `/var/log/mysql/mysqld.log`|
-|[secure_file_priv](/5/5.1/5.1.8/server-system-variables) 的值|`/var/lib/mysql-files`|
+|[secure_file_priv](/5/5.1/5.1.8/server-system-variables.html) 的值|`/var/lib/mysql-files`|
 |System V 初始化脚本|对 RHEL、Oracle Linux、CentOS 或 Fedora 平台: `/etc/init.d/mysqld` <br> 对 SLES: `/etc/init.d/mysql`|
 |Systemd 服务|对 RHEL、Oracle Linux、CentOS 或 Fedora 平台: `mysqld` <br> 对 SLES: `mysql`|
 |Pid 文件|`/var/run/mysql/mysqld.pid`|
@@ -128,7 +128,7 @@ $> systemctl start mysqld
 $> systemctl start mysql
 ```
 
-如果操作系统启用了 systemd，则应使用标准 **systemctl**（或参数相反的 **service**）命令（如 **stop**、**start**、**status** 和 [**restart**](/13/13.7/13.7.8/13.7.8.8/restart)）来管理 MySQL 服务器服务。默认情况下，`mysqld` 服务处于启用状态，并在系统重新启动时启动。有关更多信息，参阅[章节 2.5.9，“使用 systemd 管理 MySQL 服务器”](/2/2.5/2.5.9/using-systemd)。
+如果操作系统启用了 systemd，则应使用标准 **systemctl**（或参数相反的 **service**）命令（如 **stop**、**start**、**status** 和 [**restart**](/13/13.7/13.7.8/13.7.8.8/restart.html)）来管理 MySQL 服务器服务。默认情况下，`mysqld` 服务处于启用状态，并在系统重新启动时启动。有关更多信息，参阅[章节 2.5.9，“使用 systemd 管理 MySQL 服务器”](/2/2.5/2.5.9/using-systemd.html)。
 
 在使用 RPM 和 DEB 包进行升级安装期间，如果在升级时 MySQL 服务器正在运行，则 MySQL 服务器将停止，升级将发生，并且 MySQL 服务器会重新启动。一个例外：如果版本在升级过程中也发生了变化（例如从社区到商业，反之亦然），则不会重新启动 MySQL 服务器。
 
@@ -138,7 +138,7 @@ $> systemctl start mysql
 
 - SSL 证书和密钥文件在数据目录中生成。
 
-- 已安装并启用 [validate_password](/6/6.4/6.4.3/validate-password)。
+- 已安装并启用 [validate_password](/6/6.4/6.4.3/validate-password.html)。
 
 - 将创建超级用户帐户 'root'@'localhost。超级用户的密码已设置并存储在错误日志文件中。要显示它，请使用以下命令：
 
@@ -157,12 +157,12 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
 ```
 
 ::: tip 注意
-默认情况下安装了 [validate_password](/6/6.4/6.4.3/validate-password)。[validate_password](/6/6.4/6.4.3/validate-password) 实现的默认密码策略要求密码至少包含一个大写字母、一个小写字母、一位数字和一个特殊字符，并且总密码长度至少为 8 个字符。
+默认情况下安装了 [validate_password](/6/6.4/6.4.3/validate-password.html)。[validate_password](/6/6.4/6.4.3/validate-password.html) 实现的默认密码策略要求密码至少包含一个大写字母、一个小写字母、一位数字和一个特殊字符，并且总密码长度至少为 8 个字符。
 :::
 
 如果安装过程中出现问题，你可能会在错误日志文件 `/var/log/mysqld.log` 中找到调试信息。
 
-对于某些 Linux 发行版，可能需要增加 [**mysqld**](/4/4.3/4.3.1/mysqld) 可用文件描述符的数量限制。参阅[章节 B.3.2.16，“未找到文件和类似错误”](/b/b.3/b.3.2/b.3.2.16/not-enough-file-handles)。
+对于某些 Linux 发行版，可能需要增加 [**mysqld**](/4/4.3/4.3.1/mysqld.html) 可用文件描述符的数量限制。参阅[章节 B.3.2.16，“未找到文件和类似错误”](/b/b.3/b.3.2/b.3.2.16/not-enough-file-handles.html)。
 
 **从多个 MySQL 版本安装客户端库**。可以安装多个客户端库版本，例如，如果你希望与链接到以前库的旧应用程序保持兼容性。要安装旧的客户端库，请在 **rpm** 中使用 `--oldpackage` 选项。例如，在具有 `libmysqlclient.21` 的 EL6 系统上基于 MySQL 8.0 安装 `mysql-community-libs-5.5.21`，使用如下命令：
 
@@ -170,10 +170,10 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
 $> rpm --oldpackage -ivh mysql-community-libs-5.5.50-2.el6.x86_64.rpm
 ```
 
-**调试包**。使用[调试包](/5/5.9/5.9.4/dbug-package)编译的 MySQL 服务器的一个特殊变体已包含在服务器 RPM 包中。它执行调试和内存分配检查，并在服务器运行时生成跟踪文件。要使用该调试版本，请使用 `/usr/sbin/mysqld-debug` 启动 MySQL，而不是将其作为服务或 `/usr/sbin/mysqld` 启动。有关可以使用的调试选项，参阅[章节 5.9.4，“DBUG 包”](/5/5.9/5.9.4/dbug-package)。
+**调试包**。使用[调试包](/5/5.9/5.9.4/dbug-package.html)编译的 MySQL 服务器的一个特殊变体已包含在服务器 RPM 包中。它执行调试和内存分配检查，并在服务器运行时生成跟踪文件。要使用该调试版本，请使用 `/usr/sbin/mysqld-debug` 启动 MySQL，而不是将其作为服务或 `/usr/sbin/mysqld` 启动。有关可以使用的调试选项，参阅[章节 5.9.4，“DBUG 包”](/5/5.9/5.9.4/dbug-package.html)。
 
 ::: tip 注意
-在 MySQL 8.0.4 中，调试构建的默认插件目录从 `/usr/lib64/mysql/plugin` 更改为 `/usr/lib64/mysql/plugin/debug`。之前，需要将 [plugin_dir](/5/5.1/5.1.8/server-system-variables) 更改为 `/usr/lib64/mysql/plugin/debug` 以进行调试构建。
+在 MySQL 8.0.4 中，调试构建的默认插件目录从 `/usr/lib64/mysql/plugin` 更改为 `/usr/lib64/mysql/plugin/debug`。之前，需要将 [plugin_dir](/5/5.1/5.1.8/server-system-variables.html) 更改为 `/usr/lib64/mysql/plugin/debug` 以进行调试构建。
 :::
 
 **从源 SRPM 重建 RPM**。MySQL 的源代码 SRPM 包可供下载。它们可以按原样使用标准 **rpmbuild** 工具链重建 MySQL RPM。

@@ -2,9 +2,9 @@
 
 Oracle 提供 Debian 软件包，用于在 Debian 或类似 Debian 的 Linux 系统上安装 MySQL。软件包可通过两个不同的渠道获得：
 
-- [MySQL APT 仓库](https://dev.mysql.com/downloads/repo/apt/)。这是在类 Debian 系统上安装 MySQL 的首选方法，因为它提供了一种简单方便的方法来安装和更新 MySQL 产品。有关详细信息，参阅[章节 2.5.2，“使用 MySQL APT 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.2/linux-installation-apt-repo)。
+- [MySQL APT 仓库](https://dev.mysql.com/downloads/repo/apt/)。这是在类 Debian 系统上安装 MySQL 的首选方法，因为它提供了一种简单方便的方法来安装和更新 MySQL 产品。有关详细信息，参阅[章节 2.5.2，“使用 MySQL APT 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.2/linux-installation-apt-repo.html)。
 
-- MySQL 开发人员专区的下载区。有关详细信息，参阅[章节 2.1.3，“如何获取 MySQL”](/2/2.1/2.1.3/getting-mysql)。以下是关于 Debian 软件包的一些信息以及安装说明：
+- MySQL 开发人员专区的下载区。有关详细信息，参阅[章节 2.1.3，“如何获取 MySQL”](/2/2.1/2.1.3/getting-mysql.html)。以下是关于 Debian 软件包的一些信息以及安装说明：
 
   - MySQL 开发者专区提供了各种 Debian 软件包，用于在当前 Debian 和 Ubuntu 平台上安装 MySQL 的不同组件。首选方法是使用 tarball 包，它包含 MySQL 基本设置所需的包。tarball 包的名称格式为 `mysql-server_MVER-DVER_CPU.deb-bundle.tar.MVER` 是 MySQL 版本，`DVER` 是 Linux 发行版。`CPU` 值表示为其构建包的处理器类型或系列，如下表所示：
 
@@ -36,7 +36,7 @@ Oracle 提供 Debian 软件包，用于在 Debian 或类似 Debian 的 Linux 系
     我们要求你为 MySQL 安装的 root 用户提供密码。你可能会被问及有关安装的其他问题。
 
     ::: danger 重要
-    请确保记住你设置的 root 密码。想要稍后设置密码的用户可以在对话框中将**密码**字段留空，然后按`确定`；在这种情况下，将使用 [MySQL 套接字对等凭据身份验证插件](/6/6.4/6.4.1/6.4.1.10/socket-pluggable-authentication)对服务器的 root 访问进行身份验证，以便使用 Unix 套接字文件进行连接。你可以稍后使用 [mysql_secure_installation](/4/4.4/4.4.2/mysql-secure-installation)设置 root 密码。
+    请确保记住你设置的 root 密码。想要稍后设置密码的用户可以在对话框中将**密码**字段留空，然后按`确定`；在这种情况下，将使用 [MySQL 套接字对等凭据身份验证插件](/6/6.4/6.4.1/6.4.1.10/socket-pluggable-authentication.html)对服务器的 root 访问进行身份验证，以便使用 Unix 套接字文件进行连接。你可以稍后使用 [mysql_secure_installation](/4/4.4/4.4.2/mysql-secure-installation.html)设置 root 密码。
     :::
 
   - 对于 MySQL 服务器的基本安装，安装数据库公共文件包、客户端包、客户端元包、服务器包和服务器元包（按顺序）；你可以使用一个命令来执行此操作：

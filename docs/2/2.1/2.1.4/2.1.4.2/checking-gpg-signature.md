@@ -1,6 +1,6 @@
 # 2.1.4.2 使用 GnuPG 进行签名检查
 
-验证包的完整性和真实性的另一种方法是使用加密签名。这比使用 [MD5 校验和](/2/2.1/2.1.4/2.1.4.1/verifying-md5-checksum)更可靠，但需要更多的工作。
+验证包的完整性和真实性的另一种方法是使用加密签名。这比使用 [MD5 校验和](/2/2.1/2.1.4/2.1.4.1/verifying-md5-checksum.html)更可靠，但需要更多的工作。
 
 我们用 **GnuPG**（GNU 隐私保护）签署 MySQL 可下载包。**GnuPG** 是 Phil Zimmermann 著名的 Pretty Good Privacy（**PGP**）的开源替代方案。大多数 Linux 发行版默认安装了 **GnuPG**。否则，参阅 [http://www.gnupg.org/](http://www.gnupg.org/) 有关 **GnuPG** 以及如何获取和安装它的更多信息。
 
@@ -473,7 +473,7 @@ gpg:         new signatures: 53
 $> rpm --import mysql_pubkey.asc
 ```
 
-如果你遇到问题或需要 RPM 特定信息，参阅[章节 2.1.4.4，“使用 RPM 进行签名检查”](/2/2.1/2.1.4/2.1.4.4/checking-rpm-signature)。
+如果你遇到问题或需要 RPM 特定信息，参阅[章节 2.1.4.4，“使用 RPM 进行签名检查”](/2/2.1/2.1.4/2.1.4.4/checking-rpm-signature.html)。
 
 下载并导入公共构建密钥后，下载所需的 MySQL 包和相应的签名，该签名也可从下载页面获得。签名文件与扩展名为 `.asc` 的分发文件具有相同的名称，如下表中的示例所示。
 

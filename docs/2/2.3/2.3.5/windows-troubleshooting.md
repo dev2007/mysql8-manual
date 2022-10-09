@@ -2,9 +2,9 @@
 
 首次安装和运行 MySQL 时，你可能会遇到某些错误，导致 MySQL 服务器无法启动。本节帮助你诊断和纠正其中一些错误。
 
-解决服务器问题时的第一个资源是[错误日志](/mysql_glossary/mysql_glossary)。MySQL 服务器使用错误日志记录与阻止服务器启动的错误相关的信息。错误日志位于 `my.ini` 文件指定的数据目录中。默认的数据目录位置是 `C:\Program Files\MySQL\MySQL Server 8.0\data`，或者在 Windows 7 和 Windows Server 2008 上是 `C:\ProgramData\MySQL`。默认情况下，`C:\ProgramData` 目录是隐藏的。你需要更改文件夹选项以查看目录和内容。有关错误日志和理解内容的更多信息，参阅[章节 5.4.2，“错误日志”](/5/5.4/5.4.2/error-log)。
+解决服务器问题时的第一个资源是[错误日志](/mysql_glossary/mysql_glossary.html)。MySQL 服务器使用错误日志记录与阻止服务器启动的错误相关的信息。错误日志位于 `my.ini` 文件指定的数据目录中。默认的数据目录位置是 `C:\Program Files\MySQL\MySQL Server 8.0\data`，或者在 Windows 7 和 Windows Server 2008 上是 `C:\ProgramData\MySQL`。默认情况下，`C:\ProgramData` 目录是隐藏的。你需要更改文件夹选项以查看目录和内容。有关错误日志和理解内容的更多信息，参阅[章节 5.4.2，“错误日志”](/5/5.4/5.4.2/error-log.html)。
 
-有关可能错误的信息，也可参阅 MySQL 服务启动时显示的控制台消息。将 [mysqld](/4/4.3/4.3.1/mysqld)安装为服务后，使用命令行中的 **SC START** *mysqld_service_name* 或 **NET START** *mysqld_service_name* 命令查看有关将 MySQL 服务器作为服务启动的任意错误消息。参阅[章节 2.3.4.8，“将 MySQL 作为 Windows 服务启动”](/2/2.3/2.3.4/2.3.4.8/windows-start-service)。
+有关可能错误的信息，也可参阅 MySQL 服务启动时显示的控制台消息。将 [mysqld](/4/4.3/4.3.1/mysqld.html)安装为服务后，使用命令行中的 **SC START** *mysqld_service_name* 或 **NET START** *mysqld_service_name* 命令查看有关将 MySQL 服务器作为服务启动的任意错误消息。参阅[章节 2.3.4.8，“将 MySQL 作为 Windows 服务启动”](/2/2.3/2.3.4/2.3.4.8/windows-start-service.html)。
 
 以下示例显示了安装 MySQL 并首次启动服务器时可能遇到的其他常见错误消息：
 
@@ -46,11 +46,11 @@ basedir=C:\\Program Files\\MySQL\\MySQL Server 8.0
 datadir=D:\\MySQLdata
 ```
 
-选项文件值中使用反斜杠的规则见[章节 4.2.2.2，“使用选项文件”](/4/4.2/4.2.2/4.2.2.2/option-files)。
+选项文件值中使用反斜杠的规则见[章节 4.2.2.2，“使用选项文件”](/4/4.2/4.2.2/4.2.2.2/option-files.html)。
 
 如果更改 MySQL 配置文件中的 `datadir` 值，则必须在重新启动 MySQL 服务器之前移动现有 MySQL 数据目录的内容。
 
-参阅[章节 2.3.4.2，“创建选项文件”](/2/2.3/2.3.4/2.3.4.2/windows-create-option-file)。
+参阅[章节 2.3.4.2，“创建选项文件”](/2/2.3/2.3.4/2.3.4.2/windows-create-option-file.html)。
 
 - 如果你在不首先停止和删除现有 MySQL 服务的情况下重新安装或升级 MySQL，并使用 MySQL 安装程序安装 MySQL，你可能会看到此错误：
 
@@ -69,6 +69,6 @@ C:\> SC DELETE mysql
 [SC] DeleteService SUCCESS
 ```
 
-如果 SC 实用程序不适用于你的 Windows 版本，请从 http://www.microsoft.com/windows2000/techinfo/reskit/tools/existing/delsrv-o.asp 下载 `delsrv` 套件并使用 `delsrv mysql` 语法。
+如果 SC 实用程序不适用于你的 Windows 版本，请从 [http://www.microsoft.com/windows2000/techinfo/reskit/tools/existing/delsrv-o.asp](http://www.microsoft.com/windows2000/techinfo/reskit/tools/existing/delsrv-o.asp) 下载 `delsrv` 套件并使用 `delsrv mysql` 语法。
 
 > [原谅链接](https://dev.mysql.com/doc/refman/8.0/en/windows-troubleshooting.html)

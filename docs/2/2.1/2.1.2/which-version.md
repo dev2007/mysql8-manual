@@ -22,23 +22,23 @@ MySQL 8.0 中的命名方案使用由三个数字和可选后缀（例如，**My
 
 系列中的开发从 DMR 版本开始，然后是 RC 版本，最后达到 GA 状态版本。
 
-选择要安装的 MySQL 版本后，决定要为你的操作系统安装的分发格式。对于大多数用例，二进制分发是正确的选择。二进制发行版可以在许多平台上以本机格式提供，例如 Linux 的 RPM 软件包或 macOS 的 DMG 软件包。发行版还提供更通用的格式，如 Zip 存档或压缩的 **tar** 文件。在 Windows 上，你可以使用 [MySQL 安装程序](/2/2.3/2.3.3/mysql-installer)安装二进制发行版。
+选择要安装的 MySQL 版本后，决定要为你的操作系统安装的分发格式。对于大多数用例，二进制分发是正确的选择。二进制发行版可以在许多平台上以本机格式提供，例如 Linux 的 RPM 软件包或 macOS 的 DMG 软件包。发行版还提供更通用的格式，如 Zip 存档或压缩的 **tar** 文件。在 Windows 上，你可以使用 [MySQL 安装程序](/2/2.3/2.3.3/mysql-installer.html)安装二进制发行版。
 
 在某些情况下，最好从源发行版安装 MySQL：
 
 - 你希望在某个显式位置安装 MySQL。标准二进制发行版可以在任何安装位置运行，但你可能需要更大的灵活性才能将 MySQL 组件放置在你想要的位置。
 
-- 你希望使用标准二进制发行版中可能不包含的功能配置 [`mysqld`](/4/4.3/4.3.1/mysqld)。以下是用于确保功能可用性的最常见的额外选项列表：
+- 你希望使用标准二进制发行版中可能不包含的功能配置 [`mysqld`](/4/4.3/4.3.1/mysqld.html)。以下是用于确保功能可用性的最常见的额外选项列表：
 
-  - [`DWITH_LIBWRAP=1`](/2/2.9/2.9.7/source-configuration-options) 用于 TCP 包装器支持。
+  - [`DWITH_LIBWRAP=1`](/2/2.9/2.9.7/source-configuration-options.html) 用于 TCP 包装器支持。
 
-  - [`DWITH_ZLIB={system|bundled}`](/2/2.9/2.9.7/source-configuration-options) 用于基于压缩的特性。
+  - [`DWITH_ZLIB={system|bundled}`](/2/2.9/2.9.7/source-configuration-options.html) 用于基于压缩的特性。
 
-  - [`DWITH_DEBUG=1`](/2/2.9/2.9.7/source-configuration-options) 用于调试支持。
+  - [`DWITH_DEBUG=1`](/2/2.9/2.9.7/source-configuration-options.html) 用于调试支持。
 
-  更多信息，参阅[章节 2.9.7，“MySQL 源配置选项”](/2/2.9/2.9.7/source-configuration-options)。
+  更多信息，参阅[章节 2.9.7，“MySQL 源配置选项”](/2/2.9/2.9.7/source-configuration-options.html)。
 
-- 你希望在配置 [`mysqld`](/4/4.3/4.3.1/mysqld) 时不使用标准二进制发行版中包含的某些功能。
+- 你希望在配置 [`mysqld`](/4/4.3/4.3.1/mysqld.html) 时不使用标准二进制发行版中包含的某些功能。
 
 - 你想阅读或修改编译 MySQL 的 C 和 C++ 代码。为此目的，需要获取源分布。
 

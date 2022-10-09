@@ -16,7 +16,7 @@
 
 - David J. Hughes
 
-  用于创建共享软件 SQL 数据库。在 MySQL AB 的前身 TcX，我们从 `mSQL` 开始，但发现它不能满足我们的目的，所以作为替代，我们为我们的应用程序生成器 Unireg 编写了一个 SQL 接口。[mysqladmin](/4/4.5/4.5.2/mysqladmin) 和 [mysql](/4/4.5/4.5.1/mysql) 客户端是受其 `mSQL` 对应程序影响较大的程序。我们已经花了很多精力使 MySQL 语法成为 `mSQL` 的超集。该 API 的许多思想都是从 `mSQL` 中借鉴的，以便于将免费的 `mSQL` 程序移植到 MySQL API。MySQL 软件不包含任何来自 `mSQL` 的代码。发行版中的两个文件（*client/insert_test.c* 和*client/select_test.c*）基于 `mSQL` 发行版中相应的（无版本）文件，但作为示例进行了修改，以显示将代码从 `mSQL` 转换为 MySQL Server 所需的更改。（`mSQL` 版权归 David J.Hughes 所有。）
+  用于创建共享软件 SQL 数据库。在 MySQL AB 的前身 TcX，我们从 `mSQL` 开始，但发现它不能满足我们的目的，所以作为替代，我们为我们的应用程序生成器 Unireg 编写了一个 SQL 接口。[mysqladmin](/4/4.5/4.5.2/mysqladmin.html) 和 [mysql](/4/4.5/4.5.1/mysql.html) 客户端是受其 `mSQL` 对应程序影响较大的程序。我们已经花了很多精力使 MySQL 语法成为 `mSQL` 的超集。该 API 的许多思想都是从 `mSQL` 中借鉴的，以便于将免费的 `mSQL` 程序移植到 MySQL API。MySQL 软件不包含任何来自 `mSQL` 的代码。发行版中的两个文件（*client/insert_test.c* 和*client/select_test.c*）基于 `mSQL` 发行版中相应的（无版本）文件，但作为示例进行了修改，以显示将代码从 `mSQL` 转换为 MySQL Server 所需的更改。（`mSQL` 版权归 David J.Hughes 所有。）
 
 - Patrick Lynch
 
@@ -28,7 +28,7 @@
 
 - Igor Romanenko <igor@frog.kiev.ua>
 
-  [mysqldump](/4/4.5/4.5.4/mysqldump)（以前是 `msqldump`，但通过 Monty 进行了移植和增强）。
+  [mysqldump](/4/4.5/4.5.4/mysqldump.html)（以前是 `msqldump`，但通过 Monty 进行了移植和增强）。
 
 - Yuri Dario
 
@@ -112,7 +112,7 @@
 
 - Alexis Mikhailov <root@medinf.chuvashia.su>
 
-  可加载函数；创建 [`CREATE FUNCTION`](/13/13.1/13.1.14/create-function) 和 [`DROP FUNCTION`](/13/13.1/13.1.26/drop-function)。
+  可加载函数；创建 [`CREATE FUNCTION`](/13/13.1/13.1.14/create-function.html) 和 [`DROP FUNCTION`](/13/13.1/13.1.26/drop-function.html)。
 
 - Andreas F. Bobak <bobak@relog.ch>
 

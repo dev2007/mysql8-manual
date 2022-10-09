@@ -1,6 +1,6 @@
 # 2.1.4.3 使用 Windows 版 Gpg4win 进行签名检查
 
-[章节 2.1.4.2，“使用 GnuPG 进行签名检查”](/2/2.1/2.1.4/2.1.4.2/checking-gpg-signature)描述了如何使用 GPG 验证 MySQL 下载。该指南也适用于 Microsoft Windows，但另一种选择是使用 Gpg4win 之类的 GUI 工具。你可以使用不同的工具，但我们的示例基于 Gpg4win，并使用其捆绑的 `Kleopatra GUI`。
+[章节 2.1.4.2，“使用 GnuPG 进行签名检查”](/2/2.1/2.1.4/2.1.4.2/checking-gpg-signature.html)描述了如何使用 GPG 验证 MySQL 下载。该指南也适用于 Microsoft Windows，但另一种选择是使用 Gpg4win 之类的 GUI 工具。你可以使用不同的工具，但我们的示例基于 Gpg4win，并使用其捆绑的 `Kleopatra GUI`。
 
 下载并安装 Gpg4win，然后加载 Kleopatra。该对话框应类似于：
 
@@ -49,6 +49,6 @@
 
 ![Kleopatra: the Decrypt and Verify Results Dialog: Bad](../../../_media/gnupg-kleopatra-decrypt-invalid-sig.png)
 
-[章节 2.1.4.2，“使用 GnuPG 进行签名检查”](/2/2.1/2.1.4/2.1.4.2/checking-gpg-signature)，部分解释了为什么你没有看到绿色良好的签名结果。
+[章节 2.1.4.2，“使用 GnuPG 进行签名检查”](/2/2.1/2.1.4/2.1.4.2/checking-gpg-signature.html)，部分解释了为什么你没有看到绿色良好的签名结果。
 
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/checking-gpg-signature-windows.html)

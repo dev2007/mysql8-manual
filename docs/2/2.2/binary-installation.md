@@ -2,7 +2,7 @@
 
 Oracle 提供了一组 MySQL 的二进制发行版。其中包括针对许多平台的压缩 **tar** 文件（扩展名为 `.tar.xz` 的文件）形式的通用二进制发行版，以及针对选定平台的特定于平台的包格式的二进制发行版。
 
-本章节介绍在 Unix/Linux 平台上从压缩的 **tar** 文件二进制发行版安装 MySQL。有关侧重于 MySQL 安全功能的 Linux 通用二进制发行版安装说明，请参阅[安全部署指南](https://dev.mysql.com/doc/mysql-secure-deployment-guide/8.0/en/)。有关其他特定于平台的二进制软件包格式，请参阅本手册中其他特定于平台的章节。例如，对于 Windows 发行版，参阅[章节 2.3，“在 Microsoft Windows 上安装 MySQL”](/2/2.3/windows-installation)。如何以不同的分发格式获取MySQL，参阅[章节 2.1.3，“如何获取 MySQL”](/2/2.1/2.1.3/getting-mysql)。
+本章节介绍在 Unix/Linux 平台上从压缩的 **tar** 文件二进制发行版安装 MySQL。有关侧重于 MySQL 安全功能的 Linux 通用二进制发行版安装说明，请参阅[安全部署指南](https://dev.mysql.com/doc/mysql-secure-deployment-guide/8.0/en/)。有关其他特定于平台的二进制软件包格式，请参阅本手册中其他特定于平台的章节。例如，对于 Windows 发行版，参阅[章节 2.3，“在 Microsoft Windows 上安装 MySQL”](/2/2.3/windows-installation.html)。如何以不同的分发格式获取MySQL，参阅[章节 2.1.3，“如何获取 MySQL”](/2/2.1/2.1.3/getting-mysql.html)。
 
 MySQL 压缩 **tar** 文件二进制发行版的名称为 `mysql-VERSION-OS.tar.xz`，其中 **VERSION** 是一个数字（例如，`8.0.27`），**OS** 表示发行版所针对的操作系统类型（例如，`pc-linux-i686` 或 `winx64`）。
 
@@ -50,7 +50,7 @@ $> yum install ncurses-compat-libs
 |share|数据库安装的错误消息、字典和 SQL|
 |support-files|杂项支持文件|
 
-[**mysqld**](/4/4.3/4.3.1/mysqld) 二进制文件的调试版本以 [**mysqld-debug**](/4/4.3/4.3.1/mysqld) 提供。要从源发行版编译自己的 MySQL 调试版本，请使用适当的配置选项启用调试支持。参阅[章节 2.9，“从源代码安装 MySQL”](/2/2.9/source-installation)。
+[**mysqld**](/4/4.3/4.3.1/mysqld.html) 二进制文件的调试版本以 [**mysqld-debug**](/4/4.3/4.3.1/mysqld.html) 提供。要从源发行版编译自己的 MySQL 调试版本，请使用适当的配置选项启用调试支持。参阅[章节 2.9，“从源代码安装 MySQL”](/2/2.9/source-installation.html)。
 
 要安装和使用 MySQL 二进制发行版，命令序列如下所示：
 
@@ -75,13 +75,13 @@ $> cp support-files/mysql.server /etc/init.d/mysql.server
 此过程假定你具有系统的 `root`（administrator）访问权限。或者，可以使用 **sudo**（Linux）或 **pfexec**（Solaris）命令为每个命令添加前缀。
 :::
 
-`mysql-files` 目录提供了一个方便的位置，可以用作 `secure_file_priv` 系统变量的值，该变量将导入和导出操作限制到特定目录。参阅[章节 5.1.8，“服务器系统变量”](/5/5.1/5.1.8/server-system-variables)。
+`mysql-files` 目录提供了一个方便的位置，可以用作 `secure_file_priv` 系统变量的值，该变量将导入和导出操作限制到特定目录。参阅[章节 5.1.8，“服务器系统变量”](/5/5.1/5.1.8/server-system-variables.html)。
 
 下面是关于安装二进制发行版的上述说明的更详细版本。
 
 ## 创建 mysql 用户和组
 
-如果你的系统还没有用于运行 [**mysqld**](/4/4.3/4.3.1/mysqld) 的用户和组，你可能需要创建它们。以下命令添加 mysql 组和 mysql 用户。你可能希望调用该用户并对其他内容进行分组，而不是 `mysql`。如果是，请在以下说明中替换相应的名称。**useradd** 和 **groupadd** 的语法在不同版本的 Unix/Linux 上可能略有不同，或者它们可能有不同的名称，例如 **adduser** 和 **addgroup**。
+如果你的系统还没有用于运行 [**mysqld**](/4/4.3/4.3.1/mysqld.html) 的用户和组，你可能需要创建它们。以下命令添加 mysql 组和 mysql 用户。你可能希望调用该用户并对其他内容进行分组，而不是 `mysql`。如果是，请在以下说明中替换相应的名称。**useradd** 和 **groupadd** 的语法在不同版本的 Unix/Linux 上可能略有不同，或者它们可能有不同的名称，例如 **adduser** 和 **addgroup**。
 
 ```bash
 $> groupadd mysql
@@ -100,7 +100,7 @@ $> useradd -r -g mysql -s /bin/false mysql
 $> cd /usr/local
 ```
 
-按照[章节 2.1.3，“如何获取MySQL”](/2/2.1/2.1.3/getting-mysql) 中的说明获取分发文件。对于给定的发行版，所有平台的二进制发行版都是从相同的 MySQL 源发行版构建的。
+按照[章节 2.1.3，“如何获取MySQL”](/2/2.1/2.1.3/getting-mysql.html) 中的说明获取分发文件。对于给定的发行版，所有平台的二进制发行版都是从相同的 MySQL 源发行版构建的。
 
 解压缩发行版，它将创建安装目录。如果 `.tar` 支持 `z` 选项，它可以解压缩和解压分发版：
 
@@ -138,6 +138,6 @@ $> export PATH=$PATH:/usr/local/mysql/bin
 
 ## 执行安装后设置
 
-安装过程的其余部分包括设置分发所有权和访问权限、初始化数据目录、启动 MySQL 服务器以及设置配置文件。有关说明，参阅[章节2.10，“安装后设置和测试”](/2/2.10/postinstallation)。
+安装过程的其余部分包括设置分发所有权和访问权限、初始化数据目录、启动 MySQL 服务器以及设置配置文件。有关说明，参阅[章节2.10，“安装后设置和测试”](/2/2.10/postinstallation.html)。
 
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html)

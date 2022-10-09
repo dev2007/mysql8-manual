@@ -1,18 +1,12 @@
 # 2.3 在 Microsoft Windows 上安装 MySQL
 
-[2.3.1 Microsoft Windows 上的 MySQL 安装布局](/2/2.3/2.3.1/windows-installation-layout)
-
-[2.3.2 选择安装包](/2/2.3/2.3.2/windows-choosing-package)
-
-[2.3.3 适用于 Windows 的 MySQL 安装程序](/2/2.3/2.3.3/mysql-installer)
-
-[2.3.4 使用免安装 ZIP 压缩包在 Microsoft Windows 上安装 MySQL](/2/2.3/2.3.4/windows-install-archive)
-
-[2.3.5 Microsoft Windows MySQL Server 安装故障排除](/2/2.3/2.3.5/windows-troubleshooting)
-
-[2.3.6 Windows 安装后程序](/2/2.3/2.3.6/windows-postinstallation)
-
-[2.3.7 Windows 平台限制](/2/2.3/2.3.7/windows-restrictions)
+- [2.3.1 Microsoft Windows 上的 MySQL 安装布局](/2/2.3/2.3.1/windows-installation-layout.html)
+- [2.3.2 选择安装包](/2/2.3/2.3.2/windows-choosing-package.html)
+- [2.3.3 适用于 Windows 的 MySQL 安装程序](/2/2.3/2.3.3/mysql-installer.html)
+- [2.3.4 使用免安装 ZIP 压缩包在 Microsoft Windows 上安装 MySQL](/2/2.3/2.3.4/windows-install-archive.html)
+- [2.3.5 Microsoft Windows MySQL Server 安装故障排除](/2/2.3/2.3.5/windows-troubleshooting.html)
+- [2.3.6 Windows 安装后程序](/2/2.3/2.3.6/windows-postinstallation.html)
+- [2.3.7 Windows 平台限制](/2/2.3/2.3.7/windows-restrictions.html)
 
 ::: danger 重要
 MySQL 8.0 Server 需要 Microsoft Visual C++ 2019 可重分发包在 Windows 平台上运行。在安装服务器之前，用户应确保软件包已安装在系统上。该软件包可在 [Microsoft 下载中心](http://www.microsoft.com/en-us/download/default.aspx)获得。此外，MySQL 调试二进制文件需要安装 Visual Studio 2019。
@@ -48,13 +42,13 @@ MySQL 仅适用于 Microsoft Windows 64 位操作系统。有关支持的 Window
 
 ## 附加安装信息
 
-可以将 MySQL 作为标准应用程序或 Windows 服务运行。通过使用服务，你可以通过标准 Windows 服务管理工具监视和控制服务器的操作。有关更多信息，参阅[2.3.4.8，“将 MySQL 作为 Windows 服务启动”](/2/2.3/2.3.4/2.3.4.8/windows-start-service)。
+可以将 MySQL 作为标准应用程序或 Windows 服务运行。通过使用服务，你可以通过标准 Windows 服务管理工具监视和控制服务器的操作。有关更多信息，参阅[2.3.4.8，“将 MySQL 作为 Windows 服务启动”](/2/2.3/2.3.4/2.3.4.8/windows-start-service.html)。
 
-为了适应 [RESTART](/13/13.7/13.7.8/13.7.8.8/restart) 语句，MySQL Server 在作为服务或独立运行时进行 fork，以使监视进程能够监视服务器进程。在本例中，有两个 [mysqld](/4/4.3/4.3.1/mysqld) 进程。如果不需要 [RESTART](/13/13.7/13.7.8/13.7.8.8/restart) 功能，则可以使用 [`--no monitor](/5/5.1/5.1.7/server-options) 选项启动服务器。参阅[章节 13.7.8.8，“RESTART 语句”](/13/13.7/13.7.8/13.7.8.8/restart)。
+为了适应 [RESTART](/13/13.7/13.7.8/13.7.8.8/restart.html) 语句，MySQL Server 在作为服务或独立运行时进行 fork，以使监视进程能够监视服务器进程。在本例中，有两个 [mysqld](/4/4.3/4.3.1/mysqld.html) 进程。如果不需要 [RESTART](/13/13.7/13.7.8/13.7.8.8/restart.html) 功能，则可以使用 [`--no monitor](/5/5.1/5.1.7/server-options.html) 选项启动服务器。参阅[章节 13.7.8.8，“RESTART 语句”](/13/13.7/13.7.8/13.7.8.8/restart.html)。
 
 通常，你应该使用具有管理员权限的帐户在 Windows 上安装 MySQL。否则，你可能会在某些操作中遇到问题，例如编辑 `PATH` 环境变量或访问**服务控制管理器**（Service Control Manager）。安装后，不需要使用具有管理员权限的用户来执行 MySQL。
 
-有关在 Windows 平台上使用 MySQL 的限制列表，参阅[章节 2.3.7，“Windows 平台限制”](/2/2.3/2.3.7/windows-restrictions)。
+有关在 Windows 平台上使用 MySQL 的限制列表，参阅[章节 2.3.7，“Windows 平台限制”](/2/2.3/2.3.7/windows-restrictions.html)。
 
 除了 MySQL Server 包之外，你可能还需要或想要其他组件在应用程序或开发环境中使用 MySQL。这些包括但不限于：
 
@@ -70,34 +64,34 @@ MySQL 仅适用于 Microsoft Windows 64 位操作系统。有关支持的 Window
   MySQL 安装程序为你安装和配置 Connector/NET。
   :::
   
-适用于 Windows 的 MySQL 发行版可以从 https://dev.mysql.com/downloads/ 下载。参阅[章节 2.1.3，“如何获取 MySQL”](/2/2.1/2.1.3/gettting-mysql)。
+适用于 Windows 的 MySQL 发行版可以从 [https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/) 下载。参阅[章节 2.1.3，“如何获取 MySQL”](/2/2.1/2.1.3/gettting-mysql.html)。
 
-MySQL for Windows 有几种分发格式，详细信息如下。一般来说，你应该使用 MySQL 安装程序。它比旧的 MSI 包含更多的功能和 MySQL 产品，比压缩文件更易于使用，并且你不需要额外的工具来启动和运行 MySQL。MySQL 安装程序自动安装 MySQL Server 和其他 MySQL 产品，创建选项文件，启动服务器，并允许你创建默认用户帐户。有关选择软件包的更多信息，参阅[章节 2.3.2，“选择安装包”](/2/2.3/2.3.2/windows-choosing-package)。
+MySQL for Windows 有几种分发格式，详细信息如下。一般来说，你应该使用 MySQL 安装程序。它比旧的 MSI 包含更多的功能和 MySQL 产品，比压缩文件更易于使用，并且你不需要额外的工具来启动和运行 MySQL。MySQL 安装程序自动安装 MySQL Server 和其他 MySQL 产品，创建选项文件，启动服务器，并允许你创建默认用户帐户。有关选择软件包的更多信息，参阅[章节 2.3.2，“选择安装包”](/2/2.3/2.3.2/windows-choosing-package.html)。
 
-- MySQL 安装程序发行版包括 MySQL Server 和其他 MySQL 产品，包括 MySQL Workbench 和 Visual Studio 版 MySQL。MySQL 安装程序也可用于将来升级这些产品（参阅 https://dev.mysql.com/doc/mysql-compat-matrix/en/)。
+- MySQL 安装程序发行版包括 MySQL Server 和其他 MySQL 产品，包括 MySQL Workbench 和 Visual Studio 版 MySQL。MySQL 安装程序也可用于将来升级这些产品（参阅 [https://dev.mysql.com/doc/mysql-compat-matrix/en/](https://dev.mysql.com/doc/mysql-compat-matrix/en/))。
 
-  有关使用 MySQL 安装程序安装 MySQL 的说明，参阅[章节 2.3.3，“用于 Windows 的 MySQL 安装程序”](/2/2.3/2.3.3/mysql-installer)。
+  有关使用 MySQL 安装程序安装 MySQL 的说明，参阅[章节 2.3.3，“用于 Windows 的 MySQL 安装程序”](/2/2.3/2.3.3/mysql-installer.html)。
 
 - 标准二进制发行版（打包为压缩文件）包含你解包到所选位置的所有必要文件。此软件包包含完整 Windows MSI 安装程序包中的所有文件，但不包括安装程序。
 
-  有关使用压缩文件安装 MySQL 的说明，参阅[章节 2.3.4，“使用免安装 ZIP 压缩包在 Microsoft Windows上 安装 MySQL”](/2/2.3/2.3.4/windows-install-archive)
+  有关使用压缩文件安装 MySQL 的说明，参阅[章节 2.3.4，“使用免安装 ZIP 压缩包在 Microsoft Windows上 安装 MySQL”](/2/2.3/2.3.4/windows-install-archive.html)
 
 - 源代码分发格式包含用于使用 VisualStudio 编译器系统构建可执行文件的所有代码和支持文件。
 
-  有关在 Windows 上从源代码构建 MySQL 的说明，参阅[章节 2.9，“从源代码安装 MySQL”](/2/2.9/source-installation)。
+  有关在 Windows 上从源代码构建 MySQL 的说明，参阅[章节 2.9，“从源代码安装 MySQL”](/2/2.9/source-installation.html)。
 
 ## Windows 上的 MySQL 注意事项
 
 - ***大表支持***
 
-  如果需要大于 4GB 的表，请在 NTFS 或更新的文件系统上安装 MySQL。创建表时，不要忘记使用 `MAX_ROWS` 和 `AVG_ROW_LENGTH`。参阅[章节 13.1.20，“CREATE TABLE 语句”](/13/13.1/13.1.20/create-table)。
+  如果需要大于 4GB 的表，请在 NTFS 或更新的文件系统上安装 MySQL。创建表时，不要忘记使用 `MAX_ROWS` 和 `AVG_ROW_LENGTH`。参阅[章节 13.1.20，“CREATE TABLE 语句”](/13/13.1/13.1.20/create-table.html)。
 
 - ***MySQL 与病毒检测软件***
 
   包含 MySQL 数据和临时表的目录上的病毒扫描软件（如 Norton/Symantec Anti-Virus）可能会导致 MySQL 性能和病毒扫描软件错误识别包含垃圾邮件的文件内容方面的问题。这是由于病毒扫描软件使用的指纹机制，以及 MySQL 快速更新不同文件的方式，这可能被认为是一种潜在的安全风险。
 
-  安装 MySQL Server 后，建议你在用于存储 MySQL 表数据的主目录（[`datadir`](/5/5.1/5.1.8/server-system-variables)）上禁用病毒扫描。病毒扫描软件中通常内置一个系统，以便忽略特定目录。
+  安装 MySQL Server 后，建议你在用于存储 MySQL 表数据的主目录（[`datadir`](/5/5.1/5.1.8/server-system-variables.html)）上禁用病毒扫描。病毒扫描软件中通常内置一个系统，以便忽略特定目录。
 
-  此外，默认情况下，MySQL 在标准 Windows 临时目录中创建临时文件。要防止临时文件也被扫描，请为 MySQL 临时文件配置单独的临时目录，并将此目录添加到病毒扫描排除列表中。为此，请将 [`tmpdir`](/5/5.1/5.1.7/server-options) 参数的配置选项添加到 `my.ini` 配置文件。有关更多信息，参阅[章节 2.3.4.2，“创建选项文件”](/2/2.3/2.3.4/2.3.4.2/windows-create-option-file)。
+  此外，默认情况下，MySQL 在标准 Windows 临时目录中创建临时文件。要防止临时文件也被扫描，请为 MySQL 临时文件配置单独的临时目录，并将此目录添加到病毒扫描排除列表中。为此，请将 [`tmpdir`](/5/5.1/5.1.7/server-options.html) 参数的配置选项添加到 `my.ini` 配置文件。有关更多信息，参阅[章节 2.3.4.2，“创建选项文件”](/2/2.3/2.3.4/2.3.4.2/windows-create-option-file.html)。
 
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/windows-installation.html)

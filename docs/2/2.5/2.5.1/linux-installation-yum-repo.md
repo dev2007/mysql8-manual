@@ -4,7 +4,7 @@
 
 ## 在你开始前
 
-作为一种流行的开源软件，MySQL 以其原始或重新打包的形式广泛安装在来自不同来源的许多系统上，包括不同的软件下载站点、软件存储库等。以下说明假设 MySQL 尚未使用第三方分布式 RPM 包安装在您的系统上；如果不是这样，请按照[章节 2.11.7，“使用 MySQL Yum 他库升级 MySQL”](/2/2.11/2.11.7/updating-yum-repo)或者[使用 MySQL Yum 仓库替换 MySQL 的第三方发行版]()中给出的说明进行操作。
+作为一种流行的开源软件，MySQL 以其原始或重新打包的形式广泛安装在来自不同来源的许多系统上，包括不同的软件下载站点、软件存储库等。以下说明假设 MySQL 尚未使用第三方分布式 RPM 包安装在您的系统上；如果不是这样，请按照[章节 2.11.7，“使用 MySQL Yum 他库升级 MySQL”](/2/2.11/2.11.7/updating-yum-repo.html)或者[使用 MySQL Yum 仓库替换 MySQL 的第三方发行版](/2/2.5/2.5.2/replace-third-party-yum.html)中给出的说明进行操作。
 
 ## 新安装 MySQL 的步骤
 
@@ -14,7 +14,7 @@
 
 首先，将 MySQL Yum 仓库添加到系统的存储库列表中。这是一个一次性操作，可以通过安装 MySQL 提供的 RPM 来执行。请遵循以下步骤：
 
-a. 转到 MySQL 开发人员区域中下载 MySQL Yum 仓库页面(https://dev.mysql.com/downloads/repo/yum/)。
+a. 转到 MySQL 开发人员区域中下载 MySQL Yum 仓库页面([https://dev.mysql.com/downloads/repo/yum/](https://dev.mysql.com/downloads/repo/yum/))。
 
 b. 为你的平台选择并下载发布包。
 
@@ -69,7 +69,7 @@ $> yum repolist enabled | grep "mysql.*-community.*"
 ```
 
 ::: tip 注意
-在你的系统上启用 MySQL Yum 仓库后，通过Y **yum update** 命令进行的任何系统范围的更新（或对启用dnf的系统进行 **dnf upgrade**）都会升级你系统上的 MySQL 包，并替换任何本地第三方包，前提是 Yum 在 MySQL Yum 仓库中找到了替换包；参阅[章节 2.11.7，“使用 MySQL Yum 仓库升级 MySQL”](/2/2.11/2.11.7/updating-yum-repo)，有关这对系统可能产生的一些影响的讨论，参阅[升级共享客户端库](/2/2.11/2.11.7/updating-yum-repo.html#升级共享客户端库)。
+在你的系统上启用 MySQL Yum 仓库后，通过Y **yum update** 命令进行的任何系统范围的更新（或对启用dnf的系统进行 **dnf upgrade**）都会升级你系统上的 MySQL 包，并替换任何本地第三方包，前提是 Yum 在 MySQL Yum 仓库中找到了替换包；参阅[章节 2.11.7，“使用 MySQL Yum 仓库升级 MySQL”](/2/2.11/2.11.7/updating-yum-repo.html)，有关这对系统可能产生的一些影响的讨论，参阅[升级共享客户端库](/2/2.11/2.11.7/updating-yum-repo.html#升级共享客户端库)。
 :::
 
 ### 2. **选择一个发布系列**
@@ -160,7 +160,7 @@ $> systemctl start mysqld
 $> systemctl status mysqld
 ```
 
-如果操作系统启用了 systemd，则应使用标准 **systemctl**（或参数相反的 **service**）命令（如 **stop**、**start**、**status** 和 [**restart**](/13/13.7/13.7.8/13.7.8.8/restart)）来管理 MySQL 服务器服务。默认情况下，`mysqld` 服务处于启用状态，并在系统重新启动时启动。有关更多信息，参阅[章节 2.5.9，“使用 systemd 管理 MySQL 服务器”](/2/2.5/2.5.9/using-systemd)。
+如果操作系统启用了 systemd，则应使用标准 **systemctl**（或参数相反的 **service**）命令（如 **stop**、**start**、**status** 和 [**restart**](/13/13.7/13.7.8/13.7.8.8/restart.html)）来管理 MySQL 服务器服务。默认情况下，`mysqld` 服务处于启用状态，并在系统重新启动时启动。有关更多信息，参阅[章节 2.5.9，“使用 systemd 管理 MySQL 服务器”](/2/2.5/2.5.9/using-systemd.html)。
 
 在服务器初始启动时，如果服务器的数据目录为空，则会发生以下情况：
 
@@ -168,7 +168,7 @@ $> systemctl status mysqld
 
 - SSL 证书和密钥文件在数据目录中生成。
 
-- 已安装并启用 [validate_password](/6/6.4/6.4.3/validate-password)。
+- 已安装并启用 [validate_password](/6/6.4/6.4.3/validate-password.html)。
 
 - 将创建超级用户帐户 'root'@'localhost。超级用户的密码已设置并存储在错误日志文件中。要显示它，请使用以下命令：
 
@@ -187,10 +187,10 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
 ```
 
 ::: tip 注意
-默认情况下安装了 [validate_password](/6/6.4/6.4.3/validate-password)。[validate_password](/6/6.4/6.4.3/validate-password) 实现的默认密码策略要求密码至少包含一个大写字母、一个小写字母、一位数字和一个特殊字符，并且总密码长度至少为 8 个字符。
+默认情况下安装了 [validate_password](/6/6.4/6.4.3/validate-password)。[validate_password](/6/6.4/6.4.3/validate-password.html) 实现的默认密码策略要求密码至少包含一个大写字母、一个小写字母、一位数字和一个特殊字符，并且总密码长度至少为 8 个字符。
 :::
 
-有关安装后程序的更多信息，参阅[章节 2.10，“安装后设置和测试”](/2/2.10/postinstallation)。
+有关安装后程序的更多信息，参阅[章节 2.10，“安装后设置和测试”](/2/2.10/postinstallation.html)。
 
 ::: tip 注意
 *基于 EL7 的平台的兼容性信息*：来自这些平台的本机软件仓库的以下 RPM 包与来自安装 MySQL 服务器的 MySQL Yum 仓库的包不兼容。一旦使用 MySQL Yum 仓库安装了 MySQL，就无法安装这些软件包（反之亦然）。</br>- akonadi mysql
@@ -243,6 +243,6 @@ $> yum install mysql-community-server
 
 ## 通过 Yum 升级 MySQL
 
-除了安装，你还可以使用 MySQL Yum 仓库对 MySQL 产品和组件执行更新。有关详细信息，参阅[章节 2.11.7，“使用 MySQL Yum 仓库升级 MySQL”](/2/2.11/2.11.7/updating-yum-repo)。
+除了安装，你还可以使用 MySQL Yum 仓库对 MySQL 产品和组件执行更新。有关详细信息，参阅[章节 2.11.7，“使用 MySQL Yum 仓库升级 MySQL”](/2/2.11/2.11.7/updating-yum-repo.html)。
 
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/linux-installation-yum-repo.html)

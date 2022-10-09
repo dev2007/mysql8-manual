@@ -142,7 +142,7 @@ docker run --name=mysql1 --network=my-custom-net -d mysql/mysql-server
 docker run --name=myapp1 --network=my-custom-net -d myapp
 ```
 
-然后，`myapp1` 容器可以使用 `mysql1` 主机名连接到 `mysql1` 容器，反之亦然，因为 Docker 会自动为给定的容器名称设置 DNS。在下面的示例中，我们从 `myapp1` 容器内部运行 [mysql](/4/4.5/4.5.1/mysql) 客户端，以连接到自己容器中的主机 `mysql1`：
+然后，`myapp1` 容器可以使用 `mysql1` 主机名连接到 `mysql1` 容器，反之亦然，因为 Docker 会自动为给定的容器名称设置 DNS。在下面的示例中，我们从 `myapp1` 容器内部运行 [mysql](/4/4.5/4.5.1/mysql.html) 客户端，以连接到自己容器中的主机 `mysql1`：
 
 ```bash
 docker exec -it myapp1 mysql --host=mysql1 --user=myuser --password
@@ -154,17 +154,17 @@ docker exec -it myapp1 mysql --host=mysql1 --user=myuser --password
 
 当使用服务器容器首次启动 MySQL 服务器时，如果以下任一条件为真，则不会生成服务器错误日志：
 
-- 已装载主机的服务器配置文件，但该文件不包含系统变量 [log_error](/5/5.1/5.1.8/server-system-variables)（参阅绑定装载服务器配置文件时的[持久数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)）。
+- 已装载主机的服务器配置文件，但该文件不包含系统变量 [log_error](/5/5.1/5.1.8/server-system-variables.html)（参阅绑定装载服务器配置文件时的[持久数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)）。
 
 - 来自主机的服务器配置文件尚未挂载，但 Docker 环境变量 [MYSQL_LOG_CONSOLE](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#Docker-环境变量) 为true（这是 MYSQL 8.0 服务器容器的默认状态）。然后，MySQL 服务器的错误日志被重定向到 stderr，以便错误日志进入 Docker 容器的日志，并可以使用 `docker logs mysqld-container` 容器命令查看。
 
-要使 MySQL 服务器在这两个条件之一为真时生成错误日志，请使用 [--log-error](/5/5.1/5.1.7/server-options) 选项将[配置服务器](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#配置-MySQL-服务器)为在容器内的特定位置生成错误日志。要持久化错误日志，请在容器内的错误日志位置安装主机文件，如[持久数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)中所述。但是，你必须确保容器中的 MySQL 服务器对装载的主机文件具有写访问权限。
+要使 MySQL 服务器在这两个条件之一为真时生成错误日志，请使用 [--log-error](/5/5.1/5.1.7/server-options.html) 选项将[配置服务器](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#配置-MySQL-服务器)为在容器内的特定位置生成错误日志。要持久化错误日志，请在容器内的错误日志位置安装主机文件，如[持久数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)中所述。但是，你必须确保容器中的 MySQL 服务器对装载的主机文件具有写访问权限。
 
 ## Docker 中使用 MySQL 企业备份
 
 [MySQL 企业备份](https://dev.mysql.com/doc/mysql-enterprise-backup/8.0/en/)是 MySQL 服务器的商业授权备份实用程序，可与 [MySQL 企业版](https://dev.mysql.com/doc/mysql-enterprise-backup/8.0/en/)一起使用。MySQL 企业备份包含在 MySQL 企业版的 Docker 安装中。
 
-在下面的示例中，我们假设您已经在 Docker 容器中运行了 MySQL 服务器（参阅[章节 2.5.6.1，“使用 Docker 部署 MySQL 服务器的基本步骤”](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started)，了解如何使用 Docker 启动 MySQL 服务器实例）。为了使 MySQL 企业备份能够备份 MySQL 服务器，它必须能够访问服务器的数据目录。例如，可以通过在启动服务器时[将主机目录绑定到 MySQL 服务器的数据目录](持久数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)来实现：
+在下面的示例中，我们假设你已经在 Docker 容器中运行了 MySQL 服务器（参阅[章节 2.5.6.1，“使用 Docker 部署 MySQL 服务器的基本步骤”](/2/2.5/2.5.6/2.5.6.1/docker-mysql-getting-started.html)，了解如何使用 Docker 启动 MySQL 服务器实例）。为了使 MySQL 企业备份能够备份 MySQL 服务器，它必须能够访问服务器的数据目录。例如，可以通过在启动服务器时[将主机目录绑定到 MySQL 服务器的数据目录](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)来实现：
 
 ```bash
 docker run --name=mysqlserver \
