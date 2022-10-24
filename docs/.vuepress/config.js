@@ -3,7 +3,8 @@ module.exports = {
   description: '对官方参考手册的翻译，持续翻译中',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'keywords', content: 'mysql,sql,innodb' }]
+    ['meta', { name: 'keywords', content: 'mysql,sql,innodb' }],
+    ['script',{src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8380975615223941',crossorigin: 'anonymous'}]
   ],
   base: '/',
   markdown: {
@@ -27,7 +28,7 @@ module.exports = {
     displayAllHeaders: true,
     nav: [
       { text: '文档首页', link: '/mysql/' },
-      { text: 'BookHub 书库', link: 'https://www.bookhub.tech' },
+      { text: 'BookHub 书库', link: 'https://pdf.bookhub.tech' },
       { text: '中文文档汇集', link: 'https://docs.bookhub.tech' },
       { text: 'GitHub', link: 'https://github.com/dev2007/mysql8-manual' }
     ],
