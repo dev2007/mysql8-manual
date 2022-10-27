@@ -1,5 +1,7 @@
 # MySQL 8.0 中文手册文档
 
+![license](https://img.shields.io/badge/license-CC--BY--NC-%23396D94)
+
 ## 缘由
 
 搜索 MySQL 相关的中文文档，发现在 git 上相关项目，但使用的机翻，且翻译不全。于是考虑自己学习一下官方文档并翻译一次。

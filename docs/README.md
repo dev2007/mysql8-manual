@@ -4,7 +4,7 @@
 
 ## 感谢与支持
 
-![translate](https://img.shields.io/badge/Translate-MySQL-%23396D94) ![stars](https://img.shields.io/github/stars/dev2007/mysql8-manual?label=Stars&logo=github&color=%23396D94) ![forks](https://img.shields.io/github/forks/dev2007/mysql8-manual?label=Forks&logo=github&color=%23396D94)
+![license](https://img.shields.io/badge/license-CC--BY--NC-%23396D94) ![translate](https://img.shields.io/badge/Translate-MySQL-%23396D94) ![stars](https://img.shields.io/github/stars/dev2007/mysql8-manual?label=Stars&logo=github&color=%23396D94) ![forks](https://img.shields.io/github/forks/dev2007/mysql8-manual?label=Forks&logo=github&color=%23396D94)
 
 如果对你有帮助，欢迎到 GitHub 给我一颗星星 [Star](https://github.com/dev2007/mysql8-manual)。
 
