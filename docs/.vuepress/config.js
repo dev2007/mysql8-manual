@@ -179,7 +179,8 @@ module.exports = {
                 ]
               },
               ['/2/2.5/2.5.7/linux-installation-native','从本地软件仓库在 Linux 上安装 MySQL'],
-              ['/2/2.5/2.5.8/linux-installation-juju','在有 Juju 的 Linux 上安装 MySQL']
+              ['/2/2.5/2.5.8/linux-installation-juju','在有 Juju 的 Linux 上安装 MySQL'],
+              ['/2/2.5/2.5.9/using-systemd','使用 systemd 管理 MySQL 服务器']
 
             ]
           },
