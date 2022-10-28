@@ -28,6 +28,7 @@ module.exports = {
       { text: '文档首页', link: '/mysql/' },
       { text: 'BookHub 书库', link: 'https://pdf.bookhub.tech' },
       { text: '中文文档汇集', link: 'https://docs.bookhub.tech' },
+      { text: 'STEMpump', link: 'https://stempump.bookhub.tech'},
       { text: 'GitHub', link: 'https://github.com/dev2007/mysql8-manual' }
     ],
     sidebar: [
