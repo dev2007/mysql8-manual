@@ -24,8 +24,6 @@ module.exports = {
   ],
   themeConfig: {
     logo: '/favicon.ico',
-    sidebarDepth: 3,
-    displayAllHeaders: true,
     nav: [
       { text: '文档首页', link: '/mysql/' },
       { text: 'BookHub 书库', link: 'https://pdf.bookhub.tech' },
@@ -181,9 +179,9 @@ module.exports = {
               ['/2/2.5/2.5.7/linux-installation-native','从本地软件仓库在 Linux 上安装 MySQL'],
               ['/2/2.5/2.5.8/linux-installation-juju','在有 Juju 的 Linux 上安装 MySQL'],
               ['/2/2.5/2.5.9/using-systemd','使用 systemd 管理 MySQL 服务器']
-
             ]
           },
+          ['/2/2.6/uln-installation','使用不可破坏的 Linux 网络（ULN）安装 MySQL'],
 
           ['/2/2.12/downgrading', '降级 MySQL']
         ]
