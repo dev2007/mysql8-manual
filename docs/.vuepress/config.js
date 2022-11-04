@@ -182,6 +182,13 @@ module.exports = {
             ]
           },
           ['/2/2.6/uln-installation','使用不可破坏的 Linux 网络（ULN）安装 MySQL'],
+          {
+            title: '在 Solaris 上安装 MySQL',
+            path: '/2/2.7/solaris-installation',
+            children: [
+              ['/2/2.7/2.7.1/solaris-installation-pkg','使用 Solaris PKG 在 Solaris 上安装 MySQL']
+            ]
+          },
 
           ['/2/2.12/downgrading', '降级 MySQL']
         ]

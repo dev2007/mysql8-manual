@@ -124,7 +124,7 @@ Upgrade   - Upgrades one or more of your installed programs.
 
   `[***product***]`
 
-    每个产品都可以由一个产品关键字指定，该关键字可以有分号分隔的版本限定符，也可以没有分号分隔的版本限定符。仅传入产品关键字即可选择产品的最新版本。如果该版本的产品有多个体系结构可用，则该命令将返回清单列表中的第一个体系结构以进行交互确认。或者，您可以使用 `-silent` 开关在产品关键字之后传入确切的版本和体系结构（`x86` 或 `x64`）。
+    每个产品都可以由一个产品关键字指定，该关键字可以有分号分隔的版本限定符，也可以没有分号分隔的版本限定符。仅传入产品关键字即可选择产品的最新版本。如果该版本的产品有多个体系结构可用，则该命令将返回清单列表中的第一个体系结构以进行交互确认。或者，你可以使用 `-silent` 开关在产品关键字之后传入确切的版本和体系结构（`x86` 或 `x64`）。
 
   `[***features***]`
 
@@ -211,7 +211,7 @@ Upgrade   - Upgrades one or more of your installed programs.
 
 - `update`
 
-  将最新的 MySQL 产品目录下载到您的系统中。成功后，将在下次执行 `MySQLInstaller` 或 [MySQLInstallerConsole.exe](https://dev.mysql.com/doc/refman/8.0/en/MySQLInstallerConsole.html) 应用目录。
+  将最新的 MySQL 产品目录下载到你的系统中。成功后，将在下次执行 `MySQLInstaller` 或 [MySQLInstallerConsole.exe](https://dev.mysql.com/doc/refman/8.0/en/MySQLInstallerConsole.html) 应用目录。
 
   ```bash
   C:\> MySQLInstallerConsole update

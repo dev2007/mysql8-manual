@@ -66,7 +66,7 @@ docker pull  container-registry.oracle.com/mysql/enterprise-server:tag
 - `8.0`、`8.0.x`（*x* 是 8.0 系列中的最新版本号），`latest`：MySQL 8.0，最新 GA
 - `5.7`、`5.7.y`（*y* 是 5.7 系列中的最新版本号）：MySQL 5.7
 
-要从[我的 Oracle 支持](https://support.oracle.com/)网站下载 MySQL 企业版镜像，请访问该网站，登录您的 Oracle 帐户，并在登录页面后执行以下步骤：
+要从[我的 Oracle 支持](https://support.oracle.com/)网站下载 MySQL 企业版镜像，请访问该网站，登录你的 Oracle 帐户，并在登录页面后执行以下步骤：
 
 - 选择**补丁和更新**选项卡。
 

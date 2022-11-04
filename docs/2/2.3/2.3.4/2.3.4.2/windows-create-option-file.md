@@ -1,6 +1,6 @@
 # 2.3.4.2 创建选项文件
 
-如果在运行服务器时需要指定启动选项，可以在命令行中指示它们，也可以将它们放在选项文件中。对于每次服务器启动时使用的选项，您可能会发现使用选项文件指定MySQL配置最为方便。在以下情况下尤其如此：
+如果在运行服务器时需要指定启动选项，可以在命令行中指示它们，也可以将它们放在选项文件中。对于每次服务器启动时使用的选项，你可能会发现使用选项文件指定MySQL配置最为方便。在以下情况下尤其如此：
 
 - 安装或数据目录位置不同于默认位置（`C:\ProgramFiles\MySQL\MySQL Server 8.0` 和 `C:\Program Files\MySQL\MySQL Server 8.0\data`）。
 
@@ -34,7 +34,7 @@ datadir=E:/mydata/data
 
 ZIP 存档不包括 `data` 目录。要通过创建数据目录并填充 MySQL 系统数据库中的表来初始化 MySQL 安装，请使用 [`--initialize`](/5/5.1/5.1.7/server-options.html) 或 [`--initial unsecure`](/5/5.1/5.1.7/server-options.html) 初始化 MySQL。有关更多信息，请参阅[章节 2.10.1，“初始化数据目录”](/2/2.10/2.10.1/data-directory-initialization.html)。
 
-如果要在其他位置使用数据目录，则应将数据目录的全部内容复制到新位置。例如，如果您想使用 `E:\mydata` 作为数据目录，则必须执行两项操作：
+如果要在其他位置使用数据目录，则应将数据目录的全部内容复制到新位置。例如，如果你想使用 `E:\mydata` 作为数据目录，则必须执行两项操作：
 
 1. 将整个数据目录及其所有内容从默认位置（例如C:\Program Files\MySQL\MySQL Server 8.0\data）移动到E:\mydata。
 

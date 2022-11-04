@@ -132,7 +132,7 @@ docker run --name=mysql1 \
 docker network create my-custom-net
 ```
 
-然后，在创建和启动服务器和客户机容器时，使用 `--network` 选项将它们放在您创建的网络上。例如：
+然后，在创建和启动服务器和客户机容器时，使用 `--network` 选项将它们放在你创建的网络上。例如：
 
 ```bash
 docker run --name=mysql1 --network=my-custom-net -d mysql/mysql-server
@@ -352,7 +352,7 @@ mysql -uadmin --password='password' -e "source /data/backups/all-databases.sql"
 - `MYSQL_ROOT_PASSWORD`：该变量指定为 MySQL root 帐户设置的密码。
 
 ::: warning 警告
-在命令行设置 MySQL root用户密码是不安全的。作为显式指定密码的替代方法，您可以使用密码文件的容器文件路径设置变量，然后在容器文件路径上挂载主机上包含密码的文件。这仍然不是很安全，因为密码文件的位置仍然暴露在外。最好使用 `MYSQL_RANDOM_ROOT_PASSWORD` 和 `MYSQL_ONETIME_PASSWORD` 的默认设置都为 true。
+在命令行设置 MySQL root用户密码是不安全的。作为显式指定密码的替代方法，你可以使用密码文件的容器文件路径设置变量，然后在容器文件路径上挂载主机上包含密码的文件。这仍然不是很安全，因为密码文件的位置仍然暴露在外。最好使用 `MYSQL_RANDOM_ROOT_PASSWORD` 和 `MYSQL_ONETIME_PASSWORD` 的默认设置都为 true。
 :::
 
 - `MYSQL_ALLOW_EMPTY_PASSWORD`。将其设置为 true 将允许容器以 root 用户的空密码启动。

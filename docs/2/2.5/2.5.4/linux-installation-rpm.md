@@ -68,9 +68,9 @@ $> rpm -qpl mysql-community-server-version-distribution-arch.rpm
 
 *本节其余部分的讨论仅适用于使用直接从 Oracle 下载的 RPM 包而不是通过 MySQL 仓库进行安装的过程。*
 
-某些包之间存在依赖关系。如果您计划安装许多软件包，你可能希望下载 RPM 打包的 **tar** 文件，它包含上面列出的所有 RPM 软件包，因此你不需要单独下载它们。
+某些包之间存在依赖关系。如果你计划安装许多软件包，你可能希望下载 RPM 打包的 **tar** 文件，它包含上面列出的所有 RPM 软件包，因此你不需要单独下载它们。
 
-在大多数情况下，您需要安装 `mysql-community-server`、`mysql-community-client`、`mysql-community-libs`、`mysql-community-common` 和 `mysql-community-libs-compat`，以获得功能性的标准 MySQL 安装。要执行这种标准的基本安装，请转到包含所有这些软件包的文件夹（最好是没有其他具有类似名称的RPM软件包），并执行以下命令：
+在大多数情况下，你需要安装 `mysql-community-server`、`mysql-community-client`、`mysql-community-libs`、`mysql-community-common` 和 `mysql-community-libs-compat`，以获得功能性的标准 MySQL 安装。要执行这种标准的基本安装，请转到包含所有这些软件包的文件夹（最好是没有其他具有类似名称的RPM软件包），并执行以下命令：
 
 ```bash
 $> sudo yum install mysql-community-{server,client,common,libs}-*

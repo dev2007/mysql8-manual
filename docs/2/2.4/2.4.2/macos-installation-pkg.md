@@ -34,7 +34,7 @@
 
 5. 成功安装新的 MySQL 服务器后，通过选择密码的默认加密类型、定义 root 密码以及在启动时启用（或禁用）MySQL 服务器来完成配置步骤。
 
-6. 默认的 MySQL 8.0 密码机制是 `caching_sha2_password`（强），此步骤允许您将其更改为 `mysql_native_password`（旧版）。
+6. 默认的 MySQL 8.0 密码机制是 `caching_sha2_password`（强），此步骤允许你将其更改为 `mysql_native_password`（旧版）。
 
 **图 2.15 MySQL 包安装程序向导：选择密码加密类型**
 
