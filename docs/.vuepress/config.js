@@ -189,6 +189,7 @@ module.exports = {
               ['/2/2.7/2.7.1/solaris-installation-pkg','使用 Solaris PKG 在 Solaris 上安装 MySQL']
             ]
           },
+          ['/2/2.8/freebsd-installation','在 FreeBSD 上安装 MySQL'],
 
           ['/2/2.12/downgrading', '降级 MySQL']
         ]
