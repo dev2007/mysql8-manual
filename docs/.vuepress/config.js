@@ -4,7 +4,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'keywords', content: 'mysql,sql,innodb' }],
-    ['script',{src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8380975615223941',crossorigin: 'anonymous'}]
+    ['script', { src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8380975615223941', crossorigin: 'anonymous' }]
   ],
   base: '/',
   markdown: {
@@ -31,7 +31,7 @@ module.exports = {
       { text: 'GitHub', link: 'https://github.com/dev2007/mysql8-manual' }
     ],
     sidebar: [
-      ["/","MySQL 翻译说明"],
+      ["/", "MySQL 翻译说明"],
       ['/mysql', '前言和法律条款'],
       {
         title: '基本信息',
@@ -176,20 +176,27 @@ module.exports = {
                   ['/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics', '关于使用 Docker 部署 MySQL 服务的更多主题']
                 ]
               },
-              ['/2/2.5/2.5.7/linux-installation-native','从本地软件仓库在 Linux 上安装 MySQL'],
-              ['/2/2.5/2.5.8/linux-installation-juju','在有 Juju 的 Linux 上安装 MySQL'],
-              ['/2/2.5/2.5.9/using-systemd','使用 systemd 管理 MySQL 服务器']
+              ['/2/2.5/2.5.7/linux-installation-native', '从本地软件仓库在 Linux 上安装 MySQL'],
+              ['/2/2.5/2.5.8/linux-installation-juju', '在有 Juju 的 Linux 上安装 MySQL'],
+              ['/2/2.5/2.5.9/using-systemd', '使用 systemd 管理 MySQL 服务器']
             ]
           },
-          ['/2/2.6/uln-installation','使用不可破坏的 Linux 网络（ULN）安装 MySQL'],
+          ['/2/2.6/uln-installation', '使用不可破坏的 Linux 网络（ULN）安装 MySQL'],
           {
             title: '在 Solaris 上安装 MySQL',
             path: '/2/2.7/solaris-installation',
             children: [
-              ['/2/2.7/2.7.1/solaris-installation-pkg','使用 Solaris PKG 在 Solaris 上安装 MySQL']
+              ['/2/2.7/2.7.1/solaris-installation-pkg', '使用 Solaris PKG 在 Solaris 上安装 MySQL']
             ]
           },
-          ['/2/2.8/freebsd-installation','在 FreeBSD 上安装 MySQL'],
+          ['/2/2.8/freebsd-installation', '在 FreeBSD 上安装 MySQL'],
+          {
+            title: '从源代码安装 MySQL',
+            path: '/2/2.9/source-installation',
+            children: [
+              ['/2/2.9/2.9.3/source-installation-layout', '源安装的 MySQL 布局']
+            ]
+          }
 
           ['/2/2.12/downgrading', '降级 MySQL']
         ]
