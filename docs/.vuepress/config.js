@@ -194,9 +194,11 @@ module.exports = {
             title: '从源代码安装 MySQL',
             path: '/2/2.9/source-installation',
             children: [
+              ['/2/2.9/2.9.1/source-installation-methods', '源码安装方法'],
+              ['/2/2.9/2.9.2/source-installation-prerequisites', '源安装先决条件'],
               ['/2/2.9/2.9.3/source-installation-layout', '源安装的 MySQL 布局']
             ]
-          }
+          },
 
           ['/2/2.12/downgrading', '降级 MySQL']
         ]
