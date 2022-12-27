@@ -49,44 +49,43 @@ module.exports = {
           },
           ['/1/1.3/mysql-nutshell', 'MySQL 8.0 新增特性'],
           ['/1/1.4/added-deprecated-removed', 'MySQL 8.0 中添加、弃用或删除的服务器和状态变量及选项'],
-          ['/1/1.5/information-sources', 'MySQL 信息源'],
-          ['/1/1.6/bug-reports', '如何报告错误或问题'],
+          ['/1/1.5/bug-reports', '如何报告错误或问题'],
           {
             title: 'MySQL 标准遵从性',
-            path: '/1/1.7/compatibility',
+            path: '/1/1.6/compatibility',
             children: [
-              ['/1/1.7/1.7.1/extensions-to-ansi', 'MySQL 对标准 SQL 的扩展'],
+              ['/1/1.6/1.6.1/extensions-to-ansi', 'MySQL 对标准 SQL 的扩展'],
               {
                 title: 'MySQL 与标准 SQL 的区别',
-                path: '/1/1.7/1.7.2/differences-from-ansi',
+                path: '/1/1.6/1.6.2/differences-from-ansi',
                 children: [
-                  ['/1/1.7/1.7.2/1.7.2.1/ansi-diff-select-into-table', 'SELECT INTO TABLE 区别'],
-                  ['/1/1.7/1.7.2/1.7.2.2/ansi-diff-update', 'UPDATE 区别'],
-                  ['/1/1.7/1.7.2/1.7.2.3/ansi-diff-foreign-keys', 'FOREIGN KEY 约束的区别'],
-                  ['/1/1.7/1.7.2/1.7.2.4/ansi-diff-comments', "'--' 作为备注的开头"]
+                  ['/1/1.6/1.6.2/1.6.2.1/ansi-diff-select-into-table', 'SELECT INTO TABLE 区别'],
+                  ['/1/1.6/1.6.2/1.6.2.2/ansi-diff-update', 'UPDATE 区别'],
+                  ['/1/1.6/1.6.2/1.6.2.3/ansi-diff-foreign-keys', 'FOREIGN KEY 约束的区别'],
+                  ['/1/1.6/1.6.2/1.6.2.4/ansi-diff-comments', "'--' 作为备注的开头"]
                 ]
               },
               {
                 title: 'MySQL 如何处理约束',
-                path: '/1/1.7/1.7.3/constraints',
+                path: '/1/1.6/1.6.3/constraints',
                 children: [
-                  ['/1/1.7/1.7.3/1.7.3.1/constraint-primary-key', 'PRIMARY KEY 和 UNIQUE 索引约束'],
-                  ['/1/1.7/1.7.3/1.7.3.2/constraint-foreign-key', 'FOREIGN KEY 约束'],
-                  ['/1/1.7/1.7.3/1.7.3.3/constraint-invalid-data', '对无效数据的强制约束'],
-                  ['/1/1.7/1.7.3/1.7.3.4/constraint-enum', 'ENUM 和 SET 约束']
+                  ['/1/1.6/1.6.3/1.6.3.1/constraint-primary-key', 'PRIMARY KEY 和 UNIQUE 索引约束'],
+                  ['/1/1.6/1.6.3/1.6.3.2/constraint-foreign-key', 'FOREIGN KEY 约束'],
+                  ['/1/1.6/1.6.3/1.6.3.3/constraint-invalid-data', '对无效数据的强制约束'],
+                  ['/1/1.6/1.6.3/1.6.3.4/constraint-enum', 'ENUM 和 SET 约束']
                 ]
               }
             ]
           },
           {
             title: 'MySQL 贡献者',
-            path: '/1/1.8/credits',
+            path: '/1/1.7/credits',
             children: [
-              ['/1/1.8/1.8.1/contributors', 'MySQL 贡献者'],
-              ['/1/1.8/1.8.2/documenters-translators', '资料员和翻译'],
-              ['/1/1.8/1.8.3/packages', '支持 MySQL 的包'],
-              ['/1/1.8/1.8.4/tools-used-to-create-mysql', '用于创建 MySQL 的工具'],
-              ['/1/1.8/1.8.5/supporters', 'MySQL 支持者']
+              ['/1/1.7/1.7.1/contributors', 'MySQL 贡献者'],
+              ['/1/1.7/1.7.2/documenters-translators', '资料员和翻译'],
+              ['/1/1.7/1.7.3/packages', '支持 MySQL 的包'],
+              ['/1/1.7/1.7.4/tools-used-to-create-mysql', '用于创建 MySQL 的工具'],
+              ['/1/1.7/1.7.5/supporters', 'MySQL 支持者']
             ]
           }
         ]
@@ -195,8 +194,9 @@ module.exports = {
             path: '/2/2.9/source-installation',
             children: [
               ['/2/2.9/2.9.1/source-installation-methods', '源码安装方法'],
-              ['/2/2.9/2.9.2/source-installation-prerequisites', '源安装先决条件'],
-              ['/2/2.9/2.9.3/source-installation-layout', '源安装的 MySQL 布局']
+              ['/2/2.9/2.9.2/source-installation-prerequisites', '源安装前提条件'],
+              ['/2/2.9/2.9.3/source-installation-layout', '源安装的 MySQL 布局'],
+              ['/2/2.9/2.9.4/installing-source-distribution', '使用标准源分发安装 MySQL']
             ]
           },
 
