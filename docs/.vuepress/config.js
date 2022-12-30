@@ -196,7 +196,10 @@ module.exports = {
               ['/2/2.9/2.9.1/source-installation-methods', '源码安装方法'],
               ['/2/2.9/2.9.2/source-installation-prerequisites', '源安装前提条件'],
               ['/2/2.9/2.9.3/source-installation-layout', '源安装的 MySQL 布局'],
-              ['/2/2.9/2.9.4/installing-source-distribution', '使用标准源分发安装 MySQL']
+              ['/2/2.9/2.9.4/installing-source-distribution', '使用标准源分发安装 MySQL'],
+              ['/2/2.9/2.9.5/installing-development-tree', '使用开发源树安装 MySQL'],
+              ['/2/2.9/2.9.6/source-ssl-library-configuration', '配置 SSL 库支持'],
+              ['/2/2.9/2.9.7/source-configuration-options', 'MySQL 源配置选项']
             ]
           },
 
