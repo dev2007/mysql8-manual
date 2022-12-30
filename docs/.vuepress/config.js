@@ -199,7 +199,10 @@ module.exports = {
               ['/2/2.9/2.9.4/installing-source-distribution', '使用标准源分发安装 MySQL'],
               ['/2/2.9/2.9.5/installing-development-tree', '使用开发源树安装 MySQL'],
               ['/2/2.9/2.9.6/source-ssl-library-configuration', '配置 SSL 库支持'],
-              ['/2/2.9/2.9.7/source-configuration-options', 'MySQL 源配置选项']
+              ['/2/2.9/2.9.7/source-configuration-options', 'MySQL 源配置选项'],
+              ['/2/2.9/2.9.8/compilation-problems', 'MySQL 编译问题的处理'],
+              ['/2/2.9/2.9.9/source-configuration-third-party', 'MySQL 配置和第三方工具'],
+              ['/2/2.9/2.9.10/source-installation-doxygen.html', '生成 MySQL Doxygen 文档内容']
             ]
           },
 
