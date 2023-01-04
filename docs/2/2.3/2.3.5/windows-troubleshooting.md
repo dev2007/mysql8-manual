@@ -1,4 +1,4 @@
-# 2.3.5 Microsoft Windows MySQL Server 安装故障排除
+# 2.3.5 Microsoft Windows MySQL 服务器安装故障排除
 
 首次安装和运行 MySQL 时，你可能会遇到某些错误，导致 MySQL 服务器无法启动。本节帮助你诊断和纠正其中一些错误。
 

@@ -130,22 +130,25 @@ module.exports = {
                   ['/2/2.3/2.3.3/2.3.3.4/mysql-installer-catalog-dashboard', 'MySQL 安装程序产品目录和面板'],
                   ['/2/2.3/2.3.3/2.3.3.5/MySQLInstallerConsole', 'MySQL 安装程序控制台参考']
                 ]
-              }
-            ]
-          },
-          {
-            title: '使用非安装压缩包在 Microsoft Windows 上安装 MySQL',
-            path: '/2/2.3/2.3.4/windows-install-archive',
-            children: [
-              ['/2/2.3/2.3.4/2.3.4.1/windows-extract-archive', '解压安装压缩包'],
-              ['/2/2.3/2.3.4/2.3.4.2/windows-create-option-file', '创建选项文件',],
-              ['/2/2.3/2.3.4/2.3.4.3/windows-select-server', '选择 MySQL 服务器类型'],
-              ['/2/2.3/2.3.4/2.3.4.4/windows-initialize-data-directory', '初始化数据目录'],
-              ['/2/2.3/2.3.4/2.3.4.5/windows-server-first-start', '首次启动服务器'],
-              ['/2/2.3/2.3.4/2.3.4.6/windows-start-command-line', '从 Windows 命令行启动 MySQL'],
-              ['/2/2.3/2.3.4/2.3.4.7/mysql-installation-windows-path', '自定义 MySQL 工具的路径'],
-              ['/2/2.3/2.3.4/2.3.4.8/windows-start-service', '将 MySQL 作为 Windows 服务启动'],
-              ['/2/2.3/2.3.4/2.3.4.9/windows-testing', '测试 MySQL 安装']
+              },
+              {
+                title: '使用非安装压缩包在 Microsoft Windows 上安装 MySQL',
+                path: '/2/2.3/2.3.4/windows-install-archive',
+                children: [
+                  ['/2/2.3/2.3.4/2.3.4.1/windows-extract-archive', '解压安装压缩包'],
+                  ['/2/2.3/2.3.4/2.3.4.2/windows-create-option-file', '创建选项文件',],
+                  ['/2/2.3/2.3.4/2.3.4.3/windows-select-server', '选择 MySQL 服务器类型'],
+                  ['/2/2.3/2.3.4/2.3.4.4/windows-initialize-data-directory', '初始化数据目录'],
+                  ['/2/2.3/2.3.4/2.3.4.5/windows-server-first-start', '首次启动服务器'],
+                  ['/2/2.3/2.3.4/2.3.4.6/windows-start-command-line', '从 Windows 命令行启动 MySQL'],
+                  ['/2/2.3/2.3.4/2.3.4.7/mysql-installation-windows-path', '自定义 MySQL 工具的路径'],
+                  ['/2/2.3/2.3.4/2.3.4.8/windows-start-service', '将 MySQL 作为 Windows 服务启动'],
+                  ['/2/2.3/2.3.4/2.3.4.9/windows-testing', '测试 MySQL 安装']
+                ]
+              },
+              ['/2/2.3/2.3.5/windows-troubleshooting','Microsoft Windows MySQL 服务器安装故障排除'],
+              ['/2/2.3/2.3.6/windows-postinstallation','Windows 安装后程序'],
+              ['/2/2.3/2.3.7/windows-restrictions','Windows 平台限制']
             ]
           },
           {
@@ -202,10 +205,26 @@ module.exports = {
               ['/2/2.9/2.9.7/source-configuration-options', 'MySQL 源配置选项'],
               ['/2/2.9/2.9.8/compilation-problems', 'MySQL 编译问题的处理'],
               ['/2/2.9/2.9.9/source-configuration-third-party', 'MySQL 配置和第三方工具'],
-              ['/2/2.9/2.9.10/source-installation-doxygen.html', '生成 MySQL Doxygen 文档内容']
+              ['/2/2.9/2.9.10/source-installation-doxygen', '生成 MySQL Doxygen 文档内容']
             ]
           },
-
+          {
+            title: '安装后设置和测试',
+            path: '/2/2.10/postinstallation',
+            children: [
+              ['/2/2.10/2.10.1/data-directory-initialization','初始化数据目录'],
+              {
+                title: '启动服务器',
+                path: '/2/2.10/2.10.2/starting-server',
+                children:[
+                  ['/2/2.10/2.10.2/2.10.2.1/starting-server-troubleshooting','启动 MySQL 服务器的疑难解答']
+                ]
+              },
+              ['/2/2.10/2.10.3/testing-server','测试服务器'],
+              ['/2/2.10/2.10.4/default-privileges','保护初始 MySQL 帐户'],
+              ['/2/2.10/2.10.5/automatic-start','自动启动和停止 MySQL']
+            ]
+          },
           ['/2/2.12/downgrading', '降级 MySQL']
         ]
       }

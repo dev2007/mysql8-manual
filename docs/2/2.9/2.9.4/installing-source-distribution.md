@@ -54,7 +54,7 @@ $> cp support-files/mysql.server /etc/init.d/mysql.server
 
 ## 执行预配置设置
 
-在 Unix 上，设置用于运行和执行 MySQL 服务器的 `mysql` 用户和组，并拥有数据库目录。详细信息，参阅[创建 mysql 用户和组](/2/2.2/binary-installation.html)。除非另有说明，然后以 `mysql` 用户执行以下步骤。
+在 Unix 上，设置用于运行和执行 MySQL 服务器的 `mysql` 用户和组，并拥有数据库目录。详细信息，参阅[创建 mysql 用户和组](/2/2.2/binary-installation.html#创建-mysql-用户和组)。除非另有说明，然后以 `mysql` 用户执行以下步骤。
 
 ## 获取并解压分发包
 
