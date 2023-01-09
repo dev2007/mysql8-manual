@@ -27,7 +27,7 @@ systemd、[mysqld_safe](/4/4.3/4.3.2/mysqld-safe.html) 和 [mysql.server](/4/4.3
 
 `[mysqld-major_version]` 表示名称为 `[mysqld-5.7]` 和 `[mysqld-8.0]` 的组由版本为 5.7.x、8.0.x 等的服务器读取。此功能可用于指定只能由给定发布系列中的服务器读取的选项。
 
-为了向后兼容，[mysql.server](/4/4.3/4.3.3/mysql-server.html) 还读取 `[mysql_server]` 组，[mysqld_safe](/4/4.3/4.3.2/mysqld-safe.html) 还读取 `[safe_mysqld]` 组。为了保持最新状态，您应该更新选项文件以使用 `[mysql.server]` 和 `[mysqld_safe]` 组。
+为了向后兼容，[mysql.server](/4/4.3/4.3.3/mysql-server.html) 还读取 `[mysql_server]` 组，[mysqld_safe](/4/4.3/4.3.2/mysqld-safe.html) 还读取 `[safe_mysqld]` 组。为了保持最新状态，你应该更新选项文件以使用 `[mysql.server]` 和 `[mysqld_safe]` 组。
 
 有关 MySQL 配置文件及其结构和内容的更多信息，参阅[章节 4.2.2.2，“使用选项文件”](/4/4.2/4.2.2/4.2.2.2/option-files.html)。
 

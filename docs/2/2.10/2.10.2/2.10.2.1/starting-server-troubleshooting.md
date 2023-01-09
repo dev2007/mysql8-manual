@@ -11,7 +11,7 @@
     $> tail host_name.log
     ```
 
-- 指定所使用的存储引擎所需的任何特殊选项。你可以创建 `my.cnf` 文件并为计划使用的引擎指定启动选项。如果你要使用支持事务表（`InnoDB`、[NDB](/23/mysql-cluster.html)）的存储引擎，请确保在启动服务器之前按照您希望的方式配置它们。如果你使用的是 `InnoDB` 表，参阅[章节 15.8，“InnoDB 配置”](/15/15.8/innodb-configuration.html)中的指南，以及[章节 15.14，“InnoDB 启动选项和系统变量”](/15/15.14/innodb-parameters.html)中的选项语法。
+- 指定所使用的存储引擎所需的任何特殊选项。你可以创建 `my.cnf` 文件并为计划使用的引擎指定启动选项。如果你要使用支持事务表（`InnoDB`、[NDB](/23/mysql-cluster.html)）的存储引擎，请确保在启动服务器之前按照你希望的方式配置它们。如果你使用的是 `InnoDB` 表，参阅[章节 15.8，“InnoDB 配置”](/15/15.8/innodb-configuration.html)中的指南，以及[章节 15.14，“InnoDB 启动选项和系统变量”](/15/15.14/innodb-parameters.html)中的选项语法。
 
     尽管存储引擎对你忽略的选项使用默认值，但 Oracle 建议你查看可用选项，并为默认值不适合你安装的任何选项指定显式值。
 
@@ -73,7 +73,7 @@
 
     使用 **ps** 确定是否有另一台 [mysqld](/4/4.3/4.3.1/mysqld.html) 服务器正在运行。如果是，请在再次启动 [mysqld](/4/4.3/4.3.1/mysqld.html) 之前关闭服务器。（如果另一台服务器正在运行，并且你确实希望运行多台服务器，你可以在[章节 5.8，“在一台机器上运行多个 MySQL 实例”](/5/5.8/multiple-servers.html)中找到有关如何执行此操作的信息。）
 
-    如果没有其他服务器正在运行，请执行命令 `telnet` *your_host_name tcp_ip_port_number*。（默认MySQL端口号为 3306。）然后按回车键几次。如果您没有收到类似的错误消息：`telnet: Unable to connect to remote host: Connection refused（telnet 无法连接到远程主机：连接被拒绝）`，则其他程序正在使用 [mysqld](/4/4.3/4.3.1/mysqld.html) 尝试使用的 TCP/IP 端口。跟踪这是什么程序并禁用它，或者告诉 [mysqld](/4/4.3/4.3.1/mysqld.html) 使用 [--port](/5/5.1/5.1.7/server-options.html) 选项监听不同的端口。在这种情况下，使用 TCP/IP 连接到服务器时，为客户端程序指定相同的非默认端口号。
+    如果没有其他服务器正在运行，请执行命令 `telnet` *your_host_name tcp_ip_port_number*。（默认MySQL端口号为 3306。）然后按回车键几次。如果你没有收到类似的错误消息：`telnet: Unable to connect to remote host: Connection refused（telnet 无法连接到远程主机：连接被拒绝）`，则其他程序正在使用 [mysqld](/4/4.3/4.3.1/mysqld.html) 尝试使用的 TCP/IP 端口。跟踪这是什么程序并禁用它，或者告诉 [mysqld](/4/4.3/4.3.1/mysqld.html) 使用 [--port](/5/5.1/5.1.7/server-options.html) 选项监听不同的端口。在这种情况下，使用 TCP/IP 连接到服务器时，为客户端程序指定相同的非默认端口号。
 
     该端口可能无法访问的另一个原因是你运行的防火墙阻止了与该端口的连接。如果是，请修改防火墙设置以允许访问该端口。
 

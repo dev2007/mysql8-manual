@@ -72,13 +72,13 @@ cd /usr/local/mysql
 
 要初始化数据目录，请使用 [--initialize](/5/5.1/5.1.7/server-options.html) 或 [--initialize-insecure](/5/5.1/5.1.7/server-options.html) 选项调用 [mysqld](/4/4.3/4.3.1/mysqld.html)，具体取决于你希望服务器为 'root'@'localhost' 帐户生成随机初始密码，还是创建没有密码的帐户：
 
-- 使用 [--initialize](/5/5.1/5.1.7/server-options.html) 进行“默认安全”安装（即，包括生成随机初始根密码）。在这种情况下，密码被标记为已过期，您必须选择一个新密码。
+- 使用 [--initialize](/5/5.1/5.1.7/server-options.html) 进行“默认安全”安装（即，包括生成随机初始根密码）。在这种情况下，密码被标记为已过期，你必须选择一个新密码。
 - 使用 [--initialize-insecure](/5/5.1/5.1.7/server-options.html)，不会生成 `root` 密码。这是不安全的；假设你打算在将服务器投入生产使用之前及时为帐户分配密码。
 
 有关分配新 'root'@'localhost' 密码的说明，参阅[初始化后 root 密码分配](/2/2.10/2.10.1/data-directory-initialization.html#初始化后-root-密码分配)。
 
 ::tip 注意
-服务器将任何消息（包括任何初始密码）写入其标准错误输出。这可能会被重定向到错误日志，因此如果您没有在屏幕上看到消息，请查看那里。有关错误日志的信息，包括其位置，参阅[章节 5.4.2，“错误日志”](/5/5.4/5.4.2/error-log.html)。
+服务器将任何消息（包括任何初始密码）写入其标准错误输出。这可能会被重定向到错误日志，因此如果你没有在屏幕上看到消息，请查看那里。有关错误日志的信息，包括其位置，参阅[章节 5.4.2，“错误日志”](/5/5.4/5.4.2/error-log.html)。
 
 在 Windows 上，使用 [--console](/5/5.1/5.1.7/server-options.html) 选项将消息定向到控制台。
 :::
@@ -93,7 +93,7 @@ bin\mysqld --initialize-insecure --console
 ```
 
 :::tip 注意
-如果缺少所需的系统库，数据目录初始化可能会失败。例如，您可能会看到如下错误：
+如果缺少所需的系统库，数据目录初始化可能会失败。例如，你可能会看到如下错误：
 
 ```bash
 bin/mysqld: error while loading shared libraries:
@@ -230,7 +230,7 @@ iTag*AfrH5ej
     mysql -u root --skip-password
     ```
 
-3. 连接后，使用 [ALTER USER]() 语句分配新的 `root` 密码：
+3. 连接后，使用 [ALTER USER](/13/13.7/13.7.1/13.7.1.1/alter-user.html) 语句分配新的 `root` 密码：
 
 ```bash
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'root-password';

@@ -225,6 +225,26 @@ module.exports = {
               ['/2/2.10/2.10.5/automatic-start','自动启动和停止 MySQL']
             ]
           },
+          {
+            title: '升级 MySQL',
+            path: '/2/2.11/upgrading',
+            children: [
+              ['/2/2.11/2.11.1/upgrade-before-you-begin','在你开始前'],
+              ['/2/2.11/2.11.2/upgrade-paths','升级路径'],
+              ['/2/2.11/2.11.3/upgrading-what-is-upgraded','MySQL 升级过程升级的内容'],
+              ['/2/2.11/2.11.4/upgrading-from-previous-series','MySQL 8.0 中的更改'],
+              ['/2/2.11/2.11.5/upgrade-prerequisites','准备升级安装'],
+              ['/2/2.11/2.11.6/upgrade-binary-package','在 Unix/Linux 上升级 MySQL 二进制或基于包的安装'],
+              ['/2/2.11/2.11.7/updating-yum-repo','使用 MySQL Yum 仓库升级 MySQL'],
+              ['/2/2.11/2.11.8/updating-apt-repo','使用 MySQL APT 仓库升级 MySQL'],
+              ['/2/2.11/2.11.9/updating-sles-repo','使用 MySQL SLES 仓库升级 MySQL'],
+              ['/2/2.11/2.11.10/windows-upgrading','在 Windows 上升级 MySQL'],
+              ['/2/2.11/2.11.11/upgrade-docker-mysql','升级 Docker 安装的 MySQL'],
+              ['/2/2.11/2.11.12/upgrade-troubleshooting','升级故障排除'],
+              ['/2/2.11/2.11.13/rebuilding-tables','重建或修复表或索引'],
+              ['/2/2.11/2.11.14/copying-databases','将 MySQL 数据库复制到另一台计算机']
+            ]
+          },
           ['/2/2.12/downgrading', '降级 MySQL']
         ]
       }

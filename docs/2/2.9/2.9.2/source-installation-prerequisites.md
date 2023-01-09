@@ -1,11 +1,11 @@
 # 2.9.2 源安装前提条件
 
-从源代码安装MySQL需要几个开发工具。无论您使用标准源代码发行版还是开发源代码树，都需要其中一些工具。其他工具要求取决于您使用的安装方法。
+从源代码安装MySQL需要几个开发工具。无论你使用标准源代码发行版还是开发源代码树，都需要其中一些工具。其他工具要求取决于你使用的安装方法。
 要从源代码安装MySQL，无论安装方法如何，都必须满足以下系统要求：
 
 - **CMake**，它被用作所有平台上的构建框架。CMake可以从下载 [http://www.cmake.org](http://www.cmake.org)。
 
-- 一个好的 **make** 程序。尽管有些平台自带  **make** 实现，但强烈建议您使用GNU make 3.75或更高版本。它可能已经作为gmake在您的系统上可用。GNU **make** 可从 [http://www.gnu.org/software/make/](http://www.gnu.org/software/make/)。
+- 一个好的 **make** 程序。尽管有些平台自带  **make** 实现，但强烈建议你使用GNU make 3.75或更高版本。它可能已经作为gmake在你的系统上可用。GNU **make** 可从 [http://www.gnu.org/software/make/](http://www.gnu.org/software/make/)。
 
 - 从MySQL 8.0.27 开始，MySQL 8.0 源代码允许使用 C++17 特性。为了在所有支持的平台上实现良好的 C++17 支持，以下最低编译器版本适用。
 
