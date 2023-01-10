@@ -245,7 +245,16 @@ module.exports = {
               ['/2/2.11/2.11.14/copying-databases','将 MySQL 数据库复制到另一台计算机']
             ]
           },
-          ['/2/2.12/downgrading', '降级 MySQL']
+          ['/2/2.12/downgrading', '降级 MySQL'],
+          {
+            title: 'Perl 安装说明',
+            path: '/2/2.13/perl-support',
+            children: [
+              ['/2/2.13/2.13.1/perl-installation','在 Unix 上安装 Perl'],
+              ['/2/2.13/2.13.2/activestate-perl','在 Windows 上安装 ActiveState Perl'],
+              ['/2/2.13/2.13.3/perl-support-problems','使用 Perl DBI/DBD 接口的问题']
+            ]
+          }
         ]
       }
     ]
