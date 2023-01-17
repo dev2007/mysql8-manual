@@ -1,7 +1,5 @@
 # 2.9 从源代码安装 MySQL
 
-**目录**
-
 - [2.9.1 源码安装方法](/2/2.9/2.9.1/source-installation-methods.html)
 - [2.9.2 源安装前提条件](/2/2.9/2.9.2/source-installation-prerequisites.html)
 - [2.9.3 源安装的 MySQL 布局](/2/2.9/2.9.3/source-installation-layout.html)

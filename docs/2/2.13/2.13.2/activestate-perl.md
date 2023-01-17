@@ -1,10 +1,10 @@
 # 2.13.2 在 Windows 上安装 ActiveState Perl
 
-在Windows上，您应该执行以下操作以使用ActiveState Perl安装MySQL DBD模块：
+在Windows上，你应该执行以下操作以使用ActiveState Perl安装MySQL DBD模块：
 
 1. 从获取 ActiveState Perl [http://www.activestate.com/Products/ActivePerl/](http://www.activestate.com/Products/ActivePerl/) 并安装它。
 2. 打开控制台窗口。
-3. 如有必要，请设置 `HTTP_proxy` 变量。例如，您可以尝试如下设置：
+3. 如有必要，请设置 `HTTP_proxy` 变量。例如，你可以尝试如下设置：
 
 ```bash
 C:\> set HTTP_proxy=my.proxy.com:3128
@@ -16,7 +16,7 @@ C:\> set HTTP_proxy=my.proxy.com:3128
 C:\> C:\perl\bin\ppm.pl
 ```
 
-5. 如果您以前没有这样做，请安装 `DBI`：
+5. 如果你以前没有这样做，请安装 `DBI`：
 
 ```bash
 ppm> install DBD-mysql

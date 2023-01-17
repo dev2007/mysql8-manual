@@ -146,9 +146,9 @@ module.exports = {
                   ['/2/2.3/2.3.4/2.3.4.9/windows-testing', '测试 MySQL 安装']
                 ]
               },
-              ['/2/2.3/2.3.5/windows-troubleshooting','Microsoft Windows MySQL 服务器安装故障排除'],
-              ['/2/2.3/2.3.6/windows-postinstallation','Windows 安装后程序'],
-              ['/2/2.3/2.3.7/windows-restrictions','Windows 平台限制']
+              ['/2/2.3/2.3.5/windows-troubleshooting', 'Microsoft Windows MySQL 服务器安装故障排除'],
+              ['/2/2.3/2.3.6/windows-postinstallation', 'Windows 安装后程序'],
+              ['/2/2.3/2.3.7/windows-restrictions', 'Windows 平台限制']
             ]
           },
           {
@@ -212,37 +212,37 @@ module.exports = {
             title: '安装后设置和测试',
             path: '/2/2.10/postinstallation',
             children: [
-              ['/2/2.10/2.10.1/data-directory-initialization','初始化数据目录'],
+              ['/2/2.10/2.10.1/data-directory-initialization', '初始化数据目录'],
               {
                 title: '启动服务器',
                 path: '/2/2.10/2.10.2/starting-server',
-                children:[
-                  ['/2/2.10/2.10.2/2.10.2.1/starting-server-troubleshooting','启动 MySQL 服务器的疑难解答']
+                children: [
+                  ['/2/2.10/2.10.2/2.10.2.1/starting-server-troubleshooting', '启动 MySQL 服务器的疑难解答']
                 ]
               },
-              ['/2/2.10/2.10.3/testing-server','测试服务器'],
-              ['/2/2.10/2.10.4/default-privileges','保护初始 MySQL 帐户'],
-              ['/2/2.10/2.10.5/automatic-start','自动启动和停止 MySQL']
+              ['/2/2.10/2.10.3/testing-server', '测试服务器'],
+              ['/2/2.10/2.10.4/default-privileges', '保护初始 MySQL 帐户'],
+              ['/2/2.10/2.10.5/automatic-start', '自动启动和停止 MySQL']
             ]
           },
           {
             title: '升级 MySQL',
             path: '/2/2.11/upgrading',
             children: [
-              ['/2/2.11/2.11.1/upgrade-before-you-begin','在你开始前'],
-              ['/2/2.11/2.11.2/upgrade-paths','升级路径'],
-              ['/2/2.11/2.11.3/upgrading-what-is-upgraded','MySQL 升级过程升级的内容'],
-              ['/2/2.11/2.11.4/upgrading-from-previous-series','MySQL 8.0 中的更改'],
-              ['/2/2.11/2.11.5/upgrade-prerequisites','准备升级安装'],
-              ['/2/2.11/2.11.6/upgrade-binary-package','在 Unix/Linux 上升级 MySQL 二进制或基于包的安装'],
-              ['/2/2.11/2.11.7/updating-yum-repo','使用 MySQL Yum 仓库升级 MySQL'],
-              ['/2/2.11/2.11.8/updating-apt-repo','使用 MySQL APT 仓库升级 MySQL'],
-              ['/2/2.11/2.11.9/updating-sles-repo','使用 MySQL SLES 仓库升级 MySQL'],
-              ['/2/2.11/2.11.10/windows-upgrading','在 Windows 上升级 MySQL'],
-              ['/2/2.11/2.11.11/upgrade-docker-mysql','升级 Docker 安装的 MySQL'],
-              ['/2/2.11/2.11.12/upgrade-troubleshooting','升级故障排除'],
-              ['/2/2.11/2.11.13/rebuilding-tables','重建或修复表或索引'],
-              ['/2/2.11/2.11.14/copying-databases','将 MySQL 数据库复制到另一台计算机']
+              ['/2/2.11/2.11.1/upgrade-before-you-begin', '在你开始前'],
+              ['/2/2.11/2.11.2/upgrade-paths', '升级路径'],
+              ['/2/2.11/2.11.3/upgrading-what-is-upgraded', 'MySQL 升级过程升级的内容'],
+              ['/2/2.11/2.11.4/upgrading-from-previous-series', 'MySQL 8.0 中的更改'],
+              ['/2/2.11/2.11.5/upgrade-prerequisites', '准备升级安装'],
+              ['/2/2.11/2.11.6/upgrade-binary-package', '在 Unix/Linux 上升级 MySQL 二进制或基于包的安装'],
+              ['/2/2.11/2.11.7/updating-yum-repo', '使用 MySQL Yum 仓库升级 MySQL'],
+              ['/2/2.11/2.11.8/updating-apt-repo', '使用 MySQL APT 仓库升级 MySQL'],
+              ['/2/2.11/2.11.9/updating-sles-repo', '使用 MySQL SLES 仓库升级 MySQL'],
+              ['/2/2.11/2.11.10/windows-upgrading', '在 Windows 上升级 MySQL'],
+              ['/2/2.11/2.11.11/upgrade-docker-mysql', '升级 Docker 安装的 MySQL'],
+              ['/2/2.11/2.11.12/upgrade-troubleshooting', '升级故障排除'],
+              ['/2/2.11/2.11.13/rebuilding-tables', '重建或修复表或索引'],
+              ['/2/2.11/2.11.14/copying-databases', '将 MySQL 数据库复制到另一台计算机']
             ]
           },
           ['/2/2.12/downgrading', '降级 MySQL'],
@@ -250,9 +250,41 @@ module.exports = {
             title: 'Perl 安装说明',
             path: '/2/2.13/perl-support',
             children: [
-              ['/2/2.13/2.13.1/perl-installation','在 Unix 上安装 Perl'],
-              ['/2/2.13/2.13.2/activestate-perl','在 Windows 上安装 ActiveState Perl'],
-              ['/2/2.13/2.13.3/perl-support-problems','使用 Perl DBI/DBD 接口的问题']
+              ['/2/2.13/2.13.1/perl-installation', '在 Unix 上安装 Perl'],
+              ['/2/2.13/2.13.2/activestate-perl', '在 Windows 上安装 ActiveState Perl'],
+              ['/2/2.13/2.13.3/perl-support-problems', '使用 Perl DBI/DBD 接口的问题']
+            ]
+          }
+        ]
+      },
+      {
+        title: '教程',
+        path: '/3/tutorial',
+        children: [
+          ['/3/3.1/connecting-disconnecting', '连接和断开服务器'],
+          ['/3/3.2/entering-queries', '输入查询'],
+          {
+            title: '创建和使用数据库',
+            path: '/3/3.3/database-use',
+            children: [
+              ['/3/3.3/3.3.1/creating-database', '创建和选择数据库'],
+              ['/3/3.3/3.3.2/creating-tables', '创建表'],
+              ['/3/3.3/3.3.3/loading-tables', '将数据加载到表中'],
+              {
+                title: '从表中检索信息',
+                path: '/3/3.3/3.3.4/retrieving-data',
+                children: [
+                  ['/3/3.3/3.3.4/3.3.4.1/selecting-all', '选择所有数据'],
+                  ['/3/3.3/3.3.4/3.3.4.2/selecting-rows', '选择特定行'],
+                  ['/3/3.3/3.3.4/3.3.4.3/selecting-columns', '选择特定列'],
+                  ['/3/3.3/3.3.4/3.3.4.4/sorting-rows', '排序行'],
+                  ['/3/3.3/3.3.4/3.3.4.5/date-calculations', '日期计算'],
+                  ['/3/3.3/3.3.4/3.3.4.6/working-with-null', '使用 NULL 值'],
+                  ['/3/3.3/3.3.4/3.3.4.7/pattern-matching', '模式匹配'],
+                  ['/3/3.3/3.3.4/3.3.4.8/counting-rows', '计数行'],
+                  ['/3/3.3/3.3.4/3.3.4.9/multiple-tables', '使用多个表']
+                ]
+              }
             ]
           }
         ]
