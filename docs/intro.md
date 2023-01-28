@@ -6,11 +6,6 @@ slug: /
 
 基于官方 MySQL 8.0 英文文档翻译，持续进行中。
 
-<InArticleAdsense
-    data-ad-client="ca-pub-8380975615223941"
-    data-ad-slot="9428292757">
-</InArticleAdsense>
-
 ## 感谢与支持
 
 ![license](https://img.shields.io/badge/license-CC--BY--NC-%23396D94) ![translate](https://img.shields.io/badge/Translate-MySQL-%23396D94) ![stars](https://img.shields.io/github/stars/dev2007/mysql8-manual?label=Stars&logo=github&color=%23396D94) ![forks](https://img.shields.io/github/forks/dev2007/mysql8-manual?label=Forks&logo=github&color=%23396D94)
