@@ -2,7 +2,7 @@
 
 - [2.7.1 使用 Solaris PKG 在 Solaris 上安装 MySQL](/2/2.7/2.7.1/solaris-installation-pkg.html)
 
-::: tip 注意
+:::tip 注意
 MySQL 8.0 支持 Solaris 11.4 及更高版本
 :::
 
@@ -12,7 +12,7 @@ Solaris 上的 MySQL 有多种不同的格式。
 
 - 要使用标准 `tar` 二进制安装，请使用[章节 2.2，“使用通用二进制文件在 Unix/Linux 上安装 MySQL”](/2/2.2/binary-installation.html)中提供的说明。请查看本节末尾的注释和提示，了解安装前后可能需要的 Solaris 特别说明。
 
-::: tip 注意
+:::tip 注意
 MySQL 5.7 依赖于 Oracle Developer Studio 运行库；但这不适用于 MySQL 8.0。
 :::
 

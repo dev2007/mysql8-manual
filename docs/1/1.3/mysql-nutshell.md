@@ -898,7 +898,7 @@
 
 - 非标准C风格 [`&&`](/12/12.4/12.4.3/logical-operators.html)、[`||`](/12/12.4/12.4.3/logical-operators.html) 和[`!`](/12/12.4/12.4.3/logical-operators.html) 分别作为标准 SQL [`AND`](/12/12.4/12.4.3/logical-operators.html)、[`OR`](/12/12.4/12.4.3/logical-operators) 和 [`NOT`](/12/12.4/12.4.3/logical-operators.html) 运算符同义词的运算符，不推荐使用。应该把使用非标准运算符的应用程序调整为使用标准运算符。
 
-  ::: tip 提示
+  :::tip 提示
   注意：除非启用了 [`PIPES_AS_CONCAT`](/5/5.1/5.1.11/sql-mode.html) 作为 SQL 模式，否则不推荐使用 [`||`](/12/12.4/12.4.3/logical-operators.html)。在这种情况下，[`||`](/12/12.4/12.4.3/logical-operators.html) 表示 SQL 标准字符串连接运算符）。
   :::
   

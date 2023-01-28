@@ -8,7 +8,7 @@
 - [2.3.6 Windows 安装后程序](/2/2.3/2.3.6/windows-postinstallation.html)
 - [2.3.7 Windows 平台限制](/2/2.3/2.3.7/windows-restrictions.html)
 
-::: danger 重要
+:::danger 重要
 MySQL 8.0 Server 需要 Microsoft Visual C++ 2019 可重分发包在 Windows 平台上运行。在安装服务器之前，用户应确保软件包已安装在系统上。该软件包可在 [Microsoft 下载中心](http://www.microsoft.com/en-us/download/default.aspx)获得。此外，MySQL 调试二进制文件需要安装 Visual Studio 2019。
 :::
 
@@ -22,7 +22,7 @@ MySQL 仅适用于 Microsoft Windows 64 位操作系统。有关支持的 Window
 
 1. 从 [https://dev.mysql.com/downloads/installer/](https://dev.mysql.com/downloads/installer/) 下载 MySQL 安装程序并执行它。
 
-  ::: tip 注意
+  :::tip 注意
   与标准 MySQL 安装程序不同，更小的 `web-community` 版本不捆绑任何 MySQL 应用程序，只下载你选择安装的 MySQL 产品。
   :::
 
@@ -36,7 +36,7 @@ MySQL 仅适用于 Microsoft Windows 64 位操作系统。有关支持的 Window
 
 3. 安装服务器实例（以及产品），然后按照屏幕上的说明开始服务器配置。有关每个单独步骤的更多信息，参阅[章节 2.3.3.3.1，“使用 MySQL 安装程序配置 MySQL Server”](/2/2.3/2.3.3/2.3.3.3/mysql-installer-workflow.html#2.3.3.3.1-使用-MySQL-Installer-配置-MySQL-Server)。
 
-  ::: tip 注意
+  :::tip 注意
   如果在系统上安装 MySQL Workbench，请考虑使用它来检查新的 MySQL Server 连接。默认情况下，程序在安装 MySQL 后自动启动。
   :::
 
@@ -54,13 +54,13 @@ MySQL 仅适用于 Microsoft Windows 64 位操作系统。有关支持的 Window
 
 - 要使用 ODBC 连接到 MySQL Server，必须具有 Connector/ODBC 驱动程序。有关更多信息，包括安装和配置说明，请参阅[MySQL Connector/ODBC 开发人员指南](https://dev.mysql.com/doc/connector-odbc/en/)。
 
-  ::: tip 注意
+  :::tip 注意
   MySQL 安装程序为你安装和配置 Connector/ODBC。
   :::
   
 - .NET 应用程序要使用 MySQL Server，你必须具有 Connector/NET 驱动程序。有关更多信息，包括安装和配置说明，请参阅 [MySQL Connector/NET 开发人员指南](https://dev.mysql.com/doc/connector-net/en/)。
 
-  ::: tip 注意
+  :::tip 注意
   MySQL 安装程序为你安装和配置 Connector/NET。
   :::
   

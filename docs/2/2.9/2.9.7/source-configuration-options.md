@@ -1109,7 +1109,7 @@ cmake .. -DCMAKE_C_FLAGS_RELWITHDEBINFO="-O3 -g" \
 
 - `-DNDB_UTILS_LINK_DYNAMIC={ON|OFF}`
 
-    控制 NDB 实用程序（如 [ndb_drop_table]()）是静态（`OFF`）还是动态（`ON`）与 `ndbclient` 链接；默认设置为 `OFF`（静态链接）。通常，在构建这些时使用静态链接，以避免 `LD_LIBRARY_PATH` 问题，或者在安装了多个版本的 `ndbclient` 时。此选项用于创建 Docker 镜像，以及可能的其他情况，在这些情况下，目标环境受到精确控制，并且需要减小镜像大小。
+    控制 NDB 实用程序（如 [ndb_drop_table](/23/23.5/23.5.11/mysql-cluster-programs-ndb-drop-table.html)）是静态（`OFF`）还是动态（`ON`）与 `ndbclient` 链接；默认设置为 `OFF`（静态链接）。通常，在构建这些时使用静态链接，以避免 `LD_LIBRARY_PATH` 问题，或者在安装了多个版本的 `ndbclient` 时。此选项用于创建 Docker 镜像，以及可能的其他情况，在这些情况下，目标环境受到精确控制，并且需要减小镜像大小。
 
     在 NDB 8.0.22 中添加。
 

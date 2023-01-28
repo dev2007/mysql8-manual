@@ -68,7 +68,7 @@ $> sudo dnf install mysql80-community-release-fc34-{version-number}.noarch.rpm
 $> yum repolist enabled | grep "mysql.*-community.*"
 ```
 
-::: tip 注意
+:::tip 提示
 在你的系统上启用 MySQL Yum 仓库后，通过Y **yum update** 命令进行的任何系统范围的更新（或对启用dnf的系统进行 **dnf upgrade**）都会升级你系统上的 MySQL 包，并替换任何本地第三方包，前提是 Yum 在 MySQL Yum 仓库中找到了替换包；参阅[章节 2.11.7，“使用 MySQL Yum 仓库升级 MySQL”](/2/2.11/2.11.7/updating-yum-repo.html)，有关这对系统可能产生的一些影响的讨论，参阅[升级共享客户端库](/2/2.11/2.11.7/updating-yum-repo.html#升级共享客户端库)。
 :::
 
@@ -186,14 +186,15 @@ $> mysql -uroot -p
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
 ```
 
-::: tip 注意
-默认情况下安装了 [validate_password](/6/6.4/6.4.3/validate-password)。[validate_password](/6/6.4/6.4.3/validate-password.html) 实现的默认密码策略要求密码至少包含一个大写字母、一个小写字母、一位数字和一个特殊字符，并且总密码长度至少为 8 个字符。
+:::tip 注意
+默认情况下安装了 [validate_password](/6/6.4/6.4.3/validate-password.html)。[validate_password](/6/6.4/6.4.3/validate-password.html) 实现的默认密码策略要求密码至少包含一个大写字母、一个小写字母、一位数字和一个特殊字符，并且总密码长度至少为 8 个字符。
 :::
 
 有关安装后程序的更多信息，参阅[章节 2.10，“安装后设置和测试”](/2/2.10/postinstallation.html)。
 
-::: tip 注意
-*基于 EL7 的平台的兼容性信息*：来自这些平台的本机软件仓库的以下 RPM 包与来自安装 MySQL 服务器的 MySQL Yum 仓库的包不兼容。一旦使用 MySQL Yum 仓库安装了 MySQL，就无法安装这些软件包（反之亦然）。</br>- akonadi mysql
+:::tip 注意
+*基于 EL7 的平台的兼容性信息*：来自这些平台的本机软件仓库的以下 RPM 包与来自安装 MySQL 服务器的 MySQL Yum 仓库的包不兼容。一旦使用 MySQL Yum 仓库安装了 MySQL，就无法安装这些软件包（反之亦然）。
+- akonadi mysql
 :::
 
 ## 使用 Yum 安装其他 MySQL 产品和组件
@@ -233,11 +234,11 @@ $> yum-config-manager --enable ol7_software_collections
 $> yum install mysql-community-server
 ```
 
-::: tip 注意
+:::tip 注意
 从 MySQL 8.0.12 开始，Oracle Linux 7 支持 ARM 64位（aarch64）。
 :::
 
-::: warning 已知限制
+:::warning 已知限制
 8.0.12 版本要求你在执行 `yum install` 步骤后，通过执行 `ln -s /opt/oracle/oracle-armtoolset-1/root/usr/lib64/usr/lib64/gcc7` 来调整 `libstdc++7` 路径。
 :::
 

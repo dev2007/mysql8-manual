@@ -1,6 +1,6 @@
 # 2.5.6.3 使用 Docker 在 Windows 和其他非 Linux 平台上部署 MySQL
 
-::: warning 警告
+:::warning 警告
 Oracle 提供的 MySQL Docker 镜像是专门为 Linux 平台构建的。其他平台不受支持，在其上运行 Oracle MySQL Docker 镜像的用户将自行承担风险。本节讨论在非 Linux 平台上使用镜像时的一些已知问题。
 :::
 

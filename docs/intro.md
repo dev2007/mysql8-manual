@@ -1,11 +1,10 @@
+---
+slug: /
+---
+
 # MySQL 文档翻译说明
 
 基于官方 MySQL 8.0 英文文档翻译，持续进行中。
-
-<InArticleAdsense
-    data-ad-client="ca-pub-8380975615223941"
-    data-ad-slot="9428292757">
-</InArticleAdsense>
 
 ## 感谢与支持
 

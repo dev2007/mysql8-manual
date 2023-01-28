@@ -7,7 +7,7 @@
     - 系统表（即剩余的非数据字典表），用于其他操作目的。
 
 - 其他模式，其中一些是内置的，可能被认为是服务器“拥有”的，其他模式则不是：
-    - 性能模式、`INFORMATION_SCHEMA`、[ndbinfo]() 和 `sys` 模式。
+    - 性能模式、`INFORMATION_SCHEMA`、[ndbinfo](/23/23.6/23.6.16/mysql-cluster-ndbinfo.html) 和 `sys` 模式。
     - 用户模式。
 
 两个不同的版本号与可能需要升级的安装部分相关联：

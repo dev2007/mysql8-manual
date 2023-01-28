@@ -8,11 +8,6 @@
 
 **许可信息——MySQL NDB Cluster 8.0**。 如果你使用的是 MySQL NDB Cluster 8.0 社区版本，请参阅 [MySQL NDB Cluster 8.0社区版本许可证信息用户手册](https://downloads.mysql.com/docs/licenses/cluster-8.0-gpl-en.pdf)以获取许可信息，包括与此社区版本中可能包含的第三方软件相关的许可信息。
 
-<InArticleAdsense
-    data-ad-client="ca-pub-8380975615223941"
-    data-ad-slot="9428292757">
-</InArticleAdsense>
-
 ## 法律条款
 
 Copyright © 1997, 2021, Oracle and/or its affiliates.

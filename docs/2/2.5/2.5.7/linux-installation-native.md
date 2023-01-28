@@ -2,7 +2,7 @@
 
 许多 Linux 发行版在其本地软件存储库中包含 MySQL 服务器、客户端工具和开发组件的版本，并且可以与平台的标准包管理系统一起安装。本章节提供了使用这些包管理系统安装 MySQL 的基本说明。
 
-::: danger 重要
+:::danger 重要
 本机软件包通常是当前可用版本之后的几个版本。你你常也无法安装开发里程碑版本（DMR），因为这些版本通常在本机存储库中不可用。在继续之前，我们建议你查看[章节 2.5，“在 Linux 上安装 MySQL”](/2/2.5/linux-installation)中描述的其他安装选项。
 :::
 
@@ -10,7 +10,7 @@
 
 - Red Hat Linux、Fedora、CentOS
 
-::: tip 注意
+:::tip 注意
 对于许多 Linux 发行版，你可以使用 MySQL Yum 存储库而不是平台的本地软件存储库来安装 MySQL。详情参阅[章节 2.5.1，“使用 MySQL Yum 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.1/linux-installation-yum-repo.html)。
 :::
 
@@ -91,7 +91,7 @@ $> systemctl start mysqld
 
 - Debian、Ubuntu、Kubuntu
 
-::: tip 注意
+:::tip 注意
 对于支持的 Debian 和 Ubuntu 版本，可以使用 MySQL APT 仓库而不是平台的本地软件存储库来安装 MySQL。详情参阅[章节 2.5.2，“使用 MySQL APT 仓库在 Linux 上安装 MySQL”](/2/2.5/2.5.1/linux-installation-yum-repo.html)。
 :::
 
@@ -99,11 +99,11 @@ $> systemctl start mysqld
 
 要下载和安装，包括任何依赖项，请使用 **apt-get** 命令，指定要安装的包。
 
-::: tip 注意
+:::tip 注意
 在安装之前，请确保更新 `apt-get` 索引文件，以确保下载的是最新的可用版本。
 :::
 
-::: tip 注意
+:::tip 注意
 **apt-get** 命令安装许多包，包括 MySQL 服务器，以便提供典型的工具和应用程序环境。这意味着除了主 MySQL 软件包之外，还需要安装大量软件包。
 :::
 

@@ -8,7 +8,7 @@ MySQL 压缩 **tar** 文件二进制发行版的名称为 `mysql-VERSION-OS.tar.
 
 Linux 通用二进制发行版还提供了 MySQL 压缩 **tar** 文件的“最小安装”版本，其名称为 `mysql-VERSION-OS-GLIBCVER-ARCH-minimal.tar.xz`。最小安装发行版不包括调试二进制文件，并且去掉了调试符号，使其比常规二进制发行版小得多。如果你选择安装最小安装发行版，请记住根据以下说明中的文件名格式差异进行调整。
 
-::: warning 警告
+:::warning 警告
 
 - 如果以前使用操作系统本机软件包管理系统，如 Yum 或 APT，安装过 MySQL，则使用本机二进制文件安装时可能会遇到问题。确保你以前的 MySQL 安装已完全删除（使用你的包管理系统），并且任何其他文件（如数据文件的旧版本）也已删除。你还应该检查配置文件，如 `/etc/my.cnf` 或 `/etc/mysql` 目录，并将其删除。
 
@@ -71,7 +71,7 @@ $> bin/mysqld_safe --user=mysql &
 $> cp support-files/mysql.server /etc/init.d/mysql.server
 ```
 
-::: tip 注意
+:::tip 注意
 此过程假定你具有系统的 `root`（administrator）访问权限。或者，可以使用 **sudo**（Linux）或 **pfexec**（Solaris）命令为每个命令添加前缀。
 :::
 
@@ -88,7 +88,7 @@ $> groupadd mysql
 $> useradd -r -g mysql -s /bin/false mysql
 ```
 
-::: tip 注意
+:::tip 注意
 由于仅出于所有权目的而非登录目的才需要该用户，因此 **useradd** 命令使用 `-r` 和 `-s/bin/false` 选项来创建对服务器主机没有登录权限的用户。如果 **useradd** 不支持这些选项，请忽略这些选项。
 :::
 
@@ -112,7 +112,7 @@ $> tar xvf /path/to/mysql-VERSION-OS.tar.xz
 
 要从压缩的 **tar** 文件二进制发行版安装MySQL，你的系统必须具有 GNU `XZ Utils` 来解压缩发行版，以及适合的 **tar** 来解压缩发行版。
 
-::: tip 注意
+:::tip 注意
 在 MySQL Server 8.0.12 中，压缩算法从 Gzip 更改为 XZ；通用二进制文件的文件扩展名从 .tar.gz 变更为 .tar.xz。
 :::
 

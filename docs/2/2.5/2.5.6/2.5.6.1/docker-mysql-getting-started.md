@@ -1,6 +1,6 @@
 # 2.5.6.1 使用 Docker 部署 MySQL 服务器的基本步骤
 
-::: warning 警告
+:::warning 警告
 MySQL 团队维护的 MySQL Docker 镜像是专门为 Linux 平台构建的。其他平台不受支持，用户在其上使用这些 MySQL Docker 镜像将自行承担风险。有关在非 Linux 操作系统上运行这些容器的一些已知限制，参阅[此处的讨论](/2/2.5/2.5.6/2.5.6.3/deploy-mysql-nonlinux-docker.html)。
 :::
 
@@ -20,7 +20,7 @@ MySQL 团队维护的 MySQL Docker 镜像是专门为 Linux 平台构建的。�
 
 ## 下载 MySQL 服务器 Docker 镜像
 
-::: danger 重要
+:::danger 重要
 对于 MySQL 企业版用户：需要订阅才能使用MySQL企业版本的Docker映像。订阅采用自带许可证模式；有关详细信息，参阅[如何购买 MySQL 产品和服务](https://www.mysql.com/buy-mysql/)。
 :::
 
@@ -223,8 +223,9 @@ docker rm mysql1
 
 ## 升级 MySQL 服务器容器
 
-::: danger 重要
-在执行任何 MySQL 升级之前，请仔细遵循[章节 2.11，“升级 MySQL”](/2/2.11/upgrading.html)中的说明。在这里讨论的其他说明中，在升级之前备份数据库尤其重要。<br> 本节中的说明要求将服务器的数据和配置保存在主机上。有关详细信息，参阅[持久化数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)。
+:::danger 重要
+在执行任何 MySQL 升级之前，请仔细遵循[章节 2.11，“升级 MySQL”](/2/2.11/upgrading.html)中的说明。在这里讨论的其他说明中，在升级之前备份数据库尤其重要。
+本节中的说明要求将服务器的数据和配置保存在主机上。有关详细信息，参阅[持久化数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改)。
 :::
 
 按照以下步骤将 MySQL 5.7 的 Docker 安装升级到 8.0：
@@ -235,7 +236,7 @@ docker rm mysql1
 docker stop mysql57
 ```
 
-- 下载MySQL 8.0服务器Docker镜像。请参阅下载MySQL Server Docker映像中的说明。确保为MySQL 8.0使用正确的标记。
+- 下载 MySQL 8.0 服务器 Docker 镜像。请参阅下载 MySQL Server Docker 镜像中的说明。确保为MySQL 8.0使用正确的标记。
 
 - 启动一个新的 MySQL 8.0 Docker 容器（在本例中命名为 `mysql80`），使用主机上保存的旧服务器数据和配置（如果需要进行适当修改，参阅[章节 2.11，“升级 MySQL”](/2/2.11/upgrading.html)）（本例中通过[绑定挂载](https://docs.docker.com/engine/reference/commandline/service_create/#add-bind-mounts-or-volumes.html)）。对于 MySQL 社区版服务器，运行以下命令：
 
@@ -265,7 +266,7 @@ docker run --name=mysql80new \
 -d mysql/mysql-server:8.0
 ```
 
-::: tip 注意
+:::tip 注意
 对于 MySQL 8.0.15 及更早版本：你需要通过在 MySQL8.0 服务器容器中运行 [mysql_upgrade](/4/4.4/4.4.5/mysql-upgrade.html) 实用程序来完成升级过程（对于 MySQL 8.0.16 及更高版本，此步骤*非*必需）：
 
 - docker exec -it mysql80 mysql_upgrade -uroot -p

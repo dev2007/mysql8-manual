@@ -14,7 +14,7 @@
 
 MySQL 构建过程需要 GNU make（**gmake**）才能工作。如果 GNU **make** 不可用，则必须在编译 MySQL 之前先安装它。
 
-::: tip 注意
+:::tip 注意
 **ldd mysqld** 中的必备库：libthr、libcrypt、libkrb5、libm、librt、libexecinfo、libunload 和 libssl。
 :::
 

@@ -49,7 +49,7 @@ cmake . -DWITH_BOOST=/usr/local/boost_version_number
 
 - 在 Solaris Express 上，除了 **bison** 之外，还必须安装 **m4**。**m4** 可从 [http://www.gnu.org/software/m4/](http://www.gnu.org/software/m4/) 获得。
 
-::: tip 注意
+:::tip 注意
 如果必须安装任何程序，请修改 PATH 环境变量以包含程序所在的任何目录。参阅[章节 4.2.9，“设置环境变量”](/4/4.2./4.2.9/setting-environment-variables.html)。
 :::
 
