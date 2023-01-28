@@ -906,7 +906,7 @@
 
 - `SQL_CALC_FOUND_ROWS` 查询修饰符和附带的 [`FOUND_ROWS()`](/12/12.16/information-functions) 函数弃用。有关替代策略的信息，请参阅 [`FOUND_ROWS()`](/12/12.16/information-functions.html) 说明。
 
-- 从 MySQL 8.0.13 开始，不推荐支持 `TABLESPACE=innodb_file_per_table` 和带有 [`CREATE TEMPORARY TABLE`](/13/13.1/13.1.20/create-table) 的子句 `TABLESPACE = innodb_temporary`。
+- 从 MySQL 8.0.13 开始，不推荐支持 `TABLESPACE=innodb_file_per_table` 和带有 [`CREATE TEMPORARY TABLE`](/13/13.1/13.1.20/create-table.html) 的子句 `TABLESPACE = innodb_temporary`。
 
 - 对于 [`SELECT`](/13/13.2/13.2.10/select.html) 语句，从 MySQL 8.0.20 开始，不推荐在 `FROM` 之后而不是 `SELECT` 末尾使用 `INTO` 子句。最好在语句末尾放置 `INTO`。
 

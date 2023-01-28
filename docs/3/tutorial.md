@@ -6,7 +6,7 @@
 - [3.2 输入查询](/3/3.2/entering-queries.html)
 - [3.3 创建和使用数据库](/3/3.3/database-use.html)
 - [3.4 获取有关数据库和表的信息](/3/3.4/getting-information.html)
-- [3.5 在批处理模式下使用mysql](/3/3.5/batch-mode.html)
+- [3.5 在批处理模式下使用 mysql](/3/3.5/batch-mode.html)
 - [3.6 常见查询示例](/3/3.6/examples.html)
 - [3.7 在 Apache 中使用 MySQL](/3/3.7/apache.html)
 
