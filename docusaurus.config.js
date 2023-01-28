@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'MySQL 8.0 中文参考手册',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'MySQL 8.0 中文参考手册',
   url: 'https://mysql.bookhub.tech',
   baseUrl: '/',
   onBrokenLinks: 'ignore',
@@ -63,10 +63,17 @@ const config = {
     ],
   ],
 
+  scripts: [
+    {
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8380975615223941',
+      crossorigin: 'anonymous'
+    }
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      metadata: [{name: 'keywords', content: 'mysql,sql,innodb,mysql中文,mysql文档'}],
+      metadata: [{ name: 'keywords', content: 'mysql,sql,innodb,mysql中文,mysql文档' }],
       docs: {
         sidebar: {
           hideable: true,
@@ -146,7 +153,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['bash','java','yaml',`json`]
+        additionalLanguages: ['bash', 'java', 'yaml', `json`]
       },
     }),
 };
