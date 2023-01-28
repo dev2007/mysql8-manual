@@ -16,13 +16,13 @@ C:\> "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld"
 C:\> "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqladmin" -u root shutdown
 ```
 
-::: tip 注意
+:::tip 注意
 如果 MySQL `root` 用户帐户有密码，则需要使用 `-p` 选项调用 [mysqladmin](/4/4.5/4.5.2/mysqladmin.html)，并在提示时提供密码。
 :::
 
 此命令调用 MySQL 管理实用程序 [mysqladmin](/4/4.5/4.5.2/mysqladmin.html) 以连接到服务器并告诉它关闭。该命令以 MySQL `root` 用户身份连接，这是 MySQL 授权系统中的默认管理帐户。
 
-::: tip 注意
+:::tip 注意
 MySQL 授权系统中的用户完全独立于 Microsoft Windows 下的任何操作系统用户。
 :::
 

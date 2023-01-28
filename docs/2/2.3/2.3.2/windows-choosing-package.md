@@ -20,7 +20,7 @@ MySQL 安装程序可以安装和管理（添加、修改、升级和删除）�
 
 MySQL 安装程序在所有支持 MySQL 的 Windows 版本上运行（参阅 [https://www.mysql.com/support/supportedplatforms/database.html](https://www.mysql.com/support/supportedplatforms/database.html))。
 
-::: tip 注意
+:::tip 注意
 因为 MySQL 安装程序不是 Microsoft Windows 的本机组件，并且依赖于 .NET，它不适用于像 Windows Server 的服务器核心版本这样的最小安装选项。
 :::
 
@@ -38,7 +38,7 @@ MySQL 安装程序在所有支持 MySQL 的 Windows 版本上运行（参阅 [ht
 
 有关在 Windows 平台上使用 Oracle 提供的 MySQL Docker 镜像的信息，参阅[章节 2.5.6.3，“使用 Docker 在 Windows 和其他非 Linux 平台上部署 MySQL”](/2/2.5/2.5.6/2.5.6.3/deploy-mysql-nonlinux-docker.html)。
 
-::: warning 警告
+:::warning 警告
 Oracle 提供的 MySQL Docker 映像是专门为 Linux 平台构建的。其他平台不受支持，在其上运行 Oracle MySQL Docker 镜像的用户将自行承担风险。
 :::
 

@@ -141,6 +141,6 @@ mysql> SELECT owner, COUNT(*) FROM pet;
 1 row in set (0.00 sec)
 ```
 
-另请参阅[章节 12.20.3，“MySQL 对 GROUP BY 的处理”](/12/12.20/12.20.3/group-by-handling.html)。有关 [COUNT(expr)]() 行为和相关优化的信息，参阅[章节 12.20.1，“聚合函数描述”](/12/12.20/12.20.1/aggregate-functions.html)。
+另请参阅[章节 12.20.3，“MySQL 对 GROUP BY 的处理”](/12/12.20/12.20.3/group-by-handling.html)。有关 [COUNT(expr)](/12/12.20/12.20.1/aggregate-functions.html) 行为和相关优化的信息，参阅[章节 12.20.1，“聚合函数描述”](/12/12.20/12.20.1/aggregate-functions.html)。
 
 > [原文链接](https://dev.mysql.com/doc/refman/8.0/en/counting-rows.html)

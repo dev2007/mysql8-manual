@@ -32,7 +32,7 @@
 
   可以将这样创建的列用作联接列，如下所示：
 
-  ```bash
+```bash
   CREATE TABLE person (
     id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
     name CHAR(60) NOT NULL,
@@ -100,7 +100,7 @@
   |  5 | polo  | red    |     2 |
   |  6 | dress | blue   |     2 |
   +----+-------+--------+-------+
-  ```
+```
 
   以这种方式使用时，`REFERENCES` 子句不会显示在 `SHOW CREATE TABLE` 或 `DESCRIPE` 的输出中：
 

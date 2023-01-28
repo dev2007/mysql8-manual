@@ -33,7 +33,7 @@ MySQL 软件是双重许可。用户可以根据 GNU 通用公共许可证([http
 - MySQL 数据库服务器及其功能的一些常见问题的解答，参阅[附录A，“MySQL 8.0 常见问题解答”](/appendix_a/faqs.html)。
 - 新功能和错误修复的历史记录，参阅[发版公告](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/)。
 
-::: danger 重要
+:::danger 重要
 要报告问题或错误，请使用[章节 1.6，“如何报告错误或问题”](/1/1.6/bug-reports.html)中的说明。如果你发现 MySQL Server 存在安全漏洞，请立即发送电子邮件给 <secalert_us@oracle.com> 以通知我们。例外情况：受支持客户应向 Oracle 支持部门报告所有问题，包括安全漏洞。
 :::
 

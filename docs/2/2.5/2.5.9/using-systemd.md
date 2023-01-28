@@ -21,7 +21,7 @@
 - [使用 systemd 配置多个 MySQL 实例](/2/2.5/2.5.9/using-systemd.html#使用-systemd-配置多个-mysql-实例)
 - [从 mysqld_safe 迁移到 systemd](/2/2.5/2.5.9/using-systemd.html#从-mysqld-safe-迁移到-systemd)
 
-::: tip 注意
+:::tip 注意
 在安装了 MySQL 版的 systemd 支持的平台上，诸如 [mysqld_safe](/4/4.3/4.3.2/mysqld-safe) 和 System V 初始化这类脚本是非必需的，且也没有安装。例如，mysqld_safe可以处理服务器重启，但 systemd 提供了相同的功能，并以与其他服务的管理一致的方式进行，而不是使用特定于应用程序的程序。
 在使用 systemd 进行服务器管理的平台上不使用 [mysqld_safe](/4/4.3/4.3.2/mysqld-safe) 的一个暗示是，不支持在选项文件中使用 `[mysqld_safe]` 或 `[safe_mysqld]` 部分，这可能会导致意外行为。
 因为 systemd 能够在安装了 MySQL 版的 systemd 支持的平台上管理多个 MySQL 实例，即 [mysqld_multi](/4/4.3/4.3.4/mysqld-multi)和 **mysqld_multi.server** 是不必要的，并且没有安装。
@@ -41,7 +41,7 @@ $> systemctl {start|stop|restart|status} mysqld
 $> service mysqld {start|stop|restart|status}
 ```
 
-::: tip 注意
+:::tip 注意
 对于 systemctl 命令（以及备用 **service** 命令），如果 MySQL 服务名称不是 mysqld，则使用适当的名称。例如，在基于 Debian 和 SLES 系统上使用 `mysql` 而不是 `mysqld`。
 :::
 
@@ -148,7 +148,7 @@ NO_INIT=true
 
 本节介绍如何为多个 MySQL 实例配置 systemd。
 
-::: tip 注意
+:::tip 注意
 因为 systemd 能够在安装了 systemd 支持的平台上管理多个 MySQL 实例，即 [mysqld_multi](/4/4.3/4.3.4/mysqld-multi) 和 **mysqld_multi.server** 是不必要的，并且没有安装。
 :::
 
@@ -232,11 +232,11 @@ mysqld --defaults-group-suffix=@%I ...
 
 结果是 `[server]`、`[mysqld]` 和 `[mysqld@replica01]` 选项组被读取并用于该服务实例。
 
-::: tip 注意
+:::tip 注意
 在 Debian 平台上，AppArmor 阻止服务器读取或写入 `/var/lib/mysql-replica*` 或其他任何非默认位置。要解决此问题，必须在 `/etc/apparmor.d/usr.sbin.mysqld` 中自定义或禁用配置文件。
 :::
 
-::: tip 注意
+:::tip 注意
 在 Debian 平台上，MySQL 卸载的打包脚本当前无法处理 `mysqld@` 实例。在删除或升级包之前，必须先手动停止任何额外的实例。
 :::
 
@@ -246,7 +246,7 @@ mysqld --defaults-group-suffix=@%I ...
 
 - 一些 [mysqld_safe](/4/4.3/4.3.2/mysqld-safe) 选项也能被 [mysqld](/4/4.3/4.3.1/mysqld) 解读，可以从 `[mysqld_safe]` 或 `[safe_mysqld]` 选项组移动到 `[mysqld]` 组。这*不*包括 [--pid-file](/4/4.3/4.3.2/mysqld-safe)、[--open-files-limit](/4/4.3/4.3.2/mysqld-safe) 或 [--nice](/4/4.3/4.3.2/mysqld-safe)。要指定这些选项，请使用 `override.conf` systemd文件，如前所述。
 
-::: tip 注意
+:::tip 注意
 在 systemd 平台上，不支持使用 `[mysqld_safe]` 和 `[safe_mysqld]` 选项组，可能会导致意外行为。
 :::
 

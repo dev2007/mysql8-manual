@@ -13,7 +13,7 @@ mysql> SELECT 1 IS NULL, 1 IS NOT NULL;
 +-----------+---------------+
 ```
 
-不能使用算术比较运算符（如 [=](/12/12.4/12.4.2/comparison-operators.html)、[<](/12/12.4/12.4.2/comparison-operators.html) 或 [<>](/12/12.4/12.4.2/comparison-operators.html)）来测试 `NULL`。要亲自演示，请尝试以下查询：
+不能使用算术比较运算符（如 [=](/12/12.4/12.4.2/comparison-operators.html)、[`<`](/12/12.4/12.4.2/comparison-operators.html) 或 [`<>`](/12/12.4/12.4.2/comparison-operators.html)）来测试 `NULL`。要亲自演示，请尝试以下查询：
 
 ```bash
 mysql> SELECT 1 = NULL, 1 <> NULL, 1 < NULL, 1 > NULL;

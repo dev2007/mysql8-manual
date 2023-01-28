@@ -1,6 +1,6 @@
 # 2.5.6.2 关于使用 Docker 部署 MySQL 服务的更多主题
 
-::: tip 注意
+:::tip 注意
 以下大多数示例命令都将 `mysql/mysql-server` 作为 Docker 镜像仓库（如 **docker pull** 和 **docker run** 命令）；如果你的镜像来自另一个仓库，请将其替换为 `container-registry.oracle.com/mysql/enterprise` 服务器，用于从 Oracle 容器注册表（OCR）下载的 MySQL 企业版镜像，或从[我的 Oracle 支持](https://support.oracle.com/)下载的，用于 MySQL 企业版镜像的 `mysql/enterprise-server`。
 :::
 
@@ -337,7 +337,7 @@ mysql -uadmin --password='password' -e "source /data/backups/all-databases.sql"
 
 - `MYSQL_USER`、`MYSQL_PASSWORD`：这些变量一起用来创建一个用户并设置该用户的密码，并且该用户被授予 `MYSQL_DATABASE` 变量指定的数据库的超级用户权限。要创建用户，`MYSQL_USER` 和 `MYSQL_PASSWORD` 都是必需的——如果没有设置这两个变量中的任何一个，则忽略另一个。如果两个变量都设置了，但 `MYSQL_DATABASE` 没有设置，则创建的用户没有任何特权。
 
-::: tip 注意
+:::tip 注意
 不需要使用这种机制来创建 root 超级用户，默认情况下创建 root 超级用户时使用的密码由 `MYSQL_ROOT_PASSWORD` 和 `MYSQL_RANDOM_ROOT_PASSWORD` 描述中讨论的任何一种机制设置，除非 `MYSQL_ALLOW_EMPTY_PASSWORD` 为 true。
 :::
 
@@ -345,13 +345,13 @@ mysql -uadmin --password='password' -e "source /data/backups/all-databases.sql"
 
 - `MYSQL_LOG_CONSOLE`：当变量为 true 时(这是 MySQL 8.0 服务器容器的默认状态)，MySQL 服务器的错误日志被重定向到 stderr，这样错误日志就会进入 Docker 容器的日志中，并且可以使用 **docker logs** *mysqld-container* 命令查看。
 
-::: tip 注意
+:::tip 注意
 如果已经挂载了来自主机的服务器配置文件，则该变量将不起作用(参阅在绑定挂载配置文件时[持久化数据和配置更改](/2/2.5/2.5.6/2.5.6.2/docker-mysql-more-topics.html#持久化数据和配置更改))。
 :::
 
 - `MYSQL_ROOT_PASSWORD`：该变量指定为 MySQL root 帐户设置的密码。
 
-::: warning 警告
+:::warning 警告
 在命令行设置 MySQL root用户密码是不安全的。作为显式指定密码的替代方法，你可以使用密码文件的容器文件路径设置变量，然后在容器文件路径上挂载主机上包含密码的文件。这仍然不是很安全，因为密码文件的位置仍然暴露在外。最好使用 `MYSQL_RANDOM_ROOT_PASSWORD` 和 `MYSQL_ONETIME_PASSWORD` 的默认设置都为 true。
 :::
 

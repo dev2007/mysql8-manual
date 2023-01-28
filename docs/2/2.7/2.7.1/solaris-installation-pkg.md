@@ -2,7 +2,7 @@
 
 你可以使用本机 Solaris PKG 格式的二进制包而不是二进制 tarball 发行版在 Solaris 上安装 MySQL。
 
-::: tip 注意
+:::tip 注意
 MySQL 5.7 依赖于 Oracle Developer Studio 运行库；但这不适用于 MySQL 8.0。
 :::
 

@@ -18,7 +18,7 @@ Linux 支持多种不同的安装MySQL的解决方案，如[章节 2.5，“在 
 
 如果你将包源代码更改为使用 ULN，而不更改正在使用的 MySQL 版本，请备份数据，删除现有二进制文件，并将其替换为 ULN 中的二进制文件。如果涉及到构建的更改，我们建议备份为转储（[mysqldump](/4/4.5/4.5.4/mysqldump) 或 [mysqlpump](/4/4.5/4.5.6/mysqlpump) 或 [MySQL Shell 的备份实用程序](/11/11.5/mysql-shell-utilities-dump-instance-schema)），以防在新二进制文件就位后需要重建数据。如果向 ULN 的转换跨越了版本边界，请在继续之前参考本节：[章节 2.11，“升级 MySQL”](/2/2.11/upgrading.html)。
 
-::: tip 注意
+:::tip 注意
 MySQL 8.0.17 开始支持 Oracle Linux 8，MySQL 8.0.24 版本中添加了社区工具和连接器频道。
 :::
 

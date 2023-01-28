@@ -35,7 +35,7 @@ Oracle 提供 Debian 软件包，用于在 Debian 或类似 Debian 的 Linux 系
 
     我们要求你为 MySQL 安装的 root 用户提供密码。你可能会被问及有关安装的其他问题。
 
-    ::: danger 重要
+    :::danger 重要
     请确保记住你设置的 root 密码。想要稍后设置密码的用户可以在对话框中将**密码**字段留空，然后按`确定`；在这种情况下，将使用 [MySQL 套接字对等凭据身份验证插件](/6/6.4/6.4.1/6.4.1.10/socket-pluggable-authentication.html)对服务器的 root 访问进行身份验证，以便使用 Unix 套接字文件进行连接。你可以稍后使用 [mysql_secure_installation](/4/4.4/4.4.2/mysql-secure-installation.html)设置 root 密码。
     :::
 
@@ -61,7 +61,7 @@ Oracle 提供 Debian 软件包，用于在 Debian 或类似 Debian 的 Linux 系
 
     - 数据目录位于 `/var/lib/mysql` 下
 
-    ::: tip 注意
+    :::tip 注意
     其他供应商也提供了 MySQL 的 Debian 发行版。请注意，它们在功能、功能和约定（包括通信设置）方面可能与 Oracle 构建的不同，本手册中的说明不一定适用于安装它们。应参考供应商的说明。
     :::
 
