@@ -18,11 +18,6 @@
 
 本章介绍如何获取和安装 MySQL。以下是流程摘要，后面的章节提供了详细信息。如果你计划将 MySQL 的现有版本升级为更新版本，而不是第一次安装 MySQL，参阅[章节 2.11，“升级 MySQL”](/2/2.11/upgrading.html)，了解升级过程的信息和升级前应考虑的问题。
 
-<InArticleAdsense
-    data-ad-client="ca-pub-8380975615223941"
-    data-ad-slot="9428292757">
-</InArticleAdsense>
-
 如果你对从另一个数据库系统迁移到 MySQL 感兴趣，参阅[章节 A.8，“MySQL 8.0 常见问题解答：迁移”](/appendix/a/a.8/faqs-migration.html)，其中包含有关迁移问题的一些常见问题的答案。
 
 MySQL 的安装通常遵循以下步骤：
