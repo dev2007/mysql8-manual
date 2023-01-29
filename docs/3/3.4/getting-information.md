@@ -15,7 +15,7 @@ mysql> SELECT DATABASE();
 
 如果尚未选择任何数据库，则结果为 `NULL`。
 
-要查找默认数据库包含哪些表（例如，当您不确定表的名称时），请使用以下语句：
+要查找默认数据库包含哪些表（例如，当你不确定表的名称时），请使用以下语句：
 
 ```bash
 mysql> SHOW TABLES;
@@ -29,7 +29,7 @@ mysql> SHOW TABLES;
 
 此语句生成的输出中的列的名称始终为 `Tables_in_db_name`，其中 *db_name* 是数据库的名称。更多信息参阅[章节 13.7.7.39，“SHOW TABLES 语句”](/13/13.7/13.7.7/13.7.7.39/show-tables.html)。
 
-如果您想了解表的结构，[DESCRIBE](/13/13.8/13.8.1/describe.html) 语句很有用；它显示关于表的每个列的信息：
+如果你想了解表的结构，[DESCRIBE](/13/13.8/13.8.1/describe.html) 语句很有用；它显示关于表的每个列的信息：
 
 ```bash
 mysql> DESCRIBE pet;

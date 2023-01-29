@@ -25,7 +25,7 @@ LEFT JOIN shop s2 ON s1.price < s2.price
 WHERE s2.article IS NULL;
 ```
 
-您还可以通过按价格降序排序所有行，并使用 MySQL 特定的 `LIMIT` 子句仅获取第一行，如下所示：
+你还可以通过按价格降序排序所有行，并使用 MySQL 特定的 `LIMIT` 子句仅获取第一行，如下所示：
 
 ```bash
 SELECT article, dealer, price

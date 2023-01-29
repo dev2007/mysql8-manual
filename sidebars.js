@@ -315,6 +315,7 @@ const sidebars = {
             '3/3.6/3.6.9/example-auto-increment'
           ],
         },
+        '3/3.7/apache'
       ],
     },
   ],

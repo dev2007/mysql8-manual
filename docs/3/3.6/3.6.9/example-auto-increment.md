@@ -43,7 +43,7 @@ INSERT INTO animals (id,name) VALUES(0,'groundhog');
 INSERT INTO animals (id,name) VALUES(NULL,'squirrel');
 ```
 
-当您将任何其他值插入 `AUTO_INCREMENT` 列时，该列将被设置为该值，序列将被重置，以便下一个自动生成的值从最大的列值开始依次出现。例如：
+当你将任何其他值插入 `AUTO_INCREMENT` 列时，该列将被设置为该值，序列将被重置，以便下一个自动生成的值从最大的列值开始依次出现。例如：
 
 ```bash
 INSERT INTO animals (id,name) VALUES(100,'rabbit');
@@ -67,7 +67,7 @@ SELECT * FROM animals;
 
 更新现有的 `AUTO_INCREMENT` 列值也会重置 `AUTO_INCREENT` 序列。
 
-您可以使用 [LAST_INSERT_ID()](/12/12.16/information-functions.html) SQL 函数或 [mysql_insert_id()](https://dev.mysql.com/doc/c-api/8.0/en/mysql-insert-id.html) C API 函数检索最近自动生成的 `AUTO_INCREMENT` 值。这些函数是特定于连接的，因此它们的返回值不受另一个执行插入的连接的影响。
+你可以使用 [LAST_INSERT_ID()](/12/12.16/information-functions.html) SQL 函数或 [mysql_insert_id()](https://dev.mysql.com/doc/c-api/8.0/en/mysql-insert-id.html) C API 函数检索最近自动生成的 `AUTO_INCREMENT` 值。这些函数是特定于连接的，因此它们的返回值不受另一个执行插入的连接的影响。
 
 为 `AUTO_INCREMENT` 列使用最小的整数数据类型，该数据类型足够大，可以容纳所需的最大序列值。当列达到数据类型的上限时，下一次生成序列号的尝试将失败。如果可能，请使用 `UNSIGNED` 属性以允许更大的范围。例如，如果使用 [TINYINT](/11/11.1/11.1.2/integer-types.html)，则允许的最大序列号为 `127`。对于 [TINYINT UNSIGNED](/11/11.1/11.1.2/integer-types.html)，最大值为 `255`。有关所有整数类型的范围，参阅[章节 11.1.2，“整数类型（精确值）——Integer、INT、SMALLINT、TINYINT、MEDIUMINT、BIGINT”](/11/11.1/11.1.2/integer-types.html)。
 
@@ -87,7 +87,7 @@ mysql> ALTER TABLE tbl AUTO_INCREMENT = 100;
 
 ## MyISAM 备注
 
-- 对于 MyISAM 表，可以在多列索引的辅助列上指定 `AUTO_INCREMENT`。在这种情况下，`AUTO_INCREMENT` 列的生成值计算为 [MAX(auto_increment_column) + 1 WHERE prefix=given-prefix](/12/12.20/12.20.1/aggregate-functions.html)。当您想将数据放入有序组时，这很有用。
+- 对于 MyISAM 表，可以在多列索引的辅助列上指定 `AUTO_INCREMENT`。在这种情况下，`AUTO_INCREMENT` 列的生成值计算为 [MAX(auto_increment_column) + 1 WHERE prefix=given-prefix](/12/12.20/12.20.1/aggregate-functions.html)。当你想将数据放入有序组时，这很有用。
 
 ```bash
 CREATE TABLE animals (
