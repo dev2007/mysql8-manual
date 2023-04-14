@@ -318,6 +318,59 @@ const sidebars = {
         '3/3.7/apache'
       ],
     },
+    {
+      type: 'category',
+      label: '7 备份和恢复',
+      link: {type: 'doc',id: '7/tutorial'},
+      items: [
+        // '7/7.1/backup and recovery type', 
+        // '7/7.2/database backup methods', 
+        // {
+        //   type: 'category',
+        //   label: '7.3 example backup and recovery strategy',
+        //   link: {type: 'doc',id: '7/7.3/example backup and recovery strategy'},
+        //   items: [
+        //     '7/7.3/7.3.1/establishing a backup policy', 
+        //     '7/7.3/7.3.2/using backups for recovery', 
+        //     '7/7.3/7.3.3/backup strategy summary',
+        //     {
+        //       type: 'category',
+        //       label: '3.3.4 从表中检索信息',
+        //       link: {type: 'doc',id: '3/3.3/3.3.4/retrieving-data'},
+        //       items: [
+        //         '3/3.3/3.3.4/3.3.4.1/selecting-all',
+        //         '3/3.3/3.3.4/3.3.4.2/selecting-rows',
+        //         '3/3.3/3.3.4/3.3.4.3/selecting-columns',
+        //         '3/3.3/3.3.4/3.3.4.4/sorting-rows',
+        //         '3/3.3/3.3.4/3.3.4.5/date-calculations', 
+        //         '3/3.3/3.3.4/3.3.4.6/working-with-null', 
+        //         '3/3.3/3.3.4/3.3.4.7/pattern-matching', 
+        //         '3/3.3/3.3.4/3.3.4.8/counting-rows', 
+        //         '3/3.3/3.3.4/3.3.4.9/multiple-tables'
+        //       ],
+        //     },
+        //   ],
+        // },
+        // '7/7.4/using mysqldump for backups',
+        // '7/7.5/point-in-time(incremental)recovery',
+        // {
+        //   type: 'category',
+        //   label: '7.6 myisam table maintenance and crash recovery',
+        //   link: {type: 'doc',id: '3/3.6/examples'},
+        //   items: [
+        //     '3/3.6/3.6.1/example-maximum-column',
+        //     '3/3.6/3.6.2/example-maximum-row',
+        //     '3/3.6/3.6.3/example-maximum-column-group',
+        //     '3/3.6/3.6.4/example-maximum-column-group-row',
+        //     '3/3.6/3.6.5/example-user-variables',
+        //     '3/3.6/3.6.6/example-foreign-keys',
+        //     '3/3.6/3.6.7/searching-on-two-keys',
+        //     '3/3.6/3.6.8/calculating-days',
+        //     '3/3.6/3.6.9/example-auto-increment'
+        //   ],
+        // },
+      ],
+    },
   ],
   
 };
